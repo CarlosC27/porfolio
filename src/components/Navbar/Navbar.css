@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'regards.oft';
+    src: url(../../assets/Regards-Font/regards.otf);
+  }
+
+
+a {
+    font-family: "Khumbh Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.nav-bar{
+    background-color: var(--color-green);
+    color: var(--color-light-green);
+    display: flex;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar-link-logo{
+    color: var(--color-yellow);
+    background-color: var(--color-green);
+    font-family: 'regards.oft';
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.mobile-menu-toggle{
+    border: none;
+    background-color: var(--color-green);
+    color: var(--color-light-yellow);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-nav-links{
+    background-color: var(--color-green);
+}
+
+.nav-link{
+    background-color: var(--color-green);
+    color: var(--color-light-green);
+    text-decoration: none;
+    margin:0 16px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    transition: color 0.3s ease
+}
+
+.nav-link.active{
+    color: var(--color-yellow);
+}
+
+.nav-link::after {
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-light-green); /* Default color of the underline */
+    transform: scaleX(0); /* Start with the line hidden */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-origin: left;
+  }
+
+  .nav-link.active::after {
+    transform: scaleX(1);
+    background-color:var(--color-yellow); /* Yellow underline for active link */
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    background-color: var(--color-light-green) /* Original underline color on hover */
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--color-light-green);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .close-menu{
+    background-color: var(--color-green);
+    color: var(--color-yellow);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  @media screen and (max-width: 768px){
+    .mobile-menu-toggle{
+        display: block;
+    }
+
+    .close-menu{
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 16px;
+    }
+
+
+    .main-nav-links {
+        position: fixed; /* Change to fixed for slide-in effect */
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 70%; /* Adjust width as needed */
+        max-width: 300px;
+        background-color: var(--color-green);
+        flex-direction: column;
+        display: flex; /* Always flex for animation purposes */
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out; /* Slide-in animation */
+        z-index: 1000;
+        padding: 16px;
+    }
+
+    .main-nav-links.open {
+        right: 0; /* Slide in */
+    }
+
+    .nav-link {
+        padding: 16px;
+        width: 100%;
+    }
+
+    /* Overlay for Mobile Menu */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 500;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .menu-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+  }
+
+

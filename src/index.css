@@ -1,0 +1,732 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap'); */
+
+:root {
+  --color-green: #2C5243;
+  --color-dark-green: #2E3A38;
+  --color-light-green: #C3D1BF;
+  --color-cream: #F0ECE3;
+  --color-yellow: #E5D599;
+  --color-orange: #C87041;
+  --color-blue: #A8B9C0;
+  --color-white: #F5F5F5;
+  --color-black: #333333;
+}
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  font-family:   "DM Sans",sans-serif;
+  font-size: 20px;
+  color: var(--color-dark-green);
+}
+
+/* Components */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Airplane Buttons */
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.airplane-text-button:hover .airplane-image-button {
+  animation: wiggle 0.5s ease;
+}
+
+.airplane-text-button{
+  font-size: 1em;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: bold;
+    color:var(--color-green);
+    text-decoration: none;
+}
+
+.airplane-text-button img{
+  width: 32px;
+  height: 16px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Text */
+
+.orange-title{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 3.2em;
+  font-weight: 300;
+  line-height: 1.1em;
+}
+
+.subtitle{
+  font-size: 2.2em;
+  font-weight: 200;
+}
+
+p{
+  font-weight: 400;
+}
+
+.yellow-subtitle{
+  color: var(--color-yellow);
+  font-family: 'regards.oft';
+  font-size: 3.2em;
+  font-weight: 300;
+}
+
+.orange-subtitle{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 3.2em;
+  font-weight: 300;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Info Cards */
+
+.info-card{
+  position: relative;
+  width: 436px;
+  height: 324px;
+  overflow: hidden;
+  border-radius: 32px;
+  transition: transform 0.3s ease;
+}
+
+.info-card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.info-card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #333333;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  cursor:pointer
+}
+
+.info-card:hover .info-card-overlay{
+  opacity: 1;
+}
+
+.info-card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-green);
+  margin: 16px 0 0 0;
+}
+
+.info-card-tech-stack{
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-green);
+  margin: 4px 0 0 0;
+}
+
+.info-card-description-container{
+  width: 85%;
+}
+
+.info-card-description{
+  font-size: 0.85rem;
+  color: var(--color-dark-green);
+  white-space: normal;
+}
+
+.learn-more{
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.learn-more .arrow{
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow{
+  transform: translateX(5px);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+
+.footer-content{
+  background-color: var(--color-green);
+  padding: 1% 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-yellow);
+  margin: 0;
+  justify-content: space-between;
+}
+
+.footer-logo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content img{
+  max-height: 24px;
+}
+.footer-content p{
+  font-size: 0.2em;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  gap: 12px
+}
+
+.footer-links a{
+  color: var(--color-yellow);
+}
+
+.go-to-top{
+  cursor: pointer;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Homepage */
+
+/* Intro Section */
+
+.intro-section{
+  height: 80vh;
+  padding: 1% 0 6%;
+  margin: 0 80px;
+  display: flex;
+  align-items: center;
+}
+
+.intro-text{
+  max-width: 60%;
+}
+
+.intro-images{
+  position: relative;
+  width: fit-content;
+}
+
+.intro-polaroid{
+  position: absolute;
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.intro-img-1 {
+  top: -250px;
+  left: 0;
+  transform: rotate(-18deg);
+  z-index: 1;
+  aspect-ratio: 280.00/337.42;
+}
+
+.intro-img-2 {
+  top: -50px;
+  left: 200px;
+  transform: rotate(19deg);
+  z-index: 2;
+  aspect-ratio: 280.00/336.17;
+}
+
+/* .intro-img-1{
+  width: 322px;
+  height: 100%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+}
+
+.intro-img-2{
+  width: 322px;
+  height: 100%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+} */
+
+.intro-sub-content{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+.intro-section h2{
+  line-height: 1.4em;
+  margin: 0;
+  color: var(--color-green)
+}
+
+.intro-section p{
+  margin-top: 2%;
+}
+
+.intro-buttons-container{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Recent Projects Section */
+
+
+.recent-projects-section{
+  background-color: var(--color-green);
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.project-info-cards{
+  display: flex;
+  gap: 80px;
+  /* overflow-x: auto; */
+  white-space: no-wrap;
+  scroll-snap-type: mandatory;
+  padding: 24px 32px;
+  scroll-padding-left: 5%;
+}
+
+.spacer{
+  margin-left: 40px;
+}
+
+.project-info-cards > .info-card{
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.recent-projects-section h2{
+  margin-left: 10%;
+}
+
+.recent-projects-section{
+  padding: 2% 0 5%;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px; /* Keeps original height */
+  scrollbar-width: none; /* Hide scrollbar for clean design */
+}
+
+.projects-sticky-container{
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px; /* Keeps original height */
+  scrollbar-width: none; /* Hide scrollbar for clean design */
+}
+
+.project-info-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* about me section */
+
+.about-me-section{
+  display: flex;
+  flex-direction: row;
+  padding: 10%;
+  align-items: center;
+}
+
+.about-me-text-content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.about-me-section h2{
+  line-height: 1.4em;
+  margin: 0;
+}
+
+.about-me-section p{
+  margin-top: 0;
+  width: 80%;
+}
+
+.about-me-section-img{
+  width: 322px;
+  height: 100%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* contact me section */
+
+.contact-me-section{
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: row;
+  padding: 10%;
+  gap: 3%;
+}
+
+.contact-me-section-img{
+  width: 322px;
+  height: 100%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+}
+
+.contact-me-section-text-content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.contact-me-section .airplane-text-button{
+  color: var(--color-cream);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* contact me section */
+
+.cme-section{
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  gap: 3%;
+}
+
+.cme-title{
+  font-size: 2em;
+  font-family: "regards.oft";
+  font-weight: 300;
+  color:var(--color-orange);
+  margin-bottom: 3%;
+}
+
+.social-link{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1.5%;
+  gap: 1%;
+  align-items: center;
+}
+
+.cme-section img{
+  max-height: 20px;
+}
+
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+/* contact page */
+
+.contact-form-container{
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5%;
+  margin: 5% 10%;
+  border-radius: 28swpx;
+
+}
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+  /* About Page */
+
+  .about-intro-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0 5vw;
+    height: 90vh;
+  }
+
+   .about-intro-img{
+    display: flex;
+    position: relative;
+    width: fit-content;
+  }
+
+
+  .about-intro-polaroid{
+    position: absolute;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-img-1 {
+    top: 20px;
+    left: 100px;
+    transform: rotate(-8deg);
+    z-index: 1;
+    aspect-ratio: 320/384;
+  }
+  
+  .about-img-2 {
+    top: 300px;
+    left: 108px;
+    transform: rotate(12deg);
+    z-index: 2;
+    aspect-ratio:320/388;
+  } 
+
+  .airplane-to-img{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-self: flex-end;
+    gap: 250px;
+    margin-bottom: 4px;
+  }
+
+  .about-headshot{
+    max-width: 324px;
+    max-height: auto;
+    border-radius: 40px;
+    margin-right: 80px;
+    margin-bottom: 32px;
+  }
+
+  .intro-about-text{
+    align-content: flex-end;
+  }
+
+  .title-profile-img-text{
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+  }
+
+
+  .about-intro-p{
+    background-color: var(--color-green);
+    color: var(--color-cream);
+    max-width: 900px;
+    padding: 28px 264px 24px 48px;
+    margin: 0;
+    align-self: flex-end;
+    border-radius: 40px 0 0 40px;
+    line-height: 1.4;
+  }
+
+  .airplane-to-img h1{
+    margin: 0;
+  }
+  
+
+    /* Skills Section */
+
+  .skills-section{
+    background-color: var(--color-green);
+    color: var(--color-cream);
+    padding: 4vh 0;
+  }
+
+  .skills-title{
+    color: var(--color-yellow);
+    font-family: "regards.oft";
+    font-size: 2.2em;
+    font-weight: 300;
+    margin-left: 5vh;
+  }
+
+  .my-skills{
+    display: flex;
+    flex-direction: row;
+    gap: 6%;
+  }
+
+  .my-skills h3{
+    color: var(--color-light-green);
+    font-size: 1.6em;
+    margin: 0;
+  }
+
+  .my-skills li{
+    line-height: 1.8em;
+    font-size: 0.8em;
+  }
+
+  .my-skills h4{
+    font-size: 1.2em;
+  }
+
+  .design-skills-columns{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .keyboard-img{
+    object-fit:cover;
+    width:364px;
+    height: 544px;
+    height: auto;
+    border-radius: 40px 0 0 40px;
+  }
+
+  .icons-wrapper-left{
+    display: flex;
+    gap: 16px;
+    animation: scroll-marquee-left 30s linear infinite;
+    will-change: transform;
+    margin-bottom: 40px;
+    min-width: 200%;
+    align-items: center;
+  }
+
+  .icons-wrapper-right{
+    display: flex;
+    gap: 16px;
+    animation: scroll-marquee-right 30s linear infinite;
+    will-change: transform;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-width: 200%;
+    align-items: center;
+  }
+
+  .img-icon{
+    height: 32px;
+    width: auto;
+  }
+
+  .icon-strip{
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  @keyframes scroll-marquee-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-marquee-right {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  /* Jounrey Section */
+  .small-orange-title{
+    color: var(--color-orange);
+    font-family: 'regards.oft';
+    font-size: 2.2em;
+    font-weight: 300;
+    line-height: 1.1em;
+  }
+
+  .timeline-section{
+    display: flex;
+    
+    scroll-behavior: smooth;
+    gap: 80px;
+    flex-wrap: nowrap;
+  }
+
+  .scroll-container{
+    overflow: visible;
+    position: relative;
+  }
+
+  .timeline-section::-webkit-scrollbar {
+    display: none;
+  }
+  .timeline-section {
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .timeline-section > *:nth-child(odd) {
+    transform: rotate(-3deg);
+  }
+  .timeline-section > *:nth-child(even) {
+    transform: rotate(3deg);
+  }
+
+  .timeline-scroll-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Journey Card */
+
+  .journey-card{
+    display: flex;
+    flex-direction: column;
+    width: 296px;
+    background-color: var(--color-green);
+    color: var(--color-cream);
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 8px;
+    font-family:"Swanky and Moo Moo", cursive;
+    font-size: 0.9em;
+    line-height: 22.4px;
+    box-shadow: 0px 100px 105px 0px rgba(0, 0, 0, 0.13), 0px 29px 54px 0px rgba(0, 0, 0, 0.09), 0px 9px 56px 0px rgba(0, 0, 0, 0.08), 0px -2px 61px 0px rgba(0, 0, 0, 0.07), 0px -6px 58px 0px rgba(0, 0, 0, 0.05), 0px -5px 41px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  .date-and-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:264px;
+  }
+
+  .journey-card p{
+    margin: 0;
+  }
+  .journey-card-img{
+    height: 240px;
+    width: 240px;
+    object-fit:cover;
+    border-radius: 8px;
+  }
+
+  .cream-journey-card .journey-card{
+    background-color: var(--color-cream);
+    color: var(--color-dark-green);
+  }
+
+
