@@ -21,6 +21,7 @@ body{
   font-family:   "DM Sans",sans-serif;
   font-size: 20px;
   color: var(--color-dark-green);
+  overflow-x: hidden;
 }
 
 /* Components */
@@ -547,7 +548,7 @@ p{
   .skills-section{
     background-color: var(--color-green);
     color: var(--color-cream);
-    padding: 4vh 0;
+    padding: 80px 0;
   }
 
   .skills-title{
@@ -556,6 +557,7 @@ p{
     font-size: 2.2em;
     font-weight: 300;
     margin-left: 5vh;
+    margin-top: 0;
   }
 
   .my-skills{
@@ -584,18 +586,23 @@ p{
     flex-direction: row;
   }
 
+  .technical-skills{
+    margin-left: 80px;
+  }
+
   .keyboard-img{
     object-fit:cover;
     width:364px;
     height: 544px;
     height: auto;
     border-radius: 40px 0 0 40px;
+    align-self: flex-end;
   }
-
+/* Icon Strip */
   .icons-wrapper-left{
     display: flex;
     gap: 16px;
-    animation: scroll-marquee-left 30s linear infinite;
+    /* animation: scroll-marquee-left 30s linear infinite; */
     will-change: transform;
     margin-bottom: 40px;
     min-width: 200%;
@@ -605,7 +612,7 @@ p{
   .icons-wrapper-right{
     display: flex;
     gap: 16px;
-    animation: scroll-marquee-right 30s linear infinite;
+    /* animation: scroll-marquee-right 30s linear infinite; */
     will-change: transform;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -647,23 +654,30 @@ p{
   .small-orange-title{
     color: var(--color-orange);
     font-family: 'regards.oft';
-    font-size: 2.2em;
+    font-size: 2.4em;
     font-weight: 300;
     line-height: 1.1em;
+    margin:0;
+  }
+
+  .my-journey-section .small-orange-title{
+    margin-top: 80px;
+    justify-self: center;
   }
 
   .timeline-section{
     display: flex;
-    
+    align-items: center;
     scroll-behavior: smooth;
-    gap: 80px;
+    gap: 88px;
     flex-wrap: nowrap;
+    overflow:visible;
+    padding: 0 64px;
+    scroll-padding: 0 24px;
+    position: relative;
+    z-index: 1;
   }
 
-  .scroll-container{
-    overflow: visible;
-    position: relative;
-  }
 
   .timeline-section::-webkit-scrollbar {
     display: none;
@@ -681,11 +695,77 @@ p{
     transform: rotate(3deg);
   }
 
-  .timeline-scroll-wrapper {
+  .timeline-scroll-container{
+    display: flex;
+    align-items: center;
     overflow-x: auto;
-    scroll-behavior: smooth;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 80px 0 240px 0;
     -webkit-overflow-scrolling: touch;
   }
+
+  .timeline-section > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .timeline-scroll-container::-webkit-scrollbar{
+    display: none;
+  }
+
+  .timeline-line{
+    z-index: 0;
+    left: -40px;
+    top: 40px;
+    position:absolute;
+    align-self: center;
+    align-self: flex-start;
+  }
+
+  .x-and-title{
+    margin-top: 200px;
+    margin-left: 48px;
+    font-family:"Swanky and Moo Moo", cursive;
+    font-size: 0.9em;
+    color: var(--color-dark-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .x-and-title p{
+    padding: 0;
+    margin: 0;
+    width:max-content;
+  }
+
+  .x{
+    color: var(--color-orange);
+  }
+
+  .timeline-airplane{
+    width: 100px;
+  }
+
+  .timeline-section .airplane-and-title{
+    transform: rotate(0deg);
+    margin-bottom: 252px;
+  }
+  .timeline-section .airplane-and-title .timeline-airplane{
+    transform: rotate(-16deg);
+  }
+
+  .airplane-and-title{
+    font-family:"Swanky and Moo Moo", cursive;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+  }
+
+
+  
 
   /* Journey Card */
 
@@ -728,5 +808,362 @@ p{
     background-color: var(--color-cream);
     color: var(--color-dark-green);
   }
+
+
+  /* Behind the screen*/
+
+  .bts-title{
+    margin-top: 0;
+    margin-bottom: 64px;
+  }
+
+  .more-about-me-text h3{
+    text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
+  }
+
+  /* pictures group 1 */
+
+  .more-about-me-images{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .bts-sub-images{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    max-height: 700px;
+  }
+  .bts-main-img{
+    max-height: 720px;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  .bts-sub-images img{
+    max-width: 280px;
+    border-radius: 28px;
+    height:auto;
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  .bella-crazy-hair{
+    max-height: 224px;
+    object-fit: cover;
+    width: 280px;
+  }
+
+  .behind-the-screen-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 44px;
+   justify-self: center;
+  }
+
+  .more-about-me-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .more-about-me-text p{
+    margin: 0;
+    width: 580px;
+  }
+
+
+  /* dancing through life */
+
+  .dancing-through-life-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+    justify-self: center;
+    margin-top: 144px;
+  }
+
+  .dancing-through-life-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 632px;
+    align-items: center;
+  }
+
+  .dancing-through-life-text h3{
+    text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
+  }
+
+    /* dancing through life images*/
+
+    .dancing-through-life-images img{
+      border-radius: 28px;
+      box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+    }
+
+    .dancing-through-life-images{
+      display: flex;
+      flex-direction: row;
+      gap:20px;
+    }
+
+    .dtl-column-imgs{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .dtl-row-imgs-1, .dtl-row-imgs-2{
+      display: flex;
+      flex-direction: row;
+      width: 342px;
+      gap: 20px;
+    }
+
+    .dtl-row-imgs-1 img{
+      max-height: 233px;
+      object-fit: cover;
+    }
+
+    .dtl-row-imgs-2 img{
+      max-height: 213px;
+      object-fit: cover;
+    }
+
+    .eras-tour-img{
+      max-height: 720px;
+      max-width: 304px;
+      object-fit: cover;
+    }
+
+    .fn-tour{
+      width: 342px;
+      max-height: 234px;
+      object-fit: cover;
+    }
+
+    .dtl-row-1-img-1{
+      max-width: 136px;
+    }
+
+    .dtl-row-1-img-2{
+      max-width: 186px;
+    }
+
+    .dtl-row-2-img-1{
+      width: 168px;
+    }
+
+    .dtl-row-2-img-2{
+      width: 154px;
+    }
+
+  
+    
+
+    /* Travel Section */
+    .travel-section{
+      display: flex;
+      flex-direction: row;
+      margin-top: 144px;
+      align-items: center;
+      gap: 56px;
+      justify-self: center;
+    }
+
+    .travel-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .travel-text p{
+      width: 640px;
+      margin: 0;
+    }
+    /* Travel Images */
+    .travel-images img,  .record-and-music-images img{
+      border-radius: 28px;
+      box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+      object-fit: cover;
+    }
+
+    .travel-images{
+      width: 666px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .travel-imgs-row-1, .travel-imgs-row-2, .travel-imgs-row-3{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .travel-imgs-row-1 img{
+      height: 292px;
+    }
+
+    .travel-imgs-row-2 img{
+      height: 224px;
+    }
+
+    .travel-imgs-row-3 img{
+      height: 200px;
+    }
+
+    .timg-r1-i1{
+      width: 411px;  
+    }
+    .timg-r1-i2{
+      width: 231px;
+    }
+    .timg-r2-i1{
+      width: 168px;
+    }
+
+    .timg-r2-i2{
+      width: 287px;
+    }
+
+    .timg-r2-i3{
+      width:171px;
+    }
+
+    .timg-r3-i1{
+      width: 246px;
+    }
+
+    .timg-r3-i2{
+      width: 149px;
+    }
+
+    .timg-r3-i3{
+      width: 231px;
+    }
+
+    /* Record Section */
+
+    .record-and-music-section{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 140px 0;
+
+      justify-self: center;
+      gap:52px;
+    }
+    .record-and-music-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .record-and-music-text h3{
+      text-align: center;
+    }
+
+    .record-and-music-text p{
+      width: 624px;
+    }
+
+    /* Record Section Images */
+
+    .record-and-music-images{
+      display: flex;
+      flex-direction: column;
+      width: 666px;
+      gap: 20px;
+    }
+
+    .rimg-row-1 img{
+      height: 292px;
+    }
+
+    .rimg-row-2 img{
+      height: 224px;
+    }
+
+    .rimg-row-3 img{
+      height: 200px;
+    }
+
+    .rimg-row-1, .rimg-row-2, .rimg-row-3{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .ri-r1-i1{
+      width: 411px;
+    }
+
+    .ri-r1-i2{
+      width: 231px;
+    }
+
+    .ri-r2-i1{
+      width:168px;
+    }
+
+    .ri-r2-i2{
+      width: 287px;
+    }
+
+    .ri-r2-i3{
+      width: 171px;
+    }
+
+    .ri-r3-i1{
+      width: 246px;
+    }
+
+    .ri-r3-i2{
+      width: 149px;
+    }
+
+    .ri-r3-i3{
+      width: 231px;
+    }
+/* lets chat section */
+
+.lets-chat{
+  background-color: var(--color-light-green);
+  padding: 100px 80px;
+  box-shadow: 0px -49px 190px 0px rgba(0, 0, 0, 0.17);
+
+}
+
+.lets-chat-title{
+  font-family: 'regards.oft';
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 1.1em;
+  color: var(--color-green);
+}
+
+.lets-chat-text-and-buttons p{
+  width: 570px;
+  margin: 0;
+}
+.lets-chat-text-and-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+.lets-chat-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+   
+
+
+
 
 
