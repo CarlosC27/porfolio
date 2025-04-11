@@ -4,7 +4,8 @@ import '../../index.css';
 import JouneyCard from '../journey-card';
 import images from '../../constants/images';
 import logos from '../../constants/logo-images';
-import linePath from '../../assets/images/timeline-dashed-line.svg'
+import linePath from '../../assets/images/timeline-dashed-line.svg';
+import smallLine from '../../assets/images/small-dashed-line.svg';
 
 
 const About = (props) => {
@@ -20,6 +21,8 @@ const About = (props) => {
                     </div>
                     <div className='title-profile-img-text'>
                         <div className='airplane-to-img'>
+                            <img src={smallLine} alt='orange dashed line' className='small-dashed-line'/>
+                            <img src={images.orange_pa} alt='orange paper airplane' className='intro-plane'/>
                             <h1 className='orange-title'>It's Me! Hi!</h1>
                             <img className='about-headshot' src={images.profile_picture} alt='A headshot of Carlos'/>
                         </div>

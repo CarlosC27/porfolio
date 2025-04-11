@@ -459,12 +459,28 @@ p{
 
   /* About Page */
 
+  .small-dashed-line{
+    position: absolute;
+    top: 240px;
+    left: 500px;
+  }
+
+  .intro-plane{
+    height: auto;
+    width: 80px;
+    position: absolute;
+    top:212px;
+    right: 424px;
+    transform: rotate(16deg);
+  }
+
   .about-intro-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 40px 0 5vw;
-    height: 90vh;
+    /* height: 90vh; */
+    margin-bottom: 100px;
   }
 
    .about-intro-img{
@@ -556,7 +572,7 @@ p{
     font-family: "regards.oft";
     font-size: 2.2em;
     font-weight: 300;
-    margin-left: 5vh;
+    margin-left: 80px;
     margin-top: 0;
   }
 
@@ -564,6 +580,7 @@ p{
     display: flex;
     flex-direction: row;
     gap: 6%;
+    justify-items: center;
   }
 
   .my-skills h3{
@@ -593,10 +610,9 @@ p{
   .keyboard-img{
     object-fit:cover;
     width:364px;
-    height: 544px;
     height: auto;
     border-radius: 40px 0 0 40px;
-    align-self: flex-end;
+    /* align-self: flex-end; */
   }
 /* Icon Strip */
   .icons-wrapper-left{
@@ -921,7 +937,6 @@ p{
     .dtl-row-imgs-1, .dtl-row-imgs-2{
       display: flex;
       flex-direction: row;
-      width: 342px;
       gap: 20px;
     }
 
@@ -982,6 +997,10 @@ p{
       align-items: center;
     }
 
+    .travel-text h3{
+      text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
+    }
+
     .travel-text p{
       width: 640px;
       margin: 0;
@@ -994,7 +1013,6 @@ p{
     }
 
     .travel-images{
-      width: 666px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -1058,6 +1076,11 @@ p{
       justify-self: center;
       gap:52px;
     }
+
+    .record-and-music-text h3{
+      text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
+    }
+
     .record-and-music-text{
       display: flex;
       flex-direction: column;
@@ -1077,7 +1100,6 @@ p{
     .record-and-music-images{
       display: flex;
       flex-direction: column;
-      width: 666px;
       gap: 20px;
     }
 
@@ -1164,6 +1186,324 @@ p{
    
 
 
+/* ---------------- Responsive Styles ---------------- */
+
+@media (max-width: 1440px) {
+
+  .intro-img-1, .intro-img-2{
+    max-width: 50%;
+    position: relative;
+  }
+
+  .intro-img-1{
+    top:-20px;
+    left: 80px;
+  }
+
+  .intro-img-2{
+    top: 120px;
+    left: -10px;
+  }
+
+  .intro-images{
+    width: fit-content;
+  }
+
+  .intro-section{
+    margin: 60px 80px;
+  }
+
+  .about-intro-img img{
+    max-width: 268px;
+  }
+  .small-dashed-line{
+    left: 440px;
+  }
+
+  .intro-plane{
+    top: 216px;
+    right: 416px;
+  }
+
+  
+}
+
+@media (max-width: 1024px) {
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Homepage */
+
+  body{
+    font-size: 16px;
+  }
+
+  .intro-section{
+    margin: 0 80px;
+  }
+
+  .orange-title{
+    font-size: 2.4em;
+  }
+  
+  .subtitle{
+    font-size: 1.8em;
+  }
+
+   .intro-img-1, .intro-img-2{
+    max-width: 65%;
+    position: relative;
+  }
+
+  .intro-img-1{
+    top: 80px;
+    left: 10px;
+  }
+
+  .intro-img-2{
+    top: -10px;
+    left: 152px;
+  }
+
+  .yellow-subtitle{
+    font-size: 2.2em;
+  }
+
+  .orange-subtitle{
+    font-size: 2.2em;
+  }
+
+  .about-me-section-img{
+    max-width: 30%;
+  }
+  .about-me-text-content p{
+    width: 96%;
+  }
+
+  .contact-me-section-img{
+    max-width: 30%;
+  }
+
+
+  /* About Me Page */
+
+  
+
+  .about-img-1{
+    width: 220px;
+    top: 16px;
+    left:60px;
+  }
+
+  .about-img-2{
+    width: 220px;
+    top: 200px;
+    left:60px;
+
+  }
+
+  .about-headshot{
+    max-width: 248px;
+  }
+
+  .airplane-to-img{
+    gap: 172px;
+  }
+
+  .small-dashed-line{
+    max-width: 30%;
+    top: 236px;
+    left: 312px;
+  }
+
+  .intro-plane{
+    max-width: 6%;
+    right: 344px;
+    top: 220px;
+  }
+
+  .about-intro-p{
+    max-width: 476px;
+    padding-right: 164px;
+  }
+
+  .skills-title{
+    font-size: 2em;
+  }
+
+  .my-skills h3{
+    font-size: 1.4em;
+  }
+
+  .my-skills h4{
+    font-size: 1em;
+  }
+
+  .keyboard-img{
+    max-width: 200px;
+  }
+
+  .bts-main-img{
+    width: 280px;
+    height: 490px;
+  }
+
+  .bts-sub-images img{
+    height: 146.66px;
+  }
+  .bella-crazy-hair{
+   width: 194.66px;
+  }
+
+  .more-about-me-text p{
+    max-width: 380px;
+  }
+
+  .eras-tour-img{
+    width: 212.8px;
+    height: 516px;
+  }
+
+  .dtl-row-imgs-1 img{
+    height: 163.1px;
+  }
+
+  .fn-tour{
+    width: 239.4px;
+    height: 163.8px;
+  }
+
+  .dtl-row-1-img-1{
+    width: 95.2px;
+  }
+
+  .dtl-row-1-img-2{
+    width: 122.325px;
+  }
+
+  .dtl-row-imgs-2 img{
+    height: 149.1px;
+  }
+
+  .dtl-row-2-img-1{
+    width: 117.6px;
+  }
+
+  .dtl-row-2-img-2{
+    width: 107.8px;
+  }
+
+  .dancing-through-life-text p{
+    max-width: 380px;
+  }
+
+  .travel-imgs-row-1 img{
+    height: 204.4px;
+  }
+
+  .travel-imgs-row-2 img{
+    height: 156.8px;
+  }
+
+  .travel-imgs-row-3 img{
+    height: 140px;
+  }
+
+  .timg-r1-i1{
+    width: 287.7px;
+  }
+
+  .timg-r1-i2{
+    width: 161.7px;
+  }
+
+  .timg-r2-i1{
+    width: 117.6px;
+  }
+
+  .timg-r2-i2{
+    width:200.9px;
+  }
+
+  .timg-r2-i3{
+    width: 119.7px;
+  }
+
+  .timg-r3-i1{
+    width: 172.2px;
+  }
+
+  .timg-r3-i2{
+    width:104.3px;
+  }
+
+  .timg-r3-i3{
+    width: 161.7px;
+  }
+
+  .travel-text p{
+    max-width: 360px;
+  }
+
+  .rimg-row-1 img{
+    height: 204.4px;
+  }
+
+  .rimg-row-2 img{
+    height: 156.8px;
+  }
+
+  .rimg-row-3 img{
+    height: 140px;
+  }
+  .ri-r1-i1{
+    width: 287.7px;
+  }
+
+  .ri-r1-i2{
+    width: 161.7px;
+  }
+
+  .ri-r2-i1{
+    width: 117.6px;
+  }
+
+  .ri-r2-i2{
+    width: 200.9px;
+  }
+
+  .ri-r2-i3{
+    width: 119.7px;
+  }
+
+  .ri-r3-i1{
+    width: 172.2px;
+  }
+
+  .ri-r3-i2{
+    width: 104.3px;
+  }
+
+  .ri-r3-i3{
+    width: 161.7px;
+  }
+
+  .record-and-music-text p{
+    max-width: 400px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  
+  
+}
+
+@media (max-width: 480px) {
+  
+}
 
 
 

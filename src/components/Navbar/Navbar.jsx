@@ -21,11 +21,11 @@ const NavBar = () => {
             "/" : "home-page",
             "/About" : "about-page",
             "/Projects" : "projects-page",
-            "/Contact" : "contact-page",
+            // "/Contact" : "contact-page",
             "/Resume" : "resume-page"
         }
 
-    document.body.classList.remove('home-page', 'about-page', 'projects-page', 'contact-page', 'resume-page');
+    document.body.classList.remove('home-page', 'about-page', 'projects-page', 'resume-page');
     document.body.classList.add(pageClasses[location.pathname] || "home-page");
 }, [location]);
 
@@ -42,7 +42,7 @@ const NavBar = () => {
             {isMobileMenuOpen && <div className="menu-overlay" onClick={mobileMenu}></div>}
             <div className={`main-nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
             <button className="close-menu" onClick={mobileMenu}>✕</button>
-                {["Home", "About", "Projects", "Contact"].map((item) => (
+                {["Home", "About", "Projects"].map((item) => (
                 <Link
                 key={item}
                 to={`/${item === "Home" ? "" : item.toLowerCase()}`}
