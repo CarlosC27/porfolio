@@ -19,7 +19,8 @@ body{
   scroll-behavior: smooth;
   background-color: var(--color-cream);
   font-family:   "DM Sans",sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.4rem;
   color: var(--color-dark-green);
   overflow-x: hidden;
 }
@@ -49,11 +50,12 @@ body{
     font-weight: bold;
     color:var(--color-green);
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .airplane-text-button img{
-  width: 32px;
-  height: 16px;
+  max-width: 24px;
+  max-height: 12px;
 }
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Text */
@@ -61,32 +63,38 @@ body{
 .orange-title{
   color: var(--color-orange);
   font-family: 'regards.oft';
-  font-size: 3.2em;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.1em;
+  line-height: 1.8rem;
+  margin: .75rem;
 }
 
 .subtitle{
-  font-size: 2.2em;
-  font-weight: 200;
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: var(--color-green);
+  margin: .75rem;
 }
 
 p{
   font-weight: 400;
+  margin: .75rem;
 }
 
 .yellow-subtitle{
   color: var(--color-yellow);
   font-family: 'regards.oft';
-  font-size: 3.2em;
+  font-size: 1.4rem;
   font-weight: 300;
+  margin: .75rem;
 }
 
 .orange-subtitle{
   color: var(--color-orange);
   font-family: 'regards.oft';
-  font-size: 3.2em;
+  font-size: 1.4rem;
   font-weight: 300;
+  margin: .75rem;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
@@ -94,10 +102,10 @@ p{
 
 .info-card{
   position: relative;
-  width: 436px;
-  height: 324px;
+  max-width: 280px;
+  height: auto;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 28px;
   transition: transform 0.3s ease;
 }
 
@@ -112,7 +120,7 @@ p{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 280px;
   height: 100%;
   background:rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -120,7 +128,7 @@ p{
   opacity: 0;
   display: flex;
   flex-direction: column;
-  padding: 1.5em;
+  padding: 1rem;
   overflow: hidden;
   transition: opacity 0.3s ease;
   cursor:pointer
@@ -131,37 +139,39 @@ p{
 }
 
 .info-card-title{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--color-green);
-  margin: 16px 0 0 0;
+  margin: .5rem 0 0 0;
 }
 
 .info-card-tech-stack{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
   color: var(--color-green);
-  margin: 4px 0 0 0;
+  margin: 0;
 }
 
 .info-card-description-container{
-  width: 85%;
+  width: 90%;
 }
 
 .info-card-description{
-  font-size: 0.85rem;
+  font-size: 0.7rem;
+  line-height: 0.8rem;
   color: var(--color-dark-green);
   white-space: normal;
+  margin: 0.4rem 0;
 }
 
 .learn-more{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   display: flex;
   align-items: center;
 }
 
 .learn-more .arrow{
-  margin-left: 5px;
+  margin-left: 0.4rem;
   transition: transform 0.3s ease;
 }
 
@@ -174,7 +184,7 @@ p{
 
 .footer-content{
   background-color: var(--color-green);
-  padding: 1% 2%;
+  padding: .2rem .5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -187,6 +197,12 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.2rem;
+}
+
+.footer-logo-container p{
+  margin: 0;
+  padding: 0;
 }
 .footer-content img{
   max-height: 24px;
@@ -198,7 +214,7 @@ p{
 .footer-links{
   display: flex;
   flex-direction: row;
-  gap: 12px
+  gap: 0.75rem;
 }
 
 .footer-links a{
@@ -214,1296 +230,587 @@ p{
 
 /* Homepage */
 
-/* Intro Section */
 
-.intro-section{
-  height: 80vh;
-  padding: 1% 0 6%;
-  margin: 0 80px;
-  display: flex;
-  align-items: center;
-}
 
-.intro-text{
-  max-width: 60%;
-}
-
-.intro-images{
-  position: relative;
-  width: fit-content;
-}
-
-.intro-polaroid{
-  position: absolute;
-  max-width: 280px;
+.intro-img-1, .intro-img-2{
+  max-width: 40%;
   height: auto;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
 }
 
-.intro-img-1 {
-  top: -250px;
-  left: 0;
-  transform: rotate(-18deg);
-  z-index: 1;
-  aspect-ratio: 280.00/337.42;
-}
-
-.intro-img-2 {
-  top: -50px;
-  left: 200px;
-  transform: rotate(19deg);
-  z-index: 2;
-  aspect-ratio: 280.00/336.17;
-}
-
-/* .intro-img-1{
-  width: 322px;
-  height: 100%;
-  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+.intro-img-1{
+  transform: rotate(-20deg);
 }
 
 .intro-img-2{
-  width: 322px;
-  height: 100%;
-  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
-} */
+  transform: rotate(20deg);
+}
 
-.intro-sub-content{
+.intro-images{
+ display: flex;
+ justify-content: center;
+ height: fit-content;
+ margin: 2rem 0;
+}
+
+.intro-section{
   display: flex;
-  flex-direction: column;
-  max-width: 90%;
-}
-
-.intro-section h2{
-  line-height: 1.4em;
-  margin: 0;
-  color: var(--color-green)
-}
-
-.intro-section p{
-  margin-top: 2%;
+  flex-direction: column-reverse;
 }
 
 .intro-buttons-container{
   display: flex;
-  flex-direction: row;
-  gap: 16px;
+  flex-direction: column;
+  margin: 0.75rem;
+  gap: 0.75rem;
 }
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Recent Projects Section */
-
 
 .recent-projects-section{
-  background-color: var(--color-green);
-  width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
+  background-color: #2C5243;
+  padding: 1rem 0;
 }
 
 .project-info-cards{
   display: flex;
-  gap: 80px;
-  /* overflow-x: auto; */
-  white-space: no-wrap;
-  scroll-snap-type: mandatory;
-  padding: 24px 32px;
-  scroll-padding-left: 5%;
+  overflow-x: auto;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding-right: 1rem;
+  height:max-content;
 }
 
-.spacer{
-  margin-left: 40px;
-}
-
-.project-info-cards > .info-card{
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-}
-
-.recent-projects-section h2{
-  margin-left: 10%;
-}
-
-.recent-projects-section{
-  padding: 2% 0 5%;
-}
-
-.horizontal-scroll-wrapper {
-  display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px; /* Keeps original height */
-  scrollbar-width: none; /* Hide scrollbar for clean design */
-}
-
-.projects-sticky-container{
-  display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px; /* Keeps original height */
-  scrollbar-width: none; /* Hide scrollbar for clean design */
-}
-
-.project-info-cards::-webkit-scrollbar {
+.project-info-cards::-webkit-scrollbar{
   display: none;
 }
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* about me section */
-
-.about-me-section{
-  display: flex;
-  flex-direction: row;
-  padding: 10%;
-  align-items: center;
+.project-info-cards > .info-card {
+  flex: 0 0 auto; 
+  scroll-snap-align: start; 
 }
 
-.about-me-text-content{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.about-me-text-content .airplane-text-button{
+  margin-left: 0.75rem;
 }
 
-.about-me-section h2{
-  line-height: 1.4em;
-  margin: 0;
-}
-
-.about-me-section p{
-  margin-top: 0;
-  width: 80%;
+.about-me-section-img, .contact-me-section-img{
+  max-width:84%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
 }
 
 .about-me-section-img{
-  width: 322px;
-  height: 100%;
-  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* contact me section */
+.about-me-section{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 2rem  0;
+}
 
 .contact-me-section{
   background-color: var(--color-green);
   color: var(--color-cream);
   display: flex;
-  flex-direction: row;
-  padding: 10%;
-  gap: 3%;
-}
-
-.contact-me-section-img{
-  width: 322px;
-  height: 100%;
-  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
-}
-
-.contact-me-section-text-content{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .contact-me-section .airplane-text-button{
   color: var(--color-cream);
+  font-size: 0.8rem;
+  margin-left: .75rem;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* contact me section */
-
+.contact-me-section-img{
+  margin: 1.5rem 0;
+}
 .cme-section{
+  padding: 2rem .5rem;
+}
+.cme-title{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: .75rem;
+}
+
+.social-link-icon{
+  max-width: 1rem;
+  height: 100%;
+}
+.socials-container{
   display: flex;
   flex-direction: column;
-  padding: 5% 10%;
-  gap: 3%;
+  gap: 0.75rem;
+  margin-left: .75rem;
 }
-
-.cme-title{
-  font-size: 2em;
-  font-family: "regards.oft";
-  font-weight: 300;
-  color:var(--color-orange);
-  margin-bottom: 3%;
-}
-
 .social-link{
   display: flex;
-  flex-direction: row;
-  padding-bottom: 1.5%;
-  gap: 1%;
+  gap:.25rem;
   align-items: center;
 }
 
-.cme-section img{
-  max-height: 20px;
-}
 
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-/* contact page */
 
-.contact-form-container{
-  background-color: var(--color-green);
-  color: var(--color-cream);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 5%;
-  margin: 5% 10%;
-  border-radius: 28swpx;
-
-}
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
-  /* About Page */
-
-  .small-dashed-line{
-    position: absolute;
-    top: 240px;
-    left: 500px;
-  }
-
-  .intro-plane{
-    height: auto;
-    width: 80px;
-    position: absolute;
-    top:212px;
-    right: 424px;
-    transform: rotate(16deg);
-  }
-
-  .about-intro-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px 0 5vw;
-    /* height: 90vh; */
-    margin-bottom: 100px;
-  }
-
-   .about-intro-img{
-    display: flex;
-    position: relative;
-    width: fit-content;
-  }
-
-
-  .about-intro-polaroid{
-    position: absolute;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
-  }
-  
-  .about-img-1 {
-    top: 20px;
-    left: 100px;
-    transform: rotate(-8deg);
-    z-index: 1;
-    aspect-ratio: 320/384;
-  }
-  
-  .about-img-2 {
-    top: 300px;
-    left: 108px;
-    transform: rotate(12deg);
-    z-index: 2;
-    aspect-ratio:320/388;
-  } 
-
-  .airplane-to-img{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    align-self: flex-end;
-    gap: 250px;
-    margin-bottom: 4px;
-  }
-
-  .about-headshot{
-    max-width: 324px;
-    max-height: auto;
-    border-radius: 40px;
-    margin-right: 80px;
-    margin-bottom: 32px;
-  }
-
-  .intro-about-text{
-    align-content: flex-end;
-  }
-
-  .title-profile-img-text{
-    display: flex;
-    flex-direction: column;
-    width: 1024px;
-  }
-
-
-  .about-intro-p{
-    background-color: var(--color-green);
-    color: var(--color-cream);
-    max-width: 900px;
-    padding: 28px 264px 24px 48px;
-    margin: 0;
-    align-self: flex-end;
-    border-radius: 40px 0 0 40px;
-    line-height: 1.4;
-  }
-
-  .airplane-to-img h1{
-    margin: 0;
-  }
-  
-
-    /* Skills Section */
-
-  .skills-section{
-    background-color: var(--color-green);
-    color: var(--color-cream);
-    padding: 80px 0;
-  }
-
-  .skills-title{
-    color: var(--color-yellow);
-    font-family: "regards.oft";
-    font-size: 2.2em;
-    font-weight: 300;
-    margin-left: 80px;
-    margin-top: 0;
-  }
-
-  .my-skills{
-    display: flex;
-    flex-direction: row;
-    gap: 6%;
-    justify-items: center;
-  }
-
-  .my-skills h3{
-    color: var(--color-light-green);
-    font-size: 1.6em;
-    margin: 0;
-  }
-
-  .my-skills li{
-    line-height: 1.8em;
-    font-size: 0.8em;
-  }
-
-  .my-skills h4{
-    font-size: 1.2em;
-  }
-
-  .design-skills-columns{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .technical-skills{
-    margin-left: 80px;
-  }
-
-  .keyboard-img{
-    object-fit:cover;
-    width:364px;
-    height: auto;
-    border-radius: 40px 0 0 40px;
-    /* align-self: flex-end; */
-  }
-/* Icon Strip */
-  .icons-wrapper-left{
-    display: flex;
-    gap: 16px;
-    /* animation: scroll-marquee-left 30s linear infinite; */
-    will-change: transform;
-    margin-bottom: 40px;
-    min-width: 200%;
-    align-items: center;
-  }
-
-  .icons-wrapper-right{
-    display: flex;
-    gap: 16px;
-    /* animation: scroll-marquee-right 30s linear infinite; */
-    will-change: transform;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    min-width: 200%;
-    align-items: center;
-  }
-
-  .img-icon{
-    height: 32px;
-    width: auto;
-  }
-
-  .icon-strip{
-    overflow: hidden;
-    width: 100%;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  @keyframes scroll-marquee-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  @keyframes scroll-marquee-right {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(50%);
-    }
-  }
-
-  /* Jounrey Section */
-  .small-orange-title{
-    color: var(--color-orange);
-    font-family: 'regards.oft';
-    font-size: 2.4em;
-    font-weight: 300;
-    line-height: 1.1em;
-    margin:0;
-  }
-
-  .my-journey-section .small-orange-title{
-    margin-top: 80px;
-    justify-self: center;
-  }
-
-  .timeline-section{
-    display: flex;
-    align-items: center;
-    scroll-behavior: smooth;
-    gap: 88px;
-    flex-wrap: nowrap;
-    overflow:visible;
-    padding: 0 64px;
-    scroll-padding: 0 24px;
-    position: relative;
-    z-index: 1;
-  }
-
-
-  .timeline-section::-webkit-scrollbar {
-    display: none;
-  }
-  .timeline-section {
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .timeline-section > *:nth-child(odd) {
-    transform: rotate(-3deg);
-  }
-  .timeline-section > *:nth-child(even) {
-    transform: rotate(3deg);
-  }
-
-  .timeline-scroll-container{
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    padding: 80px 0 240px 0;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .timeline-section > * {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-  }
-
-  .timeline-scroll-container::-webkit-scrollbar{
-    display: none;
-  }
-
-  .timeline-line{
-    z-index: 0;
-    left: -40px;
-    top: 40px;
-    position:absolute;
-    align-self: center;
-    align-self: flex-start;
-  }
-
-  .x-and-title{
-    margin-top: 200px;
-    margin-left: 48px;
-    font-family:"Swanky and Moo Moo", cursive;
-    font-size: 0.9em;
-    color: var(--color-dark-green);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .x-and-title p{
-    padding: 0;
-    margin: 0;
-    width:max-content;
-  }
-
-  .x{
-    color: var(--color-orange);
-  }
-
-  .timeline-airplane{
-    width: 100px;
-  }
-
-  .timeline-section .airplane-and-title{
-    transform: rotate(0deg);
-    margin-bottom: 252px;
-  }
-  .timeline-section .airplane-and-title .timeline-airplane{
-    transform: rotate(-16deg);
-  }
-
-  .airplane-and-title{
-    font-family:"Swanky and Moo Moo", cursive;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
-  }
-
-
-  
-
-  /* Journey Card */
-
-  .journey-card{
-    display: flex;
-    flex-direction: column;
-    width: 296px;
-    background-color: var(--color-green);
-    color: var(--color-cream);
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    padding: 16px;
-    gap: 8px;
-    font-family:"Swanky and Moo Moo", cursive;
-    font-size: 0.9em;
-    line-height: 22.4px;
-    box-shadow: 0px 100px 105px 0px rgba(0, 0, 0, 0.13), 0px 29px 54px 0px rgba(0, 0, 0, 0.09), 0px 9px 56px 0px rgba(0, 0, 0, 0.08), 0px -2px 61px 0px rgba(0, 0, 0, 0.07), 0px -6px 58px 0px rgba(0, 0, 0, 0.05), 0px -5px 41px 0px rgba(0, 0, 0, 0.04);
-  }
-
-  .date-and-title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width:264px;
-  }
-
-  .journey-card p{
-    margin: 0;
-  }
-  .journey-card-img{
-    height: 240px;
-    width: 240px;
-    object-fit:cover;
-    border-radius: 8px;
-  }
-
-  .cream-journey-card .journey-card{
-    background-color: var(--color-cream);
-    color: var(--color-dark-green);
-  }
-
-
-  /* Behind the screen*/
-
-  .bts-title{
-    margin-top: 0;
-    margin-bottom: 64px;
-  }
-
-  .more-about-me-text h3{
-    text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
-  }
-
-  /* pictures group 1 */
-
-  .more-about-me-images{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .bts-sub-images{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    max-height: 700px;
-  }
-  .bts-main-img{
-    max-height: 720px;
-    max-width: 400px;
-    object-fit: cover;
-    border-radius: 28px;
-    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
-  }
-
-  .bts-sub-images img{
-    max-width: 280px;
-    border-radius: 28px;
-    height:auto;
-    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
-  }
-
-  .bella-crazy-hair{
-    max-height: 224px;
-    object-fit: cover;
-    width: 280px;
-  }
-
-  .behind-the-screen-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 44px;
-   justify-self: center;
-  }
-
-  .more-about-me-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .more-about-me-text p{
-    margin: 0;
-    width: 580px;
-  }
-
-
-  /* dancing through life */
-
-  .dancing-through-life-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 56px;
-    justify-self: center;
-    margin-top: 144px;
-  }
-
-  .dancing-through-life-text{
-    display: flex;
-    flex-direction: column;
-    max-width: 632px;
-    align-items: center;
-  }
-
-  .dancing-through-life-text h3{
-    text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
-  }
-
-    /* dancing through life images*/
-
-    .dancing-through-life-images img{
-      border-radius: 28px;
-      box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
-    }
-
-    .dancing-through-life-images{
-      display: flex;
-      flex-direction: row;
-      gap:20px;
-    }
-
-    .dtl-column-imgs{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .dtl-row-imgs-1, .dtl-row-imgs-2{
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    .dtl-row-imgs-1 img{
-      max-height: 233px;
-      object-fit: cover;
-    }
-
-    .dtl-row-imgs-2 img{
-      max-height: 213px;
-      object-fit: cover;
-    }
-
-    .eras-tour-img{
-      max-height: 720px;
-      max-width: 304px;
-      object-fit: cover;
-    }
-
-    .fn-tour{
-      width: 342px;
-      max-height: 234px;
-      object-fit: cover;
-    }
-
-    .dtl-row-1-img-1{
-      max-width: 136px;
-    }
-
-    .dtl-row-1-img-2{
-      max-width: 186px;
-    }
-
-    .dtl-row-2-img-1{
-      width: 168px;
-    }
-
-    .dtl-row-2-img-2{
-      width: 154px;
-    }
-
-  
-    
-
-    /* Travel Section */
-    .travel-section{
-      display: flex;
-      flex-direction: row;
-      margin-top: 144px;
-      align-items: center;
-      gap: 56px;
-      justify-self: center;
-    }
-
-    .travel-text{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .travel-text h3{
-      text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
-    }
-
-    .travel-text p{
-      width: 640px;
-      margin: 0;
-    }
-    /* Travel Images */
-    .travel-images img,  .record-and-music-images img{
-      border-radius: 28px;
-      box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
-      object-fit: cover;
-    }
-
-    .travel-images{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .travel-imgs-row-1, .travel-imgs-row-2, .travel-imgs-row-3{
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
-    .travel-imgs-row-1 img{
-      height: 292px;
-    }
-
-    .travel-imgs-row-2 img{
-      height: 224px;
-    }
-
-    .travel-imgs-row-3 img{
-      height: 200px;
-    }
-
-    .timg-r1-i1{
-      width: 411px;  
-    }
-    .timg-r1-i2{
-      width: 231px;
-    }
-    .timg-r2-i1{
-      width: 168px;
-    }
-
-    .timg-r2-i2{
-      width: 287px;
-    }
-
-    .timg-r2-i3{
-      width:171px;
-    }
-
-    .timg-r3-i1{
-      width: 246px;
-    }
-
-    .timg-r3-i2{
-      width: 149px;
-    }
-
-    .timg-r3-i3{
-      width: 231px;
-    }
-
-    /* Record Section */
-
-    .record-and-music-section{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 140px 0;
-
-      justify-self: center;
-      gap:52px;
-    }
-
-    .record-and-music-text h3{
-      text-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px rgba(0, 0, 0, 0.02);
-    }
-
-    .record-and-music-text{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .record-and-music-text h3{
-      text-align: center;
-    }
-
-    .record-and-music-text p{
-      width: 624px;
-    }
-
-    /* Record Section Images */
-
-    .record-and-music-images{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .rimg-row-1 img{
-      height: 292px;
-    }
-
-    .rimg-row-2 img{
-      height: 224px;
-    }
-
-    .rimg-row-3 img{
-      height: 200px;
-    }
-
-    .rimg-row-1, .rimg-row-2, .rimg-row-3{
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    .ri-r1-i1{
-      width: 411px;
-    }
-
-    .ri-r1-i2{
-      width: 231px;
-    }
-
-    .ri-r2-i1{
-      width:168px;
-    }
-
-    .ri-r2-i2{
-      width: 287px;
-    }
-
-    .ri-r2-i3{
-      width: 171px;
-    }
-
-    .ri-r3-i1{
-      width: 246px;
-    }
-
-    .ri-r3-i2{
-      width: 149px;
-    }
-
-    .ri-r3-i3{
-      width: 231px;
-    }
-/* lets chat section */
-
-.lets-chat{
-  background-color: var(--color-light-green);
-  padding: 100px 80px;
-  box-shadow: 0px -49px 190px 0px rgba(0, 0, 0, 0.17);
-
-}
-
-.lets-chat-title{
-  font-family: 'regards.oft';
-  font-size: 1.8em;
-  font-weight: 300;
-  line-height: 1.1em;
-  color: var(--color-green);
-}
-
-.lets-chat-text-and-buttons p{
-  width: 570px;
-  margin: 0;
-}
-.lets-chat-text-and-buttons{
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-}
-.lets-chat-buttons{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-   
-
-
-/* ---------------- Responsive Styles ---------------- */
-
-@media (max-width: 1440px) {
-
-  .intro-img-1, .intro-img-2{
-    max-width: 50%;
-    position: relative;
-  }
-
-  .intro-img-1{
-    top:-20px;
-    left: 80px;
-  }
-
-  .intro-img-2{
-    top: 120px;
-    left: -10px;
-  }
-
+@media(min-width: 375px){
   .intro-images{
-    width: fit-content;
+    margin: 2.5rem 0.5rem;
+  }
+  
+  .orange-title{
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .orange-subtitle{
+    font-size: 1.6rem;
+  }
+
+  .subtitle{
+    font-size: 1.5rem;
+    margin: 1rem 0.75rem;
   }
 
   .intro-section{
-    margin: 60px 80px;
+    height: 92vh;
+    justify-content: center;
+  }
+  .yellow-subtitle{
+    font-size: 1.6rem;
   }
 
-  .about-intro-img img{
-    max-width: 268px;
-  }
-  .small-dashed-line{
-    left: 440px;
+  .recent-projects-section{
+    padding: 2rem 0 1.5rem 0;
   }
 
-  .intro-plane{
-    top: 216px;
-    right: 416px;
+  .info-card{
+   max-width: 324px;
   }
 
-  
+  .info-card-overlay{
+    max-width: 324px;
+    padding: 1.2rem;
+  }
+
+  .info-card-title{
+    font-size: 1.2rem;
+  }
+
+  .info-card-tech-stack{
+    font-size: .8rem;
+  }
+
+  .info-card-description{
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
 }
 
-@media (max-width: 1024px) {
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
-/* Homepage */
-
-  body{
-    font-size: 16px;
-  }
+@media(min-width: 430px){
 
   .intro-section{
-    margin: 0 80px;
+    height: 93vh;
+    justify-content: center;
   }
 
   .orange-title{
-    font-size: 2.4em;
+    margin: 1rem;
+  }
+
+  .subtitle{
+    margin: 1rem;
+  }
+
+  .intro-p{
+    margin: 1rem;
+  }
+
+  .intro-buttons-container{
+    margin: 1rem;
+  }
+
+  .yellow-subtitle{
+    margin-left: 1rem;
+  }
+
+  .orange-subtitle{
+    margin-left: 1rem;
+  }
+
+  .about-me-section p{
+    margin: 0.75rem 1rem;
+  }
+
+  .about-me-section .airplane-text-button{
+    margin-left: 1rem;
+  }
+
+  .contact-me-text-content{
+    margin: 0.75rem 1rem;
+  }
+
+  .cme-title{
+    margin-left: 1rem;
+  }
+
+  .socials-container{
+    margin-left: 1rem;
+  }
+}
+
+@media(min-width:768px){
+  body{
+    font-size: 20px;
+    line-height: 1.6rem;
+  }
+
+  .intro-section{
+    height: 94vh;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 36%;
+    position: absolute;
+  }
+
+  .intro-img-1{
+    top: 9em;
+    left: 5em;
+  }
+
+  .intro-img-2{
+    top: 8em;
+    left: 19em;
+  }
+
+  .intro-images{
+    margin: 0;
+  }
+
+  .intro-text{
+    margin: 24em 5em 0 2em;
+  }
+
+  .orange-title{
+    font-size: 2em;
+    line-height: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .subtitle{
+    font-size: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .intro-p{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .intro-buttons-container{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .airplane-text-button{
+    font-size: 1em;
+  }
+
+  .airplane-text-button img{
+    max-width: 32px;
+    max-height: 16px;
+  }
+
+  .recent-projects-section{
+    padding-top: 4em;
+    padding-bottom: 4rem;
+
+  }
+
+  .recent-projects-section h2{
+    margin: 0 0 1em 1em;
+  }
+
+  .info-card, .info-card-overlay{
+    max-width: 436px;
+    border-radius: 32px;
+  }
+
+  .info-card-overlay{
+    padding: 2rem;
+  }
+
+  .info-card-title{
+    font-size: 1.5rem;
+  }
+
+  .info-card-tech-stack{
+    font-size: 1rem;
+    padding: 0.2rem 0;
+  }
+
+  .info-card-description{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .yellow-subtitle{
+    font-size: 1.8em;
   }
   
+
+  .about-me-section, .contact-me-section{
+    flex-direction: row;
+    padding: 2em 1em;
+    gap: 1em;
+  }
+
+  .about-me-section{
+    padding: 4em 1em;
+  }
+
+  .orange-subtitle{
+    font-size: 1.8em;
+  }
+
+  .about-me-section-img, .contact-me-section-img{
+    max-width: 30%;
+  }
+
+  .airplane-text-button{
+    font-size: 1em;
+  }
+
+  .contact-me-section .airplane-text-button{
+    font-size: 1em;
+  }
+
+
+  .cme-title{
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+
+  .socials-container{
+    margin-left: 0;
+  }
+
+  .cme-section{
+    margin-left: 2em;
+  }
+  
+}
+
+@media(min-width:1024px){
+  p{
+    line-height: 1.8rem;
+  }
+  .intro-section{
+    flex-direction: row;
+    margin: 6em 4em;
+    height: auto;
+   justify-content: flex-start;
+  }
+
+  .intro-buttons-container{
+    flex-direction: row;
+  }
+
+  .intro-image{
+    height: fit-content;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 20%;
+  }
+
+  .intro-img-1{
+    left: 32em;
+  }
+
+  .intro-img-2{
+    left:39em;
+    top: 16.5em;
+  }
+
+  .intro-text{
+    margin: 0;
+    width: 60%;
+  }
+
+  .orange-title{
+    font-size: 2.2em;
+    line-height: 3.2rem;
+  }
+
   .subtitle{
     font-size: 1.8em;
   }
 
-   .intro-img-1, .intro-img-2{
-    max-width: 65%;
-    position: relative;
-  }
-
-  .intro-img-1{
-    top: 80px;
-    left: 10px;
-  }
-
-  .intro-img-2{
-    top: -10px;
-    left: 152px;
-  }
-
   .yellow-subtitle{
-    font-size: 2.2em;
-  }
-
-  .orange-subtitle{
-    font-size: 2.2em;
-  }
-
-  .about-me-section-img{
-    max-width: 30%;
-  }
-  .about-me-text-content p{
-    width: 96%;
-  }
-
-  .contact-me-section-img{
-    max-width: 30%;
-  }
-
-
-  /* About Me Page */
-
-  
-
-  .about-img-1{
-    width: 220px;
-    top: 16px;
-    left:60px;
-  }
-
-  .about-img-2{
-    width: 220px;
-    top: 200px;
-    left:60px;
-
-  }
-
-  .about-headshot{
-    max-width: 248px;
-  }
-
-  .airplane-to-img{
-    gap: 172px;
-  }
-
-  .small-dashed-line{
-    max-width: 30%;
-    top: 236px;
-    left: 312px;
-  }
-
-  .intro-plane{
-    max-width: 6%;
-    right: 344px;
-    top: 220px;
-  }
-
-  .about-intro-p{
-    max-width: 476px;
-    padding-right: 164px;
-  }
-
-  .skills-title{
     font-size: 2em;
   }
 
-  .my-skills h3{
-    font-size: 1.4em;
+  .recent-projects-section h2{
+    margin-left: 2em;
   }
 
-  .my-skills h4{
+  .project-info-cards{
+    padding-left: 2em;
+  }
+
+
+   .about-me-section, .contact-me-section{
+    padding: 5em 4em;
+  }
+
+  .cme-section{
+    padding-left: 4em;
+  }
+
+  .cme-title{
+    font-size: 1.6em;
+    margin-bottom: 1em;
+  }
+
+  .social-link-icon{
+   max-width: 1.6em;
+   margin-right: 0.25em;
+
+  }
+
+  .socials-container{
+    gap: 1em;
+  }
+
+}
+
+
+@media(min-width: 1440px){
+
+  .orange-title{
+    font-size: 3.2em;
+    line-height: 4.6rem;
+  }
+
+  .intro-section h1, .intro-section h2{
+    margin-bottom: .5em;
+  }
+
+  .subtitle{
+    font-size: 2.2em;
+  }
+
+
+
+  .intro-section{
+    margin: 9.2em 6em;
+    width: 85%;
+  }
+
+  .intro-p{
+    width: 84.5%;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 18%;
+  }
+
+  .intro-img-1{
+    left: 46em;
+  }
+  .intro-img-2{
+    left: 55em;
+    top:16.5em;
+  }
+
+  .info-card{
+    max-width: 532px;
+  }
+
+  .info-card-overlay{
+    max-width: 532px;
+    padding: 2em;
+  }
+
+  .info-card-tech-stack{
     font-size: 1em;
+    margin-top: 0.5rem;
   }
 
-  .keyboard-img{
-    max-width: 200px;
+  .info-card-description{
+    font-size: 1em;
+    line-height: 1.6rem;
   }
 
-  .bts-main-img{
-    width: 280px;
-    height: 490px;
+  .info-card-title{
+    font-size: 1.5em;
   }
 
-  .bts-sub-images img{
-    height: 146.66px;
-  }
-  .bella-crazy-hair{
-   width: 194.66px;
+  .yellow-subtitle{
+    font-size: 3em;
   }
 
-  .more-about-me-text p{
-    max-width: 380px;
+  .recent-projects-section{
+    padding-top: 5em;
+    padding-bottom: 5em;
   }
 
-  .eras-tour-img{
-    width: 212.8px;
-    height: 516px;
+
+  .project-info-cards{
+    padding-left: 5em;
   }
 
-  .dtl-row-imgs-1 img{
-    height: 163.1px;
+  .orange-subtitle{
+    font-size: 3em;
+    margin-bottom: 0.5em;
   }
 
-  .fn-tour{
-    width: 239.4px;
-    height: 163.8px;
+  .about-me-section, .contact-me-section{
+   padding: 5em 6em;
+  
   }
 
-  .dtl-row-1-img-1{
-    width: 95.2px;
+  .about-me-section p, .contact-me-section p{
+    width: 85%;
+    margin-bottom: 1em;
   }
 
-  .dtl-row-1-img-2{
-    width: 122.325px;
+  .contact-me-section h2{
+    margin-bottom: 0.5em;
   }
 
-  .dtl-row-imgs-2 img{
-    height: 149.1px;
+  .cme-title{
+    font-size: 2em;
   }
 
-  .dtl-row-2-img-1{
-    width: 117.6px;
+  .cme-section{
+    padding: 3em 5em;
   }
 
-  .dtl-row-2-img-2{
-    width: 107.8px;
+}
+
+@media(min-width: 1512px){
+
+  .intro-section{
+    margin: 8em 6em;
   }
 
-  .dancing-through-life-text p{
-    max-width: 380px;
-  }
-
-  .travel-imgs-row-1 img{
-    height: 204.4px;
-  }
-
-  .travel-imgs-row-2 img{
-    height: 156.8px;
-  }
-
-  .travel-imgs-row-3 img{
-    height: 140px;
-  }
-
-  .timg-r1-i1{
-    width: 287.7px;
-  }
-
-  .timg-r1-i2{
-    width: 161.7px;
-  }
-
-  .timg-r2-i1{
-    width: 117.6px;
-  }
-
-  .timg-r2-i2{
-    width:200.9px;
-  }
-
-  .timg-r2-i3{
-    width: 119.7px;
-  }
-
-  .timg-r3-i1{
-    width: 172.2px;
-  }
-
-  .timg-r3-i2{
-    width:104.3px;
-  }
-
-  .timg-r3-i3{
-    width: 161.7px;
-  }
-
-  .travel-text p{
-    max-width: 360px;
-  }
-
-  .rimg-row-1 img{
-    height: 204.4px;
-  }
-
-  .rimg-row-2 img{
-    height: 156.8px;
-  }
-
-  .rimg-row-3 img{
-    height: 140px;
-  }
-  .ri-r1-i1{
-    width: 287.7px;
-  }
-
-  .ri-r1-i2{
-    width: 161.7px;
-  }
-
-  .ri-r2-i1{
-    width: 117.6px;
-  }
-
-  .ri-r2-i2{
-    width: 200.9px;
-  }
-
-  .ri-r2-i3{
-    width: 119.7px;
-  }
-
-  .ri-r3-i1{
-    width: 172.2px;
-  }
-
-  .ri-r3-i2{
-    width: 104.3px;
-  }
-
-  .ri-r3-i3{
-    width: 161.7px;
-  }
-
-  .record-and-music-text p{
-    max-width: 400px;
+  .intro-img-2{
+    left: 55.5em;
+    top: 18em;
   }
 }
 
-
-
-@media (max-width: 768px) {
-
-  
-  
+@media(min-width: 2560px){
+  main{
+   padding-left: 30em;
+   padding-right: 30em;
+  }
 }
-
-@media (max-width: 480px) {
-  
-}
-
-
-

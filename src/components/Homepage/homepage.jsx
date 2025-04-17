@@ -52,7 +52,7 @@ const Homepage = (props) => {
                     <div className='about-me-text-content'>
                         <h2 className='orange-subtitle'>It's Me! Hi!</h2>
                         <p>
-                        I am first generation student at the University of Washington. I am currently a senior majoring 
+                        I am a first generation student at the University of Washington. I am currently a senior majoring 
                         in Informatics with a focus area in Software Development and Human-Computer Interaction. 
                         I chose this major because of it’s focus on the intersectionality of technology and human values. 
                         I have experience with computer programming, web development, and user experience design.
@@ -77,15 +77,15 @@ const Homepage = (props) => {
                     <h3 className='cme-title'>Contact Me Elsewhere</h3>
                     <div className='socials-container'>
                         <div className='social-link'>
-                            <img src={images.green_github_logo} alt='the GitHub logo in green' />
+                            <img src={images.green_github_logo} alt='the GitHub logo in green' className='social-link-icon'/>
                             <AirplaneTextButton text='GitHub' to="https://github.com/CarlosC27" image={images.green_pa} />
                         </div>
                         <div className='social-link'>
-                            <img src={images.green_linkedin_logo} alt='the LinkedIn logo in green' />
+                            <img src={images.green_linkedin_logo} alt='the LinkedIn logo in green' className='social-link-icon'/>
                             <AirplaneTextButton text='LinkedIn' to="https://www.linkedin.com/in/cacs27/" image={images.green_pa} />
                         </div>
                         <div className='social-link'>
-                            <img src={images.green_instagram_logo} alt='the Instagram logo in green' />
+                            <img src={images.green_instagram_logo} alt='the Instagram logo in green' className='social-link-icon' />
                             <AirplaneTextButton text='Instagram' to="https://www.instagram.com/carlosjtj13/" image={images.green_pa} />
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 
 
-const elotes_polaroid = new URL('../assets/images/I-Heart-Elotes.PNG', import.meta.url).href;
+const elotes_polaroid = new URL('../assets/images/I-Heart-Elotes.JPG', import.meta.url).href;
 const mascota_polaroid = new URL('../assets/images/In-Mascota.JPG', import.meta.url).href;
 const picnic_polaroid = new URL('../assets/images/Picnic.JPG', import.meta.url).href;
 const scrabble_polaroid = new URL('../assets/images/Playing-Scrabble.JPG', import.meta.url).href;
@@ -9,28 +9,28 @@ const countryBoards_polaroid = new URL('../assets/images/country-surf-boards.JPG
 
 const dumbo = new URL('../assets/images/joe-and-i-dumbo.JPG', import.meta.url).href;
 const bella_crazy_hair = new URL('../assets/images/bella-crazy-hair.JPG', import.meta.url).href;
-const nyc_skyline = new URL('../assets/images/nyc-skyline.JPEG', import.meta.url).href;
-const crag_karina_i = new URL('../assets/images/craig-karina-and-i.JPEG', import.meta.url).href;
-const eras_tour = new URL('../assets/images/eras-tour.JPEG', import.meta.url).href;
+const nyc_skyline = new URL('../assets/images/nyc-skyline.JPG', import.meta.url).href;
+const crag_karina_i = new URL('../assets/images/craig-karina-and-i.JPG', import.meta.url).href;
+const eras_tour = new URL('../assets/images/eras-tour.JPG', import.meta.url).href;
 const fn_tour = new URL('../assets/images/fn-tour.JPG', import.meta.url).href;
 const maisie_peters = new URL('../assets/images/maisie-peters.JPG', import.meta.url).href;
-const sabrina_carpenter = new URL('../assets/images/sabrina-carpenter.JPEG', import.meta.url).href;
-const wicked = new URL('../assets/images/wicked.JPEG', import.meta.url).href;
+const sabrina_carpenter = new URL('../assets/images/sabrina-carpenter.JPG', import.meta.url).href;
+const wicked = new URL('../assets/images/wicked.JPG', import.meta.url).href;
 const lucky_and_irene = new URL('../assets/images/lucky-and-irene.JPG', import.meta.url).href;
-const folklore = new URL('../assets/images/folklore.JPEG', import.meta.url).href;
+const folklore = new URL('../assets/images/folklore.JPG', import.meta.url).href;
 const crj = new URL('../assets/images/crj.JPG', import.meta.url).href;
-const ehs = new URL('../assets/images/ehs.JPEG', import.meta.url).href;
-const joe_i_vallarta = new URL('../assets/images/joe-and-i-vallarta.JPEG', import.meta.url).href;
-const lover = new URL('../assets/images/lover.JPEG', import.meta.url).href;
+const ehs = new URL('../assets/images/ehs.JPG', import.meta.url).href;
+const joe_i_vallarta = new URL('../assets/images/joe-and-i-vallarta.JPG', import.meta.url).href;
+const lover = new URL('../assets/images/lover.JPG', import.meta.url).href;
 const mom_i_joe = new URL('../assets/images/mon-joe-i.JPG', import.meta.url).href;
-const nyc_sky = new URL('../assets/images/nyc-sky.JPEG', import.meta.url).href;
-const pegasus = new URL('../assets/images/pegasus-coffee.JPEG', import.meta.url).href;
-const rainy_day_records = new URL('../assets/images/rainy-day-records.JPEG', import.meta.url).href;
-const red_fearless = new URL('../assets/images/red-fearless-tv.JPEG', import.meta.url).href;
+const nyc_sky = new URL('../assets/images/nyc-sky.JPG', import.meta.url).href;
+const pegasus = new URL('../assets/images/pegasus-coffee.JPG', import.meta.url).href;
+const rainy_day_records = new URL('../assets/images/rainy-day-records.JPG', import.meta.url).href;
+const red_fearless = new URL('../assets/images/red-fearless-tv.JPG', import.meta.url).href;
 const red_tv = new URL('../assets/images/red-tv.JPG', import.meta.url).href;
-const seattle = new URL('../assets/images/seattle.JPEG', import.meta.url).href;
+const seattle = new URL('../assets/images/seattle.JPG', import.meta.url).href;
 const ysuft = new URL('../assets/images/signed-ysuft.JPG', import.meta.url).href;
-const vern = new URL('../assets/images/the-vern.JPEG', import.meta.url).href;
+const vern = new URL('../assets/images/the-vern.JPG', import.meta.url).href;
 const tulum = new URL('../assets/images/tulum.JPG', import.meta.url).href;
 const tlt_signed = new URL('../assets/images/signed-tlt.JPG', import.meta.url).href;
 
@@ -56,12 +56,12 @@ const green_linkedin_logo = new URL('../assets/personal-brand/LinkedIn-green.PNG
 const green_instagram_logo = new URL('../assets/personal-brand/green-instagram.PNG', import.meta.url).href;
 
 const mexico_and_friends = new URL('../assets/images/mexico-friends.JPG', import.meta.url).href;
-const unity = new URL('../assets/images/unity.JPG.WEBP', import.meta.url).href;
+const unity = new URL('../assets/images/unity.JPG', import.meta.url).href;
 const highschool = new URL('../assets/images/highschool.JPG', import.meta.url).href;
-const dubs_and_I = new URL('../assets/images/dubs-and-i.JPEG', import.meta.url).href;
-const uw_tacoma = new URL('../assets/images/uw-tacoma-steps.JPEG', import.meta.url).href;
-const rotator = new URL('../assets/images/rotator-office.JPEG', import.meta.url).href;
-const capstone_team = new URL('../assets/images/capstone-team.JPEG', import.meta.url).href;
+const dubs_and_I = new URL('../assets/images/dubs-and-i.JPG', import.meta.url).href;
+const uw_tacoma = new URL('../assets/images/uw-tacoma-steps.JPG', import.meta.url).href;
+const rotator = new URL('../assets/images/rotator-office.JPG', import.meta.url).href;
+const capstone_team = new URL('../assets/images/capstone-team.JPG', import.meta.url).href;
 const cherry_blossoms_uw = new URL('../assets/images/uw-cherry-blossoms.JPG', import.meta.url).href;
 
 
