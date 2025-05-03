@@ -71,7 +71,7 @@ body{
 
 .subtitle{
   font-size: 1.2em;
-  font-weight: lighter;
+  font-weight: 250;
   color: var(--color-green);
   margin-bottom: .5rem;
   margin-top: 0;
@@ -238,6 +238,11 @@ p{
 /* Homepage */
 
 
+.intro-images{
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+ }
 
 .intro-img-1, .intro-img-2{
   max-width: 40%;
@@ -253,16 +258,11 @@ p{
   transform: rotate(20deg);
 }
 
-.intro-images{
- display: flex;
- justify-content: center;
- margin: 2rem 0;
-}
-
 .intro-section{
   display: flex;
   flex-direction: column-reverse;
   margin: 2rem .75rem;
+  gap: 1rem;
 }
 
 .intro-buttons-container{
@@ -305,7 +305,7 @@ p{
 }
 
 .about-me-section-img{
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .about-me-section{
@@ -367,8 +367,6 @@ p{
 
 /* About Me Page */
 
-
-
 .about-intro-section{
   margin: 3rem 0.75rem;
 }
@@ -381,24 +379,29 @@ p{
 
 .about-img-1{
   transform: rotate(-20deg);
+  z-index: 1;
 }
 
 .about-img-2{
   transform: rotate(20deg);
 }
 
+.about-intro-p{
+  color: var(--color-cream);
+  background-color: var(--color-green);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
 .about-intro-img{
  display: flex;
  justify-content: center;
- margin: 6rem 0 2rem;
+ margin-top: 3.5rem;
 }
 
-.small-dashed-line, .intro-plane, .about-headshot {
-  display: none;
-}
 
 .about-intro-section h1{
-  margin: 4rem 0 1rem 0;
+  margin: 3.5rem 0 1rem 0;
 }
 
 /* Journey Card */
@@ -406,13 +409,13 @@ p{
 .journey-card{
   display: flex;
   flex-direction: column;
-  width: 164px;
+  width: 188px;
   background-color: var(--color-green);
   color: var(--color-cream);
   justify-content: center;
   align-items: center;
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 12px;
   gap: 8px;
   font-family:"Swanky and Moo Moo", cursive;
   font-size: 0.9em;
@@ -425,7 +428,7 @@ p{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width:264px;
+  width:184px;
 }
 
 .journey-card p{
@@ -545,10 +548,258 @@ p{
 }
 
 
+.skills-section{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0.75rem 0;
+  background-color: var(--color-green);
+  color: var(--color-light-green);
+}
+
+.skills-title{
+  color: var(--color-yellow);
+  font-family: 'regards.oft';
+  font-size: 1.4rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.skills-section h3{
+  font-size: 1.2rem;
+}
+
+.skills-section h4{
+  font-size: 1.05rem;
+}
+
+.skills-section img, .my-journey-section img{
+  max-width: 200px;
+  height: auto;
+} 
+
+
+
+.behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0.75rem;
+}
+.skills-section img{
+  margin-top: 1rem;
+  align-self: center;
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+
+}
+
+.more-about-me-images{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  justify-items: center;
+}
+
+.dancing-through-life-images{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, minmax(80px, auto));
+  gap: 16px;
+  max-width: 800px;
+  width: 100%;
+  justify-items: center;
+}
+
+.travel-images{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  justify-items:center;
+}
+
+.record-and-music-images{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  justify-items:center;
+}
+
+.more-about-me-images img, .dancing-through-life-images img, .travel-images img, .record-and-music-images img{
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  /* max-width: 280px; */
+  aspect-ratio: auto;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-journey-section h2{
+  justify-self: center;
+}
+.mam-left{
+  grid-column: 1;
+  grid-row: 1/ span 3;
+  height: 100%;
+}
+
+.mam-rt, .mam-rm, .mam-rb{
+ width: 100%;
+}
+
+.mam-rt{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.mam-rm{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.mam-rb{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.my-journey-section h3{
+ text-align: center;
+}
+
+.dthl-img-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.dthl-img-2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.dthl-img-3 {
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 2;
+}
+
+.dthl-img-4 {
+  grid-column: 1 / span 2;
+  grid-row: 5 / span 2;
+}
+
+.dthl-img-5 {
+  grid-column: 3 / span 2;
+  grid-row: 5 / span 2;
+}
+
+.dthl-img-6 {
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 6;
+}
+
+.ti-img-1{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.ti-img-2{
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.ti-img-3{
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ti-img-4{
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ti-img-5{
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ti-img-6{
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.ti-img-7{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.ti-img-8{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.ram-img-1{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.ram-img-2{
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 1;
+
+}
+
+.ram-img-3{
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ram-img-4{
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.ram-img-5{
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ram-img-6{
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.ram-img-7{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.ram-img-8{
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 1;
+}
+
+/* Hover effect for all images */
+.more-about-me-images img:hover, .dancing-through-life-images img:hover, .travel-images img:hover, .record-and-music-images img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
 
 @media(min-width: 375px){
   .intro-images{
-    margin: 2.5rem 0.5rem;
+    margin: 2.5rem 0rem;
   }
   
   .orange-title{
@@ -606,7 +857,13 @@ p{
     font-size: 0.8rem;
     line-height: 0.9rem;
   }
+
+  .more-about-me-images img, .dancing-through-life-images img, .travel-images img, .record-and-music-images img{
+    max-width: 412px;
+  }
+
 }
+
 
 @media(min-width: 430px){
 
@@ -641,6 +898,13 @@ p{
   .cme-title{
     margin-bottom: 1rem;
   }
+
+}
+
+@media(min-width:548px ){
+  .dthl-img-6{
+    min-width: 320px;
+  }
 }
 
 @media(min-width:768px){
@@ -649,27 +913,15 @@ p{
     line-height: 1.6rem;
   }
 
+
   .intro-img-1, .intro-img-2{
     max-width: 36%;
-    position: absolute;
-  }
-
-  .intro-img-1{
-    top: 9em;
-    left: 5em;
-  }
-
-  .intro-img-2{
-    top: 8em;
-    left: 19em;
-  }
-
-  .intro-images{
-    margin-bottom: 21em;
+    
   }
 
   .intro-section{
     margin: 3em 2em;
+    gap: 2em;
   }
 
   .orange-title{
@@ -772,44 +1024,48 @@ p{
     padding: 0;
     margin: 2em;
   }
-  
+
+  .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section{
+    align-items: center;
+    margin: 1em 2em;
+    gap: 1em;
+  }
+
+
+
 }
 
 @media(min-width:1024px){
   p{
     line-height: 1.8rem;
   }
+
   .intro-section{
-    flex-direction: row;
-    margin: 6em 4em;
-    height: auto;
+   flex-direction: row;
+   margin: 6% 4em;
    justify-content: flex-start;
+   align-items: center;
+   gap: 2em;
+  
+  }
+
+  .intro-text{
+    max-width:60%;
+    justify-content: center;
   }
 
   .intro-buttons-container{
     flex-direction: row;
   }
 
-  .intro-image{
-    height: fit-content;
+  .intro-images{
+    flex-direction: column;
+    height: max-content;
+    align-items: flex-end;
   }
 
   .intro-img-1, .intro-img-2{
-    max-width: 20%;
-  }
-
-  .intro-img-1{
-    left: 32em;
-  }
-
-  .intro-img-2{
-    left:39em;
-    top: 16.5em;
-  }
-
-  .intro-text{
-    margin: 0;
-    width: 60%;
+    max-width: 70%;
   }
 
   .orange-title{
@@ -833,8 +1089,12 @@ p{
     padding-left: 2em;
   }
 
+  .about-me-section{
+    margin: 5em 4em;
+  }
 
-   .about-me-section, .contact-me-section{
+
+   .contact-me-section{
     padding: 5em 4em;
   }
 
@@ -857,7 +1117,30 @@ p{
     gap: 1em;
   }
 
+  .behind-the-screen-section{
+    flex-direction: row;
+    margin: 1em 4em;
+  }
+
+  .dancing-through-life-section, .travel-section, .record-and-music-section{
+    flex-direction: row;
+    margin: 5em 4em;
+  }
+
+  .dancing-through-life-images, .travel-images, .record-and-music-images{
+    width: 70%;
+  }
+
+  .more-about-me-text, .dancing-through-life-text, .travel-text, .record-and-music-text{
+    width: 85%;
+  }
+
+  .dthl-img-6{
+    min-width: 220px;
+  }
+
 }
+
 
 
 @media(min-width: 1440px){
@@ -875,24 +1158,20 @@ p{
     font-size: 2.2em;
   }
   .intro-section{
-    margin:12.5em 6em;
-    width: 85%;
+    margin: 9.8% 6em;
+    gap: 0;
+  }
+
+  .intro-text{
+    max-width: 62%;
   }
 
   .intro-p{
-    width: 84.5%;
+    width: 80%;
   }
 
   .intro-img-1, .intro-img-2{
-    max-width: 18%;
-  }
-
-  .intro-img-1{
-    left: 46em;
-  }
-  .intro-img-2{
-    left: 55em;
-    top:16.5em;
+    max-width: 75%;
   }
 
   .info-card{
@@ -975,32 +1254,35 @@ p{
     gap: 1.5em;
   }
 
+  .behind-the-screen-section{
+    margin: 3em 6em;
+    gap: 2em;
+  }
+
+  .dancing-through-life-section, .travel-section, .record-and-music-section{
+    margin: 5em 6em;
+    gap: 2em;
+  }
+
 }
 
-@media(min-width: 1512px){
-
+@media(min-width:1512px){
   .intro-section{
-    margin: 8em 6em;
-  }
-
-  .intro-img-2{
-    left: 55.5em;
-    top: 18em;
+    margin: 4% 6em;
+    gap: 2em;
   }
 }
+
+
 
 @media(min-width: 1728px){
   .intro-section{
-    margin: 15em 8em;
+    margin: 10% 6em;
+    gap: 0;
   }
 
-  .intro-img-1{
-    left: 52em;
-    top:12em;
-  }
-  .intro-img-2{
-    left: 63em;
-    top:22em;
+  .intro-img-1, .intro-img-2{
+    max-width: 90%;
   }
 
   .recent-projects-section h2{
@@ -1023,21 +1305,52 @@ p{
     margin-left: 8em;
   }
 
+  .behind-the-screen-section{
+    margin: 3em 8em;
+  }
+
+  .dancing-through-life-section, .travel-section, .record-and-music-section{
+    margin: 6em 8em;
+  }
+
 }
 
 @media(min-width: 2560px){
   .intro-section{
-    padding-left: 20em;
+    margin: 6% 32em;
   }
 
-  .intro-img-1{
-    left: 52em;
-    top:12em;
+  .intro-img-1, .intro-img-2{
+    max-width: 100%;
   }
-  .intro-img-2{
-    left: 63em;
-    top:22em;
+
+  .intro-text p{
+    max-width: 70%;
   }
+
+  .about-me-section{
+    margin-left: 32em;
+    margin-right: 32em;
+  }
+
+  .about-me-section p{
+    max-width: 70%;
+  }
+
+  .contact-me-section{
+    padding-left: 32em;
+    padding-right: 32em;
+  }
+
+  .contact-me-section p{
+    max-width: 75%;
+  }
+
+  .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section{
+    margin-left: 32em;
+    margin-right: 32em;
+  }
+
 
 
 }

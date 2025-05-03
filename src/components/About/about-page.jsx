@@ -9,8 +9,8 @@ import smallLine from '../../assets/images/small-dashed-line.svg';
 
 
 const About = (props) => {
-    const icons = [logos.after_effects_logo, logos.swift_logo, logos.android_studio_logo, logos.sql_logo, logos.css_logo, logos.react_logo, logos.figma_logo, logos.python_logo, logos.firebase_logo, logos.postgre_logo,
-        logos.git_logo, logos.photoshop_logo, logos.html_logo, logos.node_js_logo, logos.illustator_logo, logos.mongo_db_logo, logos.indesign_logo, logos.miro_logo, logos.java_logo, logos.kotlin_logo, logos.javascript_logo]
+    // const icons = [logos.after_effects_logo, logos.swift_logo, logos.android_studio_logo, logos.sql_logo, logos.css_logo, logos.react_logo, logos.figma_logo, logos.python_logo, logos.firebase_logo, logos.postgre_logo,
+    //     logos.git_logo, logos.photoshop_logo, logos.html_logo, logos.node_js_logo, logos.illustator_logo, logos.mongo_db_logo, logos.indesign_logo, logos.miro_logo, logos.java_logo, logos.kotlin_logo, logos.javascript_logo]
     return(
         <div>
             <main className='about-page-content'>
@@ -20,31 +20,17 @@ const About = (props) => {
                         <img src={images.picnic_polaroid} alt='polaroid of Carlos at a picnic' className="about-intro-polaroid about-img-2"/>
                     </div>
                     <div className='title-profile-img-text'>
-                        <div className='airplane-to-img'>
-                            <img src={smallLine} alt='orange dashed line' className='small-dashed-line'/>
-                            <img src={images.orange_pa} alt='orange paper airplane' className='intro-plane'/>
-                            <h1 className='orange-title'>It's Me! Hi!</h1>
-                            <img className='about-headshot' src={images.profile_picture} alt='A headshot of Carlos'/>
-                        </div>
-                        {/* <div className='intro-about-text'> */}
-                            <p className='about-intro-p'>
-                            I am <strong>Carlos Alexis Carrillo-Sandoval</strong>, a <strong>designer</strong> and <strong>developer</strong> based in <strong>Seattle</strong>. I’m in my final quarter at the <em>University of Washington</em>,
-                            where I will be earning my Bachelor of Science in Informatics. Throughout my academic journey, I’ve honed my skills in <strong>web</strong> and <strong>mobile development</strong>
-                            while also exploring <strong>product</strong> and <strong>user experience design</strong>. I thrive on tackling complex problems with a thoughtful approach, transforming ideas from 
+                        <h1 className='orange-title'>It's Me! Hi!</h1>
+                        <p className='about-intro-p'>
+                            I am <strong>Carlos Alexis Carrillo-Sandoval</strong>, a <strong>designer</strong> and <strong>developer</strong> based in <strong>Seattle</strong>. I’m in my final quarter at the <strong>University of Washington</strong>,
+                            where I will be earning my Bachelor of Science in Informatics. Throughout my academic journey, I’ve honed my skills in <strong>web</strong> and <strong>mobile 
+                            development</strong>  while also exploring <strong>product</strong> and <strong>user experience design</strong>. I thrive on tackling complex problems with a thoughtful approach, transforming ideas from 
                             concept to reality while balancing functionality and user experience.
                             </p>
-                        {/* </div> */}
                     </div>
                 </section>
                 <section className='skills-section'>
                     <h2 className='skills-title'>My Coding & Crafting Kit  💻</h2>
-                    {/* <div className='icon-strip'>
-                        <div className='icons-wrapper-left'>
-                        {[...icons, ...icons].map((icon, index) => (
-                            <img src={icon} alt={`icon-${index}`} className='img-icon' key={index}/>
-                        ))}                            
-                        </div>
-                    </div> */}
                     <div className='my-skills'>
                         <div className='technical-skills'>
                             <h3>💻 Technical Skills:</h3>
@@ -102,19 +88,12 @@ const About = (props) => {
                                 <li>User Research</li>
                             </ul>
                         </div>
-                        <img src={images.keyboard_temp} alt='hands on keyboard' className='keyboard-img'/> 
                     </div>
-                    {/* <div className='icon-strip'>
-                        <div className='icons-wrapper-right'>
-                        {[...icons, ...icons].map((icon, index) => (
-                            <img src={icon} alt={`icon-${index}`} className='img-icon' key={index}/>
-                        ))}                            
-                        </div>
-                    </div> */}
+                    <img src={images.keyboard_temp} alt='hands on keyboard' className='keyboard-img'/> 
                 </section>
                 <section className='my-journey-section'>
-                    <h2 className='small-orange-title'>My Journey</h2>
-                        <div className="timeline-scroll-container">
+                    <h2 className='orange-subtitle'>My Journey</h2>
+                        {/* <div className="timeline-scroll-container">
                         <div className='x-and-title'>
                                         <p>The Begginng</p>
                                         <p className='x'>x</p>
@@ -194,16 +173,23 @@ const About = (props) => {
                                         <p>To be continued...</p>
                                     </div>
                                 </div>
-                            </div>
-                            <h2 className="small-orange-title bts-title">Behind the Screen</h2>
+                            </div> */}
+                            <h2 className="orange-subtitle bts-title">Behind the Screen</h2>
                         <div className='behind-the-screen-section'>
                             <div className='more-about-me-images'>
-                                <img src={images.dumbo} alt='Carlos and his fiance Joseph with the Brooklyn Bridge behind them' className='bts-main-img'/>
-                                <div className='bts-sub-images'>
+                                <div className='mam-left'>
+                                    <img src={images.dumbo} alt='Carlos and his fiance Joseph with the Brooklyn Bridge behind them' className='bts-main-img'/>
+                                </div>{/* <div className='bts-sub-images'> */}
+                                <div className='mam-rt'>
                                     <img src={images.bella_crazy_hair} alt="Carlos's dog, Bella" className='bella-crazy-hair'/>
+                                </div>
+                                <div className='mam-rm'>
                                     <img src={images.nyc_skyline} alt='the New York City skyline from the Brooklyn Bridge'/>
+                                </div>
+                                 <div className='mam-rb'>
                                     <img src={images.crag_karina_i} alt='Carlos and his firends, Craig and Karina, on hiking at Mt Raineir'/>
                                 </div>
+                                {/* </div> */}
                             </div>
                             <div className='more-about-me-text'>
                                 <h3>🌑 Stories, Hobbies, and a Few Record Spins 🪐</h3>
@@ -224,34 +210,50 @@ const About = (props) => {
                                  and the Emails I Can’t Send Tour. I’m also always down for a musical or a drag show—anything that brings good vibes and great performances! 🎶</p>
                         </div>
                         <div className='dancing-through-life-images'>
-                            <div className='dtl-column-imgs'>
-                                <div className='dtl-row-imgs-1'>
-                                    <img src={images.sabrina_carpenter} alt="Sabrina Carpenter at the emails I can't send tour in Seattle" className='dtl-row-1-img-1'/>
-                                    <img src={images.wicked} alt='the backdrop of the Wicked Musical' className='dtl-row-1-img-2'/>
-                                </div>
-                                <img src={images.fn_tour} alt='Carlos at the fututre nostalgia tour' className='fn-tour'/>
-                                <div className='dtl-row-imgs-2'>
-                                    <img src={images.lucky_and_irene} alt='the drag queen Lucky Starzzz and Irene the Alien Dubois' className='dtl-row-2-img-1'/>
-                                    <img src={images.maisie_peters} alt='Maisie Peters doing an acoustic concert at Easy Street Records' className='dtl-row-2-img-2'/>
-                                </div>
+                            <div className='dthl-img-1'>
+                                <img src={images.sabrina_carpenter} alt="Sabrina Carpenter at the emails I can't send tour in Seattle" className='dtl-row-1-img-1'/>
                             </div>
-                            <img src={images.eras_tour} alt='Taylor Swift at the Eras Tour in Seattle' className='eras-tour-img'/>
+                            <div className='dthl-img-2'>
+                                <img src={images.wicked} alt='the backdrop of the Wicked Musical' className='dtl-row-1-img-2'/>
+                            </div>
+                            <div className='dthl-img-3'>
+                                <img src={images.fn_tour} alt='Carlos at the fututre nostalgia tour' className='fn-tour'/>
+                            </div>
+                            <div className='dthl-img-4'>
+                                <img src={images.lucky_and_irene} alt='the drag queen Lucky Starzzz and Irene the Alien Dubois' className='dtl-row-2-img-1'/>
+                            </div>
+                            <div className='dthl-img-5'>
+                                <img src={images.maisie_peters} alt='Maisie Peters doing an acoustic concert at Easy Street Records' className='dtl-row-2-img-2'/>
+                            </div>
+                            <div className='dthl-img-6'>
+                                <img src={images.eras_tour} alt='Taylor Swift at the Eras Tour in Seattle' className='eras-tour-img'/>
+                            </div>
                         </div>
                     </div>
                     <div className='travel-section'>
                         <div className='travel-images'>
-                            <div className='travel-imgs-row-1'>
+                           <div className="ti-img-1">
                                 <img src={images.seattle} alt='the Seattle skyline' className='timg-r1-i1'/>
+                           </div>
+                            <div className='ti-img-2'>
                                 <img src={images.mom_i_joe} alt='Carlos, his mother, and fiance Joseph' className='timg-r1-i2'/>
                             </div>
-                            <div className='travel-imgs-row-2'>
+                             <div className='ti-img-3'>
                                 <img src={images.ehs} alt='Carlos in front East High in Salt Lake City Utah' className='timg-r2-i1'/>
+                            </div>
+                            <div className='ti-img-4'>
                                 <img src={images.vern} alt='the Vern in Portland Oregon' className='timg-r2-i2'/>
+                             </div>
+                            <div className='ti-img-5'>
                                 <img src={images.pegasus} alt='the Pegasus coffee ship in Bainbridge Island' className='timg-r2-i3'/>
                             </div>
-                            <div className='travel-imgs-row-3'>
-                                <img src={images.joe_i_vallarta} alt='Carlos and his fiance Joseph in fron of the beach in Puerto Vallarta' className='timg-r3-i1'/>
+                            <div className='ti-img-6'>
+                                 <img src={images.joe_i_vallarta} alt='Carlos and his fiance Joseph in fron of the beach in Puerto Vallarta' className='timg-r3-i1'/>
+                            </div>
+                            <div className='ti-img-7'>
                                 <img src={images.nyc_sky} alt='Skyscrappers in New York City' className='timg-r3-i2'/>
+                            </div>
+                            <div className='ti-img-8'>
                                 <img src={images.tulum} alt='Carlos and his friends Mikayla, Danielle, Jasmine, and Sage in a cenote in Tulum' className='timg-r3-i3'/>
                             </div>
                         </div>
@@ -273,18 +275,28 @@ const About = (props) => {
                                   just love the feeling of owning a piece of music history. Catch me flipping through bins at the local record shop—I’ll probably be obsessing over the latest find or debating whether I really need that splatter variant (spoiler: I do). 🎶</p>
                         </div>
                         <div className='record-and-music-images'>
-                            <div className='rimg-row-1'>
+                            <div className='ram-img-1'>
                                 <img src={images.folklore} alt='a collection of cds, vinyl, and merch pertaining to the Taylor Swift album, folklore' className='ri-r1-i1'/>
+                            </div>
+                            <div className='ram-img-2'>
                                 <img src={images.rainy_day_records} alt='Carlos at Rainy Day Records holding the Red vinyl' className='ri-r1-i2'/>
                             </div>
-                            <div className='rimg-row-2'>
+                            <div className='ram-img-3'>
                                 <img src={images.ysuft} alt="Carlos' signed copy of the You Signed Up for This vinyl" className='ri-r2-i1'/>
+                            </div>
+                            <div className='ram-img-4'>
                                 <img src={images.lover} alt='a collection of cds, vinyl, and merch pertaining to the Taylor Swift album, Lover' className='ri-r2-i2'/>
+                            </div>
+                            <div className='ram-img-5'>
                                 <img src={images.red_fearless} alt="the Red (Taylor's Version) and Fearless (Taylor's Version) vinyls" className='ri-r2-i3'/>
                             </div>
-                            <div className='rimg-row-3'>
+                            <div className='ram-img-6'>
                                 <img src={images.red_tv} alt="a collection of cds, vinyl, and merch pertaining to the Taylor Swift album, Red (Taylor's Version)" className='ri-r3-i1'/>
+                            </div>
+                            <div className='ram-img-7'>
                                 <img src={images.tlt_signed} alt="Carlos' signed copy of the Loneliest Time" className='ri-r3-i2'/>
+                            </div>
+                            <div className='ram-img-8'>
                                 <img src={images.crj} alt='Carlos meeting Carly Rae Jepsen at Easy Street Records' className='ri-r3-i3'/>
                             </div>
                         </div>

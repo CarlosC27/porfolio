@@ -12,7 +12,7 @@ const Homepage = (props) => {
             <main className='home-page-content'>
                 <section className='intro-section'>
                     <div className='intro-text'>
-                        <h1 className='orange-title'>Designing with Purpose, Coding with Precision</h1>
+                        <h1 className='orange-title'>Designing with Purpose,<br/> Coding with Precision</h1>
                         <div className='intro-sub-content'>
                             <h2 className='subtitle'>Carlos Alexis Carrillo-Sandoval</h2>
                             <p className='intro-p'>

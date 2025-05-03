@@ -1504,3 +1504,1110 @@
   @media (max-width: 480px) {
     
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap'); */
+
+:root {
+  --color-green: #2C5243;
+  --color-dark-green: #2E3A38;
+  --color-light-green: #C3D1BF;
+  --color-cream: #F0ECE3;
+  --color-yellow: #E5D599;
+  --color-orange: #C87041;
+  --color-blue: #A8B9C0;
+  --color-white: #F5F5F5;
+  --color-black: #333333;
+}
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  font-family:   "DM Sans",sans-serif;
+  font-size: 16px;
+  line-height: 1.4rem;
+  color: var(--color-dark-green);
+  overflow-x: hidden;
+}
+
+/* Components */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Airplane Buttons */
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.airplane-text-button:hover .airplane-image-button {
+  animation: wiggle 0.5s ease;
+}
+
+.airplane-text-button{
+  font-size: 1em;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: bold;
+    color:var(--color-green);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.airplane-text-button img{
+  max-width: 24px;
+  max-height: 12px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Text */
+
+.orange-title{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.subtitle{
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: var(--color-green);
+  margin-bottom: .5rem;
+  margin-top: 0;
+}
+
+p{
+  font-weight: 400;
+  margin-bottom: .75rem;
+  margin-top: 0;
+}
+
+.yellow-subtitle{
+  color: var(--color-yellow);
+  font-family: 'regards.oft';
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: .75rem;
+}
+
+.orange-subtitle{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: .75rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Info Cards */
+
+.info-card{
+  position: relative;
+  max-width: 280px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 28px;
+  transition: transform 0.3s ease;
+}
+
+.info-card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.info-card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 280px;
+  height: 100%;
+  background:rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #333333;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  cursor:pointer
+}
+
+.info-card:hover .info-card-overlay{
+  opacity: 1;
+}
+
+.info-card-title{
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-green);
+  margin: .5rem 0 0 0;
+}
+
+.info-card-tech-stack{
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--color-green);
+  margin: 0;
+}
+
+.info-card-description-container{
+  width: 90%;
+}
+
+.info-card-description{
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  color: var(--color-dark-green);
+  white-space: normal;
+  margin: 0.4rem 0;
+}
+
+.learn-more{
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+}
+
+.learn-more .arrow{
+  margin-left: 0.4rem;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow{
+  transform: translateX(5px);
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+
+.footer-content{
+  background-color: var(--color-green);
+  padding: .2rem .5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-yellow);
+  margin: 0;
+  justify-content: space-between;
+}
+
+.footer-logo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.footer-logo-container p{
+  margin: 0;
+  padding: 0;
+}
+.footer-content img{
+  max-height: 24px;
+}
+.footer-content p{
+  font-size: 0.2em;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.footer-links a{
+  color: var(--color-yellow);
+}
+
+.go-to-top{
+  cursor: pointer;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Homepage */
+
+
+
+.intro-img-1, .intro-img-2{
+  max-width: 40%;
+  height: auto;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+}
+
+.intro-img-1{
+  transform: rotate(-20deg);
+}
+
+.intro-img-2{
+  transform: rotate(20deg);
+}
+
+.intro-images{
+ display: flex;
+ justify-content: center;
+ margin: 2rem 0;
+}
+
+.intro-section{
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2rem .75rem;
+}
+
+.intro-buttons-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recent-projects-section{
+  background-color: #2C5243;
+  padding: 1rem 0;
+}
+
+.recent-projects-section h2{
+  margin-left: .75rem;
+}
+
+.project-info-cards{
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  height:max-content;
+}
+
+.project-info-cards::-webkit-scrollbar{
+  display: none;
+}
+.project-info-cards > .info-card {
+  flex: 0 0 auto; 
+  scroll-snap-align: start; 
+}
+
+
+.about-me-section-img, .contact-me-section-img{
+  max-width:75%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+}
+
+.about-me-section-img{
+  margin-bottom: 2rem;
+}
+
+.about-me-section{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 2rem  .75rem;
+}
+
+.contact-me-section{
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 2rem  .75rem;
+}
+
+.contact-me-section h2, .about-me-section h2{
+  margin-top: 0;
+}
+.contact-me-section .airplane-text-button{
+  color: var(--color-cream);
+  font-size: 0.8rem;
+}
+
+.contact-me-section-img{
+  margin: 1.5rem 0;
+}
+.cme-section{
+  padding: 2rem 1rem;
+}
+.cme-title{
+  color: var(--color-orange);
+  font-family: 'regards.oft';
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.social-link-icon{
+  max-width: 1rem;
+  height: 100%;
+}
+.socials-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.social-link{
+  display: flex;
+  gap:.25rem;
+  align-items: center;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* About Me Page */
+
+
+
+.about-intro-section{
+  margin: 3rem 0.75rem;
+}
+
+.about-img-1, .about-img-2{
+  max-width: 40%;
+  height: auto;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+}
+
+.about-img-1{
+  transform: rotate(-20deg);
+}
+
+.about-img-2{
+  transform: rotate(20deg);
+}
+
+.about-intro-img{
+ display: flex;
+ justify-content: center;
+ margin: 6rem 0 2rem;
+}
+
+.small-dashed-line, .intro-plane, .about-headshot {
+  display: none;
+}
+
+.about-intro-section h1{
+  margin: 4rem 0 1rem 0;
+}
+
+/* Journey Card */
+  
+.journey-card{
+  display: flex;
+  flex-direction: column;
+  width: 164px;
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 8px;
+  font-family:"Swanky and Moo Moo", cursive;
+  font-size: 0.9em;
+  line-height: 22.4px;
+  box-shadow: 0px 100px 105px 0px rgba(0, 0, 0, 0.13), 0px 29px 54px 0px rgba(0, 0, 0, 0.09), 0px 9px 56px 0px rgba(0, 0, 0, 0.08), 0px -2px 61px 0px rgba(0, 0, 0, 0.07), 0px -6px 58px 0px rgba(0, 0, 0, 0.05), 0px -5px 41px 0px rgba(0, 0, 0, 0.04);
+}
+
+.date-and-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:264px;
+}
+
+.journey-card p{
+  margin: 0;
+}
+.journey-card-img{
+  height: 140px;
+  width: 140px;
+  object-fit:cover;
+  border-radius: 8px;
+}
+
+.cream-journey-card .journey-card{
+  background-color: var(--color-cream);
+  color: var(--color-dark-green);
+}
+
+
+
+.timeline-section{
+  display: flex;
+  align-items: center;
+  scroll-behavior: smooth;
+  gap: 88px;
+  flex-wrap: nowrap;
+  overflow:visible;
+  padding: 0 64px;
+  scroll-padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.timeline-section::-webkit-scrollbar {
+  display: none;
+}
+.timeline-section {
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.timeline-section > *:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+.timeline-section > *:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.timeline-scroll-container{
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 80px 0 240px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-section > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.timeline-scroll-container::-webkit-scrollbar{
+  display: none;
+}
+
+.timeline-line{
+  z-index: 0;
+  left: -40px;
+  top: 40px;
+  position:absolute;
+  align-self: center;
+  align-self: flex-start;
+}
+
+.x-and-title{
+  margin-top: 200px;
+  margin-left: 48px;
+  font-family:"Swanky and Moo Moo", cursive;
+  font-size: 0.9em;
+  color: var(--color-dark-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.x-and-title p{
+  padding: 0;
+  margin: 0;
+  width:max-content;
+}
+
+.x{
+  color: var(--color-orange);
+}
+
+.timeline-airplane{
+  width: 100px;
+}
+
+.timeline-section .airplane-and-title{
+  transform: rotate(0deg);
+  margin-bottom: 252px;
+}
+.timeline-section .airplane-and-title .timeline-airplane{
+  transform: rotate(-16deg);
+}
+
+.airplane-and-title{
+  font-family:"Swanky and Moo Moo", cursive;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+
+.skills-section{
+  padding: 3rem 0.75rem;
+  background-color: var(--color-green);
+  color: var(--color-light-green);
+}
+
+.keyboard-img{
+  position:relative;
+  bottom: 0;
+}
+
+.skills-section img, .my-journey-section img{
+  max-width: 200px;
+  height: auto;
+} 
+
+
+@media(min-width: 375px){
+  .intro-images{
+    margin: 2.5rem 0.5rem;
+  }
+  
+  .orange-title{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 0;
+  }
+
+  .orange-subtitle{
+    font-size: 1.6rem;
+  }
+
+  .subtitle{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .intro-p, .intro-buttons-container{
+    margin: 0;
+  }
+
+  .intro-section h1, .intro-section h2, .intro-p{
+    margin-bottom: 1rem;
+  }
+
+  .intro-section{
+    margin: 2.5rem 0.75rem;
+  }
+  .yellow-subtitle{
+    font-size: 1.6rem;
+  }
+
+  .recent-projects-section{
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .info-card{
+   max-width: 324px;
+  }
+
+  .info-card-overlay{
+    max-width: 324px;
+    padding: 1.2rem;
+  }
+
+  .info-card-title{
+    font-size: 1.2rem;
+  }
+
+  .info-card-tech-stack{
+    font-size: .8rem;
+  }
+
+  .info-card-description{
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
+}
+
+@media(min-width: 430px){
+
+  .orange-title{
+    margin-bottom: 1rem;
+  }
+
+  .subtitle{
+    margin-bottom: 1rem;
+  }
+
+  .intro-p{
+    margin-bottom: 1rem;
+  }
+
+  .intro-buttons-container{
+    margin: 0;
+  }
+
+  .yellow-subtitle{
+    margin-bottom: 1rem;
+  }
+
+  .orange-subtitle{
+    margin-bottom: 1rem;
+  }
+
+  .about-me-section p{
+    margin-bottom:  1rem;
+  }
+
+  .cme-title{
+    margin-bottom: 1rem;
+  }
+}
+
+@media(min-width:768px){
+  body{
+    font-size: 20px;
+    line-height: 1.6rem;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 36%;
+    position: absolute;
+  }
+
+  .intro-img-1{
+    top: 9em;
+    left: 5em;
+  }
+
+  .intro-img-2{
+    top: 8em;
+    left: 19em;
+  }
+
+  .intro-images{
+    margin-bottom: 21em;
+  }
+
+  .intro-section{
+    margin: 3em 2em;
+  }
+
+  .orange-title{
+    font-size: 2em;
+    line-height: 3rem;
+  }
+
+  .subtitle{
+    font-size: 1.5em;
+  }
+
+  .airplane-text-button{
+    font-size: 1em;
+  }
+
+  .airplane-text-button img{
+    max-width: 32px;
+    max-height: 16px;
+  }
+
+  .recent-projects-section{
+    padding-top: 4em;
+    padding-bottom: 4rem;
+
+  }
+
+  .recent-projects-section h2{
+    margin: 0 0 1em 1em;
+  }
+
+  .info-card, .info-card-overlay{
+    max-width: 436px;
+    border-radius: 32px;
+  }
+
+  .info-card-overlay{
+    padding: 2rem;
+  }
+
+  .info-card-title{
+    font-size: 1.5rem;
+  }
+
+  .info-card-tech-stack{
+    font-size: 1rem;
+    padding: 0.2rem 0;
+  }
+
+  .info-card-description{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .yellow-subtitle{
+    font-size: 1.8em;
+  }
+  
+
+  .about-me-section, .contact-me-section{
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .about-me-section{
+   margin: 4em 2em;
+  }
+
+  .contact-me-section{
+    padding:  4em 2em;
+  }
+
+  .orange-subtitle{
+    font-size: 1.8em;
+  }
+
+  .about-me-section-img, .contact-me-section-img{
+    max-width: 30%;
+  }
+
+  .airplane-text-button{
+    font-size: 1em;
+  }
+
+  .contact-me-section .airplane-text-button{
+    font-size: 1em;
+  }
+
+
+  .cme-title{
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+
+  .socials-container{
+    margin-left: 0;
+  }
+
+  .cme-section{
+    padding: 0;
+    margin: 2em;
+  }
+  
+}
+
+@media(min-width:1024px){
+  p{
+    line-height: 1.8rem;
+  }
+  .intro-section{
+    flex-direction: row;
+    margin: 6em 4em;
+    height: auto;
+   justify-content: flex-start;
+  }
+
+  .intro-buttons-container{
+    flex-direction: row;
+  }
+
+  .intro-image{
+    height: fit-content;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 20%;
+  }
+
+  .intro-img-1{
+    left: 32em;
+  }
+
+  .intro-img-2{
+    left:39em;
+    top: 16.5em;
+  }
+
+  .intro-text{
+    margin: 0;
+    width: 60%;
+  }
+
+  .orange-title{
+    font-size: 2.2em;
+    line-height: 3.2rem;
+  }
+
+  .subtitle{
+    font-size: 1.8em;
+  }
+
+  .yellow-subtitle{
+    font-size: 2em;
+  }
+
+  .recent-projects-section h2{
+    margin-left: 2em;
+  }
+
+  .project-info-cards{
+    padding-left: 2em;
+  }
+
+
+   .about-me-section, .contact-me-section{
+    padding: 5em 4em;
+  }
+
+  .cme-section{
+    padding-left: 4em;
+  }
+
+  .cme-title{
+    font-size: 1.6em;
+    margin-bottom: 1em;
+  }
+
+  .social-link-icon{
+   max-width: 1.6em;
+   margin-right: 0.25em;
+
+  }
+
+  .socials-container{
+    gap: 1em;
+  }
+
+}
+
+
+@media(min-width: 1440px){
+
+  .orange-title{
+    font-size: 3.2em;
+    line-height: 4.6rem;
+  }
+
+  .intro-section h1, .intro-section h2{
+    margin-bottom: .5em;
+  }
+
+  .subtitle{
+    font-size: 2.2em;
+  }
+  .intro-section{
+    margin:12.5em 6em;
+    width: 85%;
+  }
+
+  .intro-p{
+    width: 84.5%;
+  }
+
+  .intro-img-1, .intro-img-2{
+    max-width: 18%;
+  }
+
+  .intro-img-1{
+    left: 46em;
+  }
+  .intro-img-2{
+    left: 55em;
+    top:16.5em;
+  }
+
+  .info-card{
+    max-width: 532px;
+  }
+
+  .info-card-overlay{
+    max-width: 532px;
+    padding: 2em;
+  }
+
+  .info-card-tech-stack{
+    font-size: 1em;
+    margin-top: 0.5rem;
+  }
+
+  .info-card-description{
+    font-size: 1em;
+    line-height: 1.6rem;
+  }
+
+  .info-card-title{
+    font-size: 1.5em;
+  }
+
+  .yellow-subtitle{
+    font-size: 3em;
+  }
+
+  .recent-projects-section{
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+
+  .project-info-cards{
+    padding-left: 3em;
+    gap:3em;
+  }
+
+  .orange-subtitle{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  .contact-me-section, .about-me-section{
+    gap: 3em;
+  }
+
+
+  .about-me-section{
+    padding: 0;
+    margin:7em 6em ;
+  }
+
+   .contact-me-section{
+   padding: 5em 6em;
+  
+  }
+
+  .about-me-section p, .contact-me-section p{
+    width: 85%;
+    margin-bottom: 1em;
+  }
+
+  .contact-me-section h2{
+    margin-bottom: 0.5em;
+  }
+
+  .cme-title{
+    font-size: 2em;
+  }
+
+  .cme-section{
+    padding: 0;
+    margin: 4em 6em;
+  }
+
+  .socials-container{
+    gap: 1.5em;
+  }
+
+}
+
+@media(min-width: 1512px){
+
+  .intro-section{
+    margin: 8em 6em;
+  }
+
+  .intro-img-2{
+    left: 55.5em;
+    top: 18em;
+  }
+}
+
+@media(min-width: 1728px){
+  .intro-section{
+    margin: 15em 8em;
+  }
+
+  .intro-img-1{
+    left: 52em;
+    top:12em;
+  }
+  .intro-img-2{
+    left: 63em;
+    top:22em;
+  }
+
+  .recent-projects-section h2{
+    margin-left: 3em;
+  }
+
+  .project-info-cards{
+    padding-left: 4em;
+  }
+
+  .about-me-section{
+    margin: 9em 8em;
+  }
+
+  .contact-me-section{
+    padding: 6em 8em;
+  }
+
+  .cme-section{
+    margin-left: 8em;
+  }
+
+}
+
+@media(min-width: 2560px){
+  .intro-section{
+    padding-left: 20em;
+  }
+
+  .intro-img-1{
+    left: 52em;
+    top:12em;
+  }
+  .intro-img-2{
+    left: 63em;
+    top:22em;
+  }
+
+
+}
+
+
+.more-about-me-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bts-main-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  aspect-ratio: 3/4;
+}
+
+.bts-sub-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.bts-sub-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+}
