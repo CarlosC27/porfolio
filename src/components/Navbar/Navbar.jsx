@@ -22,10 +22,11 @@ const NavBar = () => {
             "/About" : "about-page",
             "/Projects" : "projects-page",
             // "/Contact" : "contact-page",
-            "/Resume" : "resume-page"
+            "/Resume" : "resume-page",
+            "/Under-Constrction": "construction-page"
         }
 
-    document.body.classList.remove('home-page', 'about-page', 'projects-page', 'resume-page');
+    document.body.classList.remove('home-page', 'about-page', 'projects-page', 'resume-page', "construction-page");
     document.body.classList.add(pageClasses[location.pathname] || "home-page");
 }, [location]);
 

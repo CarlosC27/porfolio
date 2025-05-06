@@ -69,6 +69,8 @@ const keyboard_temp = new URL('../assets/images/keyboard-temp.png', import.meta.
 
 
 
+const labubus_desk = new URL('../assets/images/labubu-desk.jpg', import.meta.url).href;
+
 
 export default {
     elotes_polaroid,
@@ -128,6 +130,7 @@ export default {
     seattle,
     ysuft,
     vern,
-    tlt_signed
+    tlt_signed,
+    labubus_desk
 
 };

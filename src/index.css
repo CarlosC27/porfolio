@@ -823,6 +823,31 @@ p{
   margin-top: 3rem;
 }
 
+.construction-page{
+  display: flex;
+  flex-direction: column;
+  margin: 2.25rem 0.75rem;
+  align-items: center;
+}
+
+.construction-title{
+  font-family: 'regards.oft';
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--color-orange);
+}
+
+.construction-img{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  align-self: center;
+}
+
+.construction-page .airplane-text-button{
+  font-size: 1.2rem;
+}
+
 
 @media(min-width: 375px){
   .intro-images{
@@ -913,6 +938,9 @@ p{
     font-size: 1.1rem;
   }
 
+  .construction-page{
+    margin: 5rem 0.75rem;
+  }
 
 
 }
@@ -956,7 +984,13 @@ p{
     margin: 7.2rem 0.75rem;
   }
 
-  
+  .construction-page{
+    margin: 8rem 0.75rem;
+  }
+
+  .construction-title{
+    font-size: 4rem;
+  }
 
   
   
@@ -1134,6 +1168,20 @@ p{
     margin-top: 2em;
   }
 
+  .construction-page{
+    margin: 3em 2em;
+  }
+
+  .construction-img{
+    max-width: 525px;
+  }
+
+  .construction-page .airplane-text-button{
+    font-size: 1.25em;
+  }
+
+
+
 
 }
 
@@ -1295,6 +1343,13 @@ p{
     gap: 4em;
   }
 
+  .construction-img{
+    max-width: 400px;
+  }
+
+  .construction-page{
+    margin: 2em 4em;
+  }
 }
 
 
@@ -1451,6 +1506,10 @@ p{
   .lets-chat{
     padding: 3em 6em;
   }
+
+  .construction-page{
+    margin: 2em 6em;
+  }
 }
 
 @media(min-width:1512px){
@@ -1512,6 +1571,10 @@ p{
     padding: 3em 8em;
   }
 
+  .construction-page{
+    margin: 8em 8em;
+  }
+
 }
 
 @media(min-width: 2560px){
@@ -1544,6 +1607,10 @@ p{
  .about-me-section, .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section, .about-intro-section, .cme{
     margin-left: 36em;
     margin-right: 36em;
+  }
+
+  .construction-page{
+    margin: 13em 32em;
   }
 
 

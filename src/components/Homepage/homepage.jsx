@@ -23,7 +23,7 @@ const Homepage = (props) => {
                         <div className='intro-buttons-container'>
                             <AirplaneTextButton to="/Projects" text="View Projects" image={images.green_pa}/>
                             <AirplaneTextButton to="/About" text="More About Me" image={images.green_pa}/>
-                            <AirplaneTextButton to="/Contact" text="Contact Me" image={images.green_pa}/>
+                            <AirplaneTextButton to="https://www.linkedin.com/in/cacs27/" text="Contact Me" image={images.green_pa}/>
                         </div>
                     </div>
                     <div className='intro-images'>
@@ -41,7 +41,7 @@ const Homepage = (props) => {
                                     title={project.title}
                                     techStack={project.techStack}
                                     description={project.description}
-                                    projectLink={project.projectLink}
+                                    projectLink="/Projects"
                                     imgSource={project.projectImg}
                                 />
                             )}
