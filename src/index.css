@@ -404,49 +404,10 @@ p{
   margin: 3.5rem 0 1rem 0;
 }
 
-/* Journey Card */
-  
-.journey-card{
-  display: flex;
-  flex-direction: column;
-  width: 188px;
-  background-color: var(--color-green);
-  color: var(--color-cream);
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  padding: 12px;
-  gap: 8px;
-  font-family:"Swanky and Moo Moo", cursive;
-  font-size: 0.9em;
-  line-height: 22.4px;
-  box-shadow: 0px 100px 105px 0px rgba(0, 0, 0, 0.13), 0px 29px 54px 0px rgba(0, 0, 0, 0.09), 0px 9px 56px 0px rgba(0, 0, 0, 0.08), 0px -2px 61px 0px rgba(0, 0, 0, 0.07), 0px -6px 58px 0px rgba(0, 0, 0, 0.05), 0px -5px 41px 0px rgba(0, 0, 0, 0.04);
+.my-journey-section .small-orange-title{
+  margin-top: 80px;
+  justify-self: center;
 }
-
-.date-and-title{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width:184px;
-}
-
-.journey-card p{
-  margin: 0;
-}
-.journey-card-img{
-  height: 140px;
-  width: 140px;
-  object-fit:cover;
-  border-radius: 8px;
-}
-
-.cream-journey-card .journey-card{
-  background-color: var(--color-cream);
-  color: var(--color-dark-green);
-}
-
-
 
 .timeline-section{
   display: flex;
@@ -484,7 +445,7 @@ p{
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
-  padding: 80px 0 240px 0;
+  padding: 55px 0 240px 0;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -500,7 +461,7 @@ p{
 .timeline-line{
   z-index: 0;
   left: -40px;
-  top: 40px;
+  top: 80px;
   position:absolute;
   align-self: center;
   align-self: flex-start;
@@ -548,6 +509,52 @@ p{
 }
 
 
+
+
+/* Journey Card */
+
+.journey-card{
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+  background-color: var(--color-green);
+  color: var(--color-cream);
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 8px;
+  font-family:"Swanky and Moo Moo", cursive;
+  font-size: 0.9em;
+  line-height: 22.4px;
+  box-shadow: 0px 100px 105px 0px rgba(0, 0, 0, 0.13), 0px 29px 54px 0px rgba(0, 0, 0, 0.09), 0px 9px 56px 0px rgba(0, 0, 0, 0.08), 0px -2px 61px 0px rgba(0, 0, 0, 0.07), 0px -6px 58px 0px rgba(0, 0, 0, 0.05), 0px -5px 41px 0px rgba(0, 0, 0, 0.04);
+}
+
+.date-and-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:264px;
+}
+
+.journey-card p{
+  margin: 0;
+}
+.journey-card-img{
+  height: 240px;
+  width: 240px;
+  object-fit:cover;
+  border-radius: 8px;
+}
+
+.cream-journey-card .journey-card{
+  background-color: var(--color-cream);
+  color: var(--color-dark-green);
+}
+
+
+
 .skills-section{
   display: flex;
   flex-direction: column;
@@ -572,10 +579,6 @@ p{
   font-size: 1.05rem;
 }
 
-.skills-section img, .my-journey-section img{
-  max-width: 200px;
-  height: auto;
-} 
 
 
 
@@ -816,6 +819,10 @@ p{
   color: var(--color-green);
 }
 
+.my-journey-title{
+  margin-top: 3rem;
+}
+
 
 @media(min-width: 375px){
   .intro-images{
@@ -882,6 +889,32 @@ p{
     max-width: 412px;
   }
 
+  .about-intro-section{
+    margin: 4rem 0.75rem;
+  }
+
+  .about-intro-p{
+    padding: 1.5rem 1.25rem;
+  }
+
+  .lets-chat-title, .skills-title{
+    font-size: 1.6rem;
+  }
+
+  .lets-chat .airplane-text-button{
+    font-size: 1rem;
+  }
+
+  .skills-section h3{
+    font-size: 1.4rem;
+  }
+
+  .skills-section h4{
+    font-size: 1.1rem;
+  }
+
+
+
 }
 
 
@@ -919,6 +952,15 @@ p{
     margin-bottom: 1rem;
   }
 
+  .about-intro-section{
+    margin: 7.2rem 0.75rem;
+  }
+
+  
+
+  
+  
+
 }
 
 @media(min-width:548px ){
@@ -926,15 +968,19 @@ p{
     min-width: 320px;
   }
 
-  .dancing-through-life-section img, .behind-the-screen-section img, .travel-section img, .recent-projects-section img{
+  .dancing-through-life-section img, .behind-the-screen-section img, .travel-section img, .recent-projects-section img, .about-intro-p{
     border-radius: 28px;
+  }
+
+  .skills-section img{
+    border-radius: 28px 28px 0 0;
   }
 }
 
 @media(min-width:768px){
   body{
     font-size: 20px;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
   }
 
 
@@ -1018,7 +1064,7 @@ p{
     padding:  4em 2em;
   }
 
-  .orange-subtitle{
+  .orange-subtitle, .skills-title, .lets-chat-title{
     font-size: 1.8em;
   }
 
@@ -1055,6 +1101,38 @@ p{
     gap: 1em;
   }
 
+  .about-intro-section{
+    margin: 6em 2em;
+  }
+
+  .about-intro-p{
+    padding: 2em;
+  }
+
+  .skills-section{
+    padding: 4em 2em 0;
+  }
+
+  .skills-section h3{
+    font-size: 1.4em;
+  }
+
+  .skills-section h4{
+    font-size: 1.2em;
+  }
+
+  .lets-chat{
+    padding: 2em;
+  }
+
+  .lets-chat .airplane-text-button{
+    font-size: 1em;
+  }
+
+  
+  .my-journey-title{
+    margin-top: 2em;
+  }
 
 
 }
@@ -1163,6 +1241,60 @@ p{
     min-width: 220px;
   }
 
+  .about-intro-section{
+    margin: 4em 2em;
+  }
+
+  .about-img-1, .about-img-2{
+    max-width: 20%;
+  }
+
+  .lets-chat{
+    padding: 3em 4em;
+  }
+
+  .lets-chat-buttons{
+    gap: 1em;
+  }
+
+  .lets-chat-text-and-buttons{
+    display: flex;
+    gap: 2em;
+  }
+
+  .lets-chat p{
+    width: 45%;
+  }
+
+  .my-skills{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .design-skills-columns{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .design-skills-columns h4{
+    margin-top: 0;
+  }
+
+  .skills-section img{
+    max-height: 200px;
+    min-width: 900px;
+  }
+
+  .skills-section{
+    padding: 4em 4em 0;
+  }
+
+  .my-skills{
+    gap: 4em;
+  }
+
 }
 
 
@@ -1178,7 +1310,7 @@ p{
     margin-bottom: .5em;
   }
 
-  .subtitle{
+  .subtitle, .skills-title, .lets-chat-title{
     font-size: 2.2em;
   }
   .intro-section{
@@ -1288,6 +1420,37 @@ p{
     gap: 2em;
   }
 
+  .about-intro-section{
+    margin: 3em 6em;
+  }
+
+  .about-intro-p{
+    padding: 3em;
+  }
+
+  .about-img-1, .about-img-2{
+    max-width: 15%;
+  }
+
+  .skills-title{
+    margin-bottom: 0.5em;
+  }
+
+  .skills-section{
+    padding: 4em 6em 0;
+  }
+
+  .skills-section h3{
+    font-size: 1.6em;
+  }
+
+  .skills-section h4{
+    font-size: 1.4em;
+  }
+
+  .lets-chat{
+    padding: 3em 6em;
+  }
 }
 
 @media(min-width:1512px){
@@ -1337,11 +1500,23 @@ p{
     margin: 6em 8em;
   }
 
+  .about-intro-section{
+    margin: 6em 8em;
+  }
+
+  .skills-section{
+    padding: 6em 8em 0;
+  }
+
+  .lets-chat{
+    padding: 3em 8em;
+  }
+
 }
 
 @media(min-width: 2560px){
   .intro-section{
-    margin: 6% 32em;
+    margin: 6% 36em;
   }
 
   .intro-img-1, .intro-img-2{
@@ -1352,27 +1527,23 @@ p{
     max-width: 70%;
   }
 
-  .about-me-section{
-    margin-left: 32em;
-    margin-right: 32em;
-  }
 
   .about-me-section p{
     max-width: 70%;
   }
 
-  .contact-me-section{
-    padding-left: 32em;
-    padding-right: 32em;
+  .contact-me-section, .skills-section, .lets-chat{
+    padding-left: 36em;
+    padding-right: 36em;
   }
 
   .contact-me-section p{
     max-width: 75%;
   }
 
-  .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section{
-    margin-left: 32em;
-    margin-right: 32em;
+ .about-me-section, .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section, .about-intro-section, .cme{
+    margin-left: 36em;
+    margin-right: 36em;
   }
 
 

@@ -92,8 +92,8 @@ const About = (props) => {
                     <img src={images.keyboard_temp} alt='hands on keyboard' className='keyboard-img'/> 
                 </section>
                 <section className='my-journey-section'>
-                    <h2 className='orange-subtitle'>My Journey</h2>
-                        {/* <div className="timeline-scroll-container">
+                    <h2 className='orange-subtitle my-journey-title'>My Journey</h2>
+                        <div className="timeline-scroll-container">
                         <div className='x-and-title'>
                                         <p>The Begginng</p>
                                         <p className='x'>x</p>
@@ -173,7 +173,7 @@ const About = (props) => {
                                         <p>To be continued...</p>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                             <h2 className="orange-subtitle bts-title">Behind the Screen</h2>
                         <div className='behind-the-screen-section'>
                             <div className='more-about-me-images'>
