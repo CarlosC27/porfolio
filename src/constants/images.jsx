@@ -50,6 +50,7 @@ const rotator_img_card = new URL('../assets/case-studies/rotator-creative/rotato
 const viableVeganism_img_card = new URL('../assets/case-studies/viable-veganism/viable-veganism-mockup.JPG', import.meta.url).href;
 const pacs_img_card = new URL('../assets/case-studies/paw-and-claws/pacs-mockup.JPG', import.meta.url).href;
 const reviseme_img_card = new URL('../assets/case-studies/révisemé/revisime-mockup.JPG', import.meta.url).href;
+const aegeliss_img_card = new URL('../assets/case-studies/aegeliss/aegeliss-mac.JPG', import.meta.url).href;
 
 const green_github_logo = new URL('../assets/personal-brand/github-green.PNG', import.meta.url).href;
 const green_linkedin_logo = new URL('../assets/personal-brand/LinkedIn-green.PNG', import.meta.url).href;
@@ -131,6 +132,7 @@ export default {
     ysuft,
     vern,
     tlt_signed,
-    labubus_desk
+    labubus_desk,
+    aegeliss_img_card
 
 };

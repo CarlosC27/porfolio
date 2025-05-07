@@ -125,7 +125,7 @@ p{
   max-width: 280px;
   height: 100%;
   background:rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   color: #333333;
   opacity: 0;
   display: flex;
@@ -367,11 +367,15 @@ p{
 
 /* About Me Page */
 
+.about-img-3, .about-img-4, .about-img-5{
+  display: none;
+}
+
 .about-intro-section{
   margin: 3rem 0.75rem;
 }
 
-.about-img-1, .about-img-2{
+.about-img-1, .about-img-2, .about-img-3, .about-img-4, .about-img-5{
   max-width: 40%;
   height: auto;
   box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
@@ -385,6 +389,21 @@ p{
 .about-img-2{
   transform: rotate(20deg);
 }
+
+.about-img-3{
+  /* transform: rotate(-20deg); */
+  z-index: 1;
+}
+
+.about-img-4{
+  transform: rotate(-20deg);
+}
+
+.about-img-5{
+  transform: rotate(20deg);
+}
+
+
 
 .about-intro-p{
   color: var(--color-cream);
@@ -460,8 +479,8 @@ p{
 
 .timeline-line{
   z-index: 0;
-  left: -40px;
-  top: 80px;
+  left: -60px;
+  top: 20px;
   position:absolute;
   align-self: center;
   align-self: flex-start;
@@ -848,7 +867,61 @@ p{
   font-size: 1.2rem;
 }
 
+ /* ------------------------------------------------------------------------------ */
+  /* Project Page */
 
+  .project-intro-section{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2rem 0.75rem;
+    align-items: center;
+  }
+
+  .website-dev-journey{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0.75rem;
+  }
+
+  .wdj-p{
+    justify-self: center;
+  }
+
+
+  .project-intro-img{
+    max-width: 85%;
+    height: auto;
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  .project-intro-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .project-page-info-cards{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0.75rem;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .projects-row-1, .projects-row-2, .projects-row-3, .projects-row-4{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-page-info-cards .info-card{
+    min-height: 250px;
+    aspect-ratio: 4/3;
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  
+  
 @media(min-width: 375px){
   .intro-images{
     margin: 2.5rem 0rem;
@@ -942,6 +1015,14 @@ p{
     margin: 5rem 0.75rem;
   }
 
+  .project-intro-section{
+    margin: 3rem 0.75rem;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 348px;
+  }
+
 
 }
 
@@ -992,8 +1073,14 @@ p{
     font-size: 4rem;
   }
 
-  
-  
+  .project-intro-section{
+    margin: 4rem 0.75rem;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 396px;
+  }
+
 
 }
 
@@ -1180,7 +1267,20 @@ p{
     font-size: 1.25em;
   }
 
+  .timeline-line{
+    z-index: 0;
+    left: -60px;
+    top: 40px;
+  }
 
+  .project-intro-section, .website-dev-journey{
+    margin: 4em 2em;
+    gap: 2em;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 648px;
+  }
 
 
 }
@@ -1293,7 +1393,7 @@ p{
     margin: 4em 2em;
   }
 
-  .about-img-1, .about-img-2{
+  .about-img-1, .about-img-2, .about-img-3, .about-img-4, .about-img-5{
     max-width: 20%;
   }
 
@@ -1350,6 +1450,43 @@ p{
   .construction-page{
     margin: 2em 4em;
   }
+
+
+  .timeline-line{
+    z-index: 0;
+    left: -60px;
+    top: 70px;
+  }
+
+  .about-img-3, .about-img-4, .about-img-5{
+    display: block;
+  }
+
+  .project-intro-section{
+    flex-direction: row;
+    margin: 7em 5em;
+    gap: 3em;
+  }
+
+  .project-intro-img{
+    max-width: 30%;
+    transform: rotate(-5deg);
+  }
+
+  .project-page-info-cards, .website-dev-journey{
+    margin: 2em 5em;
+    gap: 2em;
+  }
+
+  .projects-row-1, .projects-row-2, .projects-row-3, .projects-row-4{
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 600px;
+  }
+
 }
 
 
@@ -1483,7 +1620,7 @@ p{
     padding: 3em;
   }
 
-  .about-img-1, .about-img-2{
+  .about-img-1, .about-img-2, .about-img-3, .about-img-4, .about-img-5{
     max-width: 15%;
   }
 
@@ -1509,6 +1646,19 @@ p{
 
   .construction-page{
     margin: 2em 6em;
+  }
+
+  .project-intro-section{
+    margin: 8em 6em;
+   gap: 8em;
+  }
+  .project-intro-text{
+    gap: 0.5em;
+    max-width: 55%;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 724px;
   }
 }
 
@@ -1575,9 +1725,19 @@ p{
     margin: 8em 8em;
   }
 
+  .project-intro-section{
+    margin: 14em 8em;
+    gap: 12em;
+  }
+
+  .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
+    max-width: 864px;
+  }
+
+
 }
 
-@media(min-width: 2560px){
+@media(min-width: 2200px){
   .intro-section{
     margin: 6% 36em;
   }
@@ -1604,7 +1764,7 @@ p{
     max-width: 75%;
   }
 
- .about-me-section, .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section, .about-intro-section, .cme{
+ .about-me-section, .behind-the-screen-section, .dancing-through-life-section, .travel-section, .record-and-music-section, .about-intro-section, .cme, .project-intro-section, .project-page-info-cards{
     margin-left: 36em;
     margin-right: 36em;
   }
@@ -1613,6 +1773,13 @@ p{
     margin: 13em 32em;
   }
 
+  .project-intro-section{
+    gap: 7em;
+  }
+
+  .project-intro-text{
+    max-width: 100%;
+  }
 
 
 }

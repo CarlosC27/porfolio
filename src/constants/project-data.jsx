@@ -2,6 +2,13 @@ import images from "./images"
 
 const projects = [
     {
+        title: 'Aegeliss',
+        techStack: 'Figma, CSS, Shopify',
+        description: "Designed and developed the Aegeliss website that provides support for dementia patients and caregivers. Created intuitive interfaces in Figma with accessibility in mind, conducted user testing, and implemented the final solution on Shopify to deliver essential resources effectively.",
+        projectLink: "/Projects",
+        projectImg: images.aegeliss_img_card
+    },
+    {
         title: 'Coast 2 Coast Cousins BBQ',
         techStack: 'React, JavaScripts, HTML, CSS, Figma',
         description: "Designed the company’s website layout and user interface to create an engaging, user-friendly experience. I then developed the site using React, incorporating functionality and aesthetics for a seamless, polished online presence, while also adding custom photography to enhance the brand’s visual storytelling.",

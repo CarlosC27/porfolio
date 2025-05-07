@@ -18,6 +18,9 @@ const About = (props) => {
                     <div className='about-intro-img'>
                         <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-1"/>
                         <img src={images.picnic_polaroid} alt='polaroid of Carlos at a picnic' className="about-intro-polaroid about-img-2"/>
+                        <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-3"/>
+                        <img src={images.picnic_polaroid} alt='polaroid of Carlos at a picnic' className="about-intro-polaroid about-img-4"/>
+                        <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-5"/>
                     </div>
                     <div className='title-profile-img-text'>
                         <h1 className='orange-title'>It's Me! Hi!</h1>
