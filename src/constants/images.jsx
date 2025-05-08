@@ -44,13 +44,28 @@ const orange_pa = new URL('../assets/personal-brand/Paper-Airplane-Orange.PNG', 
 const footer_logo = new URL('../assets/personal-brand/Footer-Logo.PNG', import.meta.url).href;
 
 const c2cccbbq_img_card = new URL('../assets/case-studies/c2ccbbq/c2c-mockup.JPG', import.meta.url).href;
+const c2cccbbq_hp_mockup = new URL('../assets/case-studies/c2ccbbq/c2c-homepage-mockup.PNG', import.meta.url).href;
+
 const gritCityMag_img_card = new URL('../assets/case-studies/grit-city-magazine/article-mockup.JPG', import.meta.url).href;
+const cityBtwn_mockup = new URL('../assets/case-studies/grit-city-magazine/gcm-tcb.PNG', import.meta.url).href;
+
 const huskyFitness_img_card = new URL('../assets/case-studies/husky-fitness/husky-fitness-mockup.JPG', import.meta.url).href;
+const huskyFitness_hp_mockup = new URL('../assets/case-studies/husky-fitness/husky-fitness-homepage.PNG', import.meta.url).href;
+
 const rotator_img_card = new URL('../assets/case-studies/rotator-creative/rotator-mockup.PNG', import.meta.url).href;
+const rotator_hp_mockup = new URL('../assets/case-studies/rotator-creative/rotator-home-page.PNG', import.meta.url).href;
+
 const viableVeganism_img_card = new URL('../assets/case-studies/viable-veganism/viable-veganism-mockup.JPG', import.meta.url).href;
+const viableVeganism_hp_mockup = new URL('../assets/case-studies/viable-veganism/viable-veganism-homepage.PNG', import.meta.url).href;
+
 const pacs_img_card = new URL('../assets/case-studies/paw-and-claws/pacs-mockup.JPG', import.meta.url).href;
+const pacs_mockup = new URL('../assets/case-studies/paw-and-claws/pacs-homepage.PNG', import.meta.url).href;
+
 const reviseme_img_card = new URL('../assets/case-studies/révisemé/revisime-mockup.JPG', import.meta.url).href;
+const reviseme_mockup = new URL('../assets/case-studies/révisemé/revisime-hompeage.PNG', import.meta.url).href;
+
 const aegeliss_img_card = new URL('../assets/case-studies/aegeliss/aegeliss-mac.JPG', import.meta.url).href;
+const aegeliss_hp_mockup = new URL('../assets/case-studies/aegeliss/aegeliss-homepage-mac.PNG', import.meta.url).href;
 
 const green_github_logo = new URL('../assets/personal-brand/github-green.PNG', import.meta.url).href;
 const green_linkedin_logo = new URL('../assets/personal-brand/LinkedIn-green.PNG', import.meta.url).href;
@@ -133,6 +148,14 @@ export default {
     vern,
     tlt_signed,
     labubus_desk,
-    aegeliss_img_card
+    aegeliss_img_card,
+    aegeliss_hp_mockup,
+    rotator_hp_mockup,
+    c2cccbbq_hp_mockup,
+    cityBtwn_mockup,
+    reviseme_mockup,
+    pacs_mockup,
+    huskyFitness_hp_mockup,
+    viableVeganism_hp_mockup
 
 };

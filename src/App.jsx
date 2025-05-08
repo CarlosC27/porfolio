@@ -7,6 +7,11 @@ import Contact from "./components/Contact/contact-page";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/footer";
 import Construction from "./components/construction-page";
+import Aegeliss from "./components/Projects/Case-Studies/aegeliss-page";
+import Rotator from "./components/Projects/Case-Studies/rotator-page";
+import Coast2Coast from "./components/Projects/Case-Studies/c2c-page";
+import TheCityBetween from "./components/Projects/Case-Studies/citybtwn-page";
+import Revisime from "./components/Projects/Case-Studies/revisime-page";
 
 function App(){
   return (
@@ -18,6 +23,12 @@ function App(){
             <Route path="about" element={<About />} />
             <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="construction" element={<Construction/>}/>
+            <Route path="Aegeliss" element={<Aegeliss/>}/>
+            <Route path="Rotator-Creative" element={<Rotator/>}/>
+            <Route path="Coast-2-Coast-Cousins-BBQ" element={<Coast2Coast/>}/>
+            <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
+            <Route path="RÉVISEMÉ" element={<Revisime/>}/>
           </Routes>
         <Footer />
         </div>

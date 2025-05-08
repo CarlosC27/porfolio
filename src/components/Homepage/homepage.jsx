@@ -41,7 +41,7 @@ const Homepage = (props) => {
                                     title={project.title}
                                     techStack={project.techStack}
                                     description={project.description}
-                                    projectLink="/Projects"
+                                    projectLink={project.projectLink}
                                     imgSource={project.projectImg}
                                 />
                             )}

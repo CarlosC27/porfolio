@@ -183,7 +183,10 @@ p{
 
 .info-card:hover {
   transform: scale(1.05);
+}
 
+.info-card-project-type{
+  display: none;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
@@ -915,9 +918,19 @@ p{
   }
 
   .project-page-info-cards .info-card{
-    min-height: 250px;
+    min-height: 280px;
     aspect-ratio: 4/3;
     box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  .project-page-info-cards .info-card .info-card-project-type{
+    display: block;
+  }
+
+  .info-card-project-type{
+    color:  var(--color-green);
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
   }
 
   
@@ -1023,6 +1036,9 @@ p{
     max-width: 348px;
   }
 
+  .info-card-project-type{
+    font-size: 0.9rem;
+  }
 
 }
 
@@ -1101,7 +1117,7 @@ p{
 @media(min-width:768px){
   body{
     font-size: 20px;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
   }
 
 
@@ -1280,6 +1296,11 @@ p{
 
   .project-page-info-cards .info-card, .project-page-info-cards .info-card-overlay{
     max-width: 648px;
+  }
+
+  .info-card-project-type{
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
   }
 
 

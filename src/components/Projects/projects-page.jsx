@@ -24,6 +24,7 @@ const Projects = (props) => {
                     <div className='projects-row-1'>
                         <InfoCard 
                             title={projects.at(0).title}
+                            projectType={projects.at(0).projectType}
                             techStack={projects.at(0).techStack}
                             description={projects.at(0).description}
                             projectLink={projects.at(0).projectLink}
@@ -31,6 +32,7 @@ const Projects = (props) => {
                             />
                          <InfoCard 
                             title={projects.at(4).title}
+                            projectType={projects.at(4).projectType}
                             techStack={projects.at(4).techStack}
                             description={projects.at(4).description}
                             projectLink={projects.at(4).projectLink}
@@ -41,12 +43,14 @@ const Projects = (props) => {
                     <div className='projects-row-2'>
                         <InfoCard 
                             title={projects.at(1).title}
+                            projectType={projects.at(1).projectType}
                             techStack={projects.at(1).techStack}
                             description={projects.at(1).description}
                             projectLink={projects.at(1).projectLink}
                             imgSource={projects.at(1).projectImg} />
                          <InfoCard 
                             title={projects.at(5).title}
+                            projectType={projects.at(5).projectType}
                             techStack={projects.at(5).techStack}
                             description={projects.at(5).description}
                             projectLink={projects.at(5).projectLink}
@@ -55,12 +59,14 @@ const Projects = (props) => {
                     <div className='projects-row-3'>
                         <InfoCard 
                             title={projects.at(3).title}
+                            projectType={projects.at(3).projectType}
                             techStack={projects.at(3).techStack}
                             description={projects.at(3).description}
                             projectLink={projects.at(3).projectLink}
                             imgSource={projects.at(3).projectImg} />
                          <InfoCard 
                             title={projects.at(2).title}
+                            projectType={projects.at(2).projectType}
                             techStack={projects.at(2).techStack}
                             description={projects.at(2).description}
                             projectLink={projects.at(2).projectLink}
@@ -69,12 +75,14 @@ const Projects = (props) => {
                     <div className='projects-row-4'>
                         <InfoCard 
                             title={projects.at(7).title}
+                            projectType={projects.at(7).projectType}
                             techStack={projects.at(7).techStack}
                             description={projects.at(7).description}
                             projectLink={projects.at(7).projectLink}
                             imgSource={projects.at(7).projectImg} />
                          <InfoCard 
                             title={projects.at(6).title}
+                            projectType={projects.at(6).projectType}
                             techStack={projects.at(6).techStack}
                             description={projects.at(6).description}
                             projectLink={projects.at(6).projectLink}
