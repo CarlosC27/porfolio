@@ -10,6 +10,7 @@ const Aegeliss = (props) => {
                 <section className="aegeliss-intro">
                     <div className="aegeliss-intro-text">
                         <h1>Aegeliss</h1>
+                        <h2>Designing a Digital Hub for Dementia Caregivers</h2>
                         <p><b>January 2025 - Present</b></p>
                         <p><b>Project Scope:</b> {projects.at(0).projectType}</p>
                         <div className="tech-stack-container">
@@ -24,6 +25,10 @@ const Aegeliss = (props) => {
                        <p>{projects.at(0).description}</p>
                     </div>
                     <img src={images.aegeliss_hp_mockup} alt="an iMac with the Aegeliss website homepage displayed"/>
+                </section>
+                <section className="aegeliss-project-overview-section">
+                    <h2 className="case-study-subsections-titles">Overview</h2>
+                    <p></p>
                 </section>
             </main>
         </div>

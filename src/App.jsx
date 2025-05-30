@@ -12,10 +12,12 @@ import Rotator from "./components/Projects/Case-Studies/rotator-page";
 import Coast2Coast from "./components/Projects/Case-Studies/c2c-page";
 import TheCityBetween from "./components/Projects/Case-Studies/citybtwn-page";
 import Revisime from "./components/Projects/Case-Studies/revisime-page";
+import ViableVegansim from "./components/Projects/Case-Studies/viable-veganism-page";
+import HuskyFitness from "./components/Projects/Case-Studies/husky-fitness-page";
 
 function App(){
   return (
-    <Router>
+    <Router  basename="/my-portfolio/">
       <div>
         <NavBar/>
           <Routes>
@@ -29,6 +31,8 @@ function App(){
             <Route path="Coast-2-Coast-Cousins-BBQ" element={<Coast2Coast/>}/>
             <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
             <Route path="RÉVISEMÉ" element={<Revisime/>}/>
+            <Route path="Viable-Veganism" element={<ViableVegansim/>}/>
+            <Route path="Husky-Fitness" element={<HuskyFitness/>}/>
           </Routes>
         <Footer />
         </div>

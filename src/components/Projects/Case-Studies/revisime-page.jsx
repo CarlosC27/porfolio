@@ -21,10 +21,10 @@ const Revisime = (props) => {
                                 <p className="ts-item">Perplexity API</p>
                             </div>
                         </div>
-                        <p><b>Collaborators: Olivia Sapp, Renusree Chittella, and Ayaan Rahim</b> </p>
+                        <p><b>Collaborators:</b> Olivia Sapp, Renusree Chittella, and Ayaan Rahim</p>
                        <p>{projects.at(3).description}</p>
                     </div>
-                    <img src={images.reviseme_mockup} alt="a macbook with the Rotator Creative website homepage displayed"/>
+                    <img src={images.reviseme_mockup} alt="a macbook with the RÉVISEMÉ website homepage displayed"/>
                 </section>
             </main>
         </div>

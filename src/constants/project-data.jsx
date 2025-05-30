@@ -54,7 +54,7 @@ const projects = [
         projectType: 'Web Design | UI/UX Design',
         techStack: 'Figma, Adobe CC',
         description: "Collaborated closely with designers and developers to create a cohesive website design. Contributed to crafting an engaging user experience that aligned with the brand's mission, ensuring the website was visually appealing and user-friendly.",
-        projectLink: "/Projects",
+        projectLink: "/Viable-Veganism",
         projectImg: images.viableVeganism_img_card
     },
     {
@@ -62,7 +62,7 @@ const projects = [
         projectType: 'UI/UX Design | Product Design',
         techStack: "Figma, Adobe CC",
         description: "UX Design project focused on developing an app for the UW Seattle fitness center. The app is designed to assist users in creating effective workout schedules and routines, providing a user-friendly interface to enhance the fitness experience for the university community.",
-        projectLink: "/Projects",
+        projectLink: "/Husky-Fitness",
         projectImg: images.huskyFitness_img_card
     }
 ]

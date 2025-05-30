@@ -32,7 +32,7 @@
     margin: 0.5rem 0;
   }
 
-  .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro, .revisime-intro{
+  .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro, .revisime-intro, .vv-intro, .hf-intro{
     background-color: #abccdb;
     color: #435061;
     padding: 2rem 0.75rem;
@@ -60,6 +60,18 @@
     color: #37434F;
   }
 
+  .vv-intro{
+    background-color: #FEE0FA;
+    color:#005719;
+  }
+
+  .hf-intro{
+    background-color: #C0C4E0;
+    color: #4B2F84;
+  }
+  .hf-intro h1{
+    color: #4B2F84;
+  }
   .rotator-intro h1{
     color: #8C3335;
   }
@@ -76,7 +88,11 @@
     color: #37434F;
   }
 
-  .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .revisime-intro p{
+  .vv-intro h1{
+    color: #005719;
+  }
+
+  .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .revisime-intro p, .vv-intro p, .hf-intro p{
     font-size: 1.1rem;
   }
 
@@ -96,7 +112,7 @@
     align-self: center;
   }
 
-  .c2c-intro img{
+  .c2c-intro img, .hf-intro img{
     max-width: 70%;
     height: auto;
     align-self: center;
@@ -109,8 +125,10 @@
     align-self: center;
   }
 
-  .revisime-intro img{
+  .revisime-intro img, .vv-intro img{
     max-width: 90%;
+    height: auto;
+    align-self: center;
   }
 
   .tech-stack-container{
@@ -155,6 +173,16 @@
     background-color: #37434F;
   }
 
+  .vv-intro .ts-item{
+    color: #FEE0FA;
+    background-color:#005719;
+  }
+
+  .hf-intro .ts-item{
+    color: #C0C4E0;
+    background-color: #4B2F84;
+  }
+
   .ts-item:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
@@ -167,6 +195,14 @@
 
     .rotator-intro{
         padding: 3.2em 0.75em;
+    }
+
+    .vv-intro{
+      padding: 4.4rem 0.75rem;
+    }
+
+    .hf-intro{
+      padding: 4rem 0.75rem;
     }
   }
 
@@ -186,8 +222,16 @@
         gap: 1rem;
     }
 
-    .tcb-intro{
+    .tcb-intro, .revisime-intro{
         padding: 4.7rem 0.75rem;
+    }
+
+    .vv-intro{
+      padding: 6.4rem 0.75rem;
+    }
+
+    .hf-intro{
+      padding: 6rem 0.75rem;
     }
     
   }
@@ -198,16 +242,17 @@
         line-height: 1.8rem;
       }
 
-      .aegeliss-intro img{
+      .aegeliss-intro img, .hf-intro img{
         max-width: 60%;
       }
 
-      .rotator-intro img{
+      .rotator-intro img, .tcb-intro img{
         max-width: 80%;
       }
 
-      .tcb-intro img{
-        max-width: 80%;
+
+      .revisime-intro img, .vv-intro img{
+        max-width: 75%;
       }
 
       h1{
@@ -219,7 +264,7 @@
         padding: 5.4em 2em;
       }
 
-      .rotator-intro{
+      .rotator-intro, .hf-intro{
         padding: 4.6em 2em;
       }
 
@@ -235,7 +280,11 @@
 
       }
 
-      .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .tcb-intro p{
+      .revisime-intro, .vv-intro{
+        padding: 6em 2em;
+      }
+
+      .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .tcb-intro p, .vv-intro p, .hf-intro p{
         font-size: 1em;
       }
 
@@ -248,14 +297,14 @@
 
   @media(min-width: 1024px){
 
-    .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro{
+    .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro, .revisime-intro, .vv-intro, .hf-intro{
         padding: 7.2em 4em;
         gap: 2em;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .rotator-intro{
+    .rotator-intro, .hf-intro{
         padding: 7.8em 4em;
     }
 
@@ -279,7 +328,7 @@
         max-width: 45%;
     }
 
-    .rotator-intro img{
+    .rotator-intro img, .hf-intro img{
         max-width: 40%;
     }
 
@@ -291,12 +340,16 @@
         max-width: 45%;
     }
 
+    .revisime-intro img, .vv-intro img{
+        max-width: 50%;
+    }
+
     h1{
         font-size: 3.5em;
         margin: 1rem 0;
     }
 
-    .c2c-intro .tech-stack-container, .tcb-intro .tech-stack-container{
+    .c2c-intro .tech-stack-container, .tcb-intro .tech-stack-container, .revisime-intro .tech-stack-container{
         align-items: flex-start;
         margin: 1em 0 0;
     }
@@ -308,8 +361,12 @@
         padding: 5.7em 6em;
     }
 
-    .rotator-intro{
+    .rotator-intro, .hf-intro{
         padding: 7.1em 6em;
+    }
+
+    .revisime-intro, .vv-intro{
+        padding: 6em;
     }
 
     .c2c-intro{
@@ -328,11 +385,15 @@
         max-width: 40%;
     }
 
+    .revisime-intro img{
+        max-width: 40%;
+    }
+
     h1{
         font-size: 4.5em;
     }
 
-    .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .tcb-intro p{
+    .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .tcb-intro p, .revisime-intro p, .vv-intro p, .hf-intro p{
         font-size: 1.2em;
     }
 
@@ -343,7 +404,7 @@
   }
 
   @media(min-width: 1728px){
-    .aegeliss-intro{
+    .aegeliss-intro, .hf-intro{
         padding: 13.7em 8em;
     }
 
@@ -359,11 +420,19 @@
         padding: 12em 8em;
     }
 
+    .revisime-intro{
+        padding: 15em 8em;
+    }
+
+    .vv-intro{
+      padding: 12.2em 8em;
+    }
+
     
   }
 
   @media(min-width: 2200px){
-    .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro{
+    .aegeliss-intro, .rotator-intro, .c2c-intro, .tcb-intro, .revisime-intro, .vv-intro, .hf-intro{
         padding-left: 32em;
         padding-right: 32em;
     }
