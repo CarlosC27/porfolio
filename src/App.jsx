@@ -17,7 +17,7 @@ import HuskyFitness from "./components/Projects/Case-Studies/husky-fitness-page"
 
 function App(){
   return (
-    <Router  basename="/my-portfolio/">
+    <Router  basename="/porfolio/">
       <div>
         <NavBar/>
           <Routes>
