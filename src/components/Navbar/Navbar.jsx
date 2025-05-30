@@ -51,7 +51,7 @@ const NavBar = () => {
                 >{item}</Link>
                 ))}
                 <a 
-                    href="https://drive.google.com/file/d/1gVxPpOKR8x-YrDD6sy2NgT4HnajsZxxd/view?usp=sharing" 
+                    href="https://drive.google.com/file/d/1GKadfyRqqP2JBeLvW041i6KJYBUAto7J/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="nav-link"
