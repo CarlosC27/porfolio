@@ -9,8 +9,6 @@ import smallLine from '../../assets/images/small-dashed-line.svg';
 
 
 const About = (props) => {
-    // const icons = [logos.after_effects_logo, logos.swift_logo, logos.android_studio_logo, logos.sql_logo, logos.css_logo, logos.react_logo, logos.figma_logo, logos.python_logo, logos.firebase_logo, logos.postgre_logo,
-    //     logos.git_logo, logos.photoshop_logo, logos.html_logo, logos.node_js_logo, logos.illustator_logo, logos.mongo_db_logo, logos.indesign_logo, logos.miro_logo, logos.java_logo, logos.kotlin_logo, logos.javascript_logo]
     return(
         <div>
             <main className='about-page-content'>
