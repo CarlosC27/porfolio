@@ -1,7 +1,7 @@
 import React from "react";
-import images from "../../../constants/images";
-import projects from "../../../constants/project-data";
-import "./case-studies.css"
+import images from "../../../../constants/images";
+import projects from "../../../../constants/project-data";
+import "./../case-studies.css"
 
 const Rotator = (props) => {
     return(

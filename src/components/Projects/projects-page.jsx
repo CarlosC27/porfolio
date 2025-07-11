@@ -48,13 +48,13 @@ const Projects = (props) => {
                             description={projects.at(1).description}
                             projectLink={projects.at(1).projectLink}
                             imgSource={projects.at(1).projectImg} />
-                         <InfoCard 
+                         {/* <InfoCard 
                             title={projects.at(5).title}
                             projectType={projects.at(5).projectType}
                             techStack={projects.at(5).techStack}
                             description={projects.at(5).description}
                             projectLink={projects.at(5).projectLink}
-                            imgSource={projects.at(5).projectImg} />
+                            imgSource={projects.at(5).projectImg} /> */}
                     </div>
                     <div className='projects-row-3'>
                         <InfoCard 
@@ -72,7 +72,7 @@ const Projects = (props) => {
                             projectLink={projects.at(2).projectLink}
                             imgSource={projects.at(2).projectImg} />
                     </div>
-                    <div className='projects-row-4'>
+                    {/* <div className='projects-row-4'>
                         <InfoCard 
                             title={projects.at(7).title}
                             projectType={projects.at(7).projectType}
@@ -87,7 +87,7 @@ const Projects = (props) => {
                             description={projects.at(6).description}
                             projectLink={projects.at(6).projectLink}
                             imgSource={projects.at(6).projectImg} />
-                    </div>
+                    </div> */}
                 </section>
                 <section className='website-dev-journey'>
                     <p className='wdj-p'>

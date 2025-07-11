@@ -1,0 +1,320 @@
+:root {
+  --color-green: #2C5243;
+  --color-dark-green: #2E3A38;
+  --color-light-green: #C3D1BF;
+  --color-cream: #F0ECE3;
+  --color-yellow: #E5D599;
+  --color-orange: #C87041;
+  --color-blue: #A8B9C0;
+  --color-white: #F5F5F5;
+  --color-black: #333333;
+}
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  font-family:   "DM Sans",sans-serif;
+  font-size: 16px;
+  line-height: 1.4rem;
+  color: var(--color-dark-green);
+  overflow-x: hidden;
+}
+
+.expandable-card {
+  --card-bg: #dbeafe;
+  --card-ring: #93c5fd;
+  --card-text: #1e3a8a;
+  --card-accent: #bfdbfe;
+  --card-hover: #e0e7ff;
+  
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 20rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  color: var(--card-text);
+}
+
+.expandable-card.expanded {
+  padding-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.image-ring {
+  position: relative;
+  padding: 0.25rem;
+  border-radius: 50%;
+  border: 4px solid var(--card-ring);
+}
+
+.card-image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #fed7aa 0%, transparent 50%, #93c5fd 100%);
+  opacity: 0.3;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--card-text);
+}
+
+.card-description {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--card-text);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.expanded-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--card-accent);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.expand-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--card-text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.expand-button:hover {
+  background-color: var(--card-hover);
+}
+
+.expand-button:focus {
+  outline: 2px solid var(--card-ring);
+  outline-offset: 2px;
+}
+
+.content-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-item {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.content-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-bullet {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: currentColor;
+  border-radius: 50%;
+  margin-top: 0.375rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* ===== THEME VARIATIONS ===== */
+
+/* Healthcare Theme */
+.healthcare-theme {
+  --card-bg: #dbeafe;
+  --card-ring: #3b82f6;
+  --card-text: #1e40af;
+  --card-accent: #bfdbfe;
+  --card-hover: #e0e7ff;
+}
+
+/* Environment Theme */
+.environment-theme {
+  --card-bg: #fef3c7;
+  --card-ring: #f59e0b;
+  --card-text: #92400e;
+  --card-accent: #fde68a;
+  --card-hover: #fef3c7;
+}
+
+/* Wellness Theme */
+.wellness-theme {
+  --card-bg: #d1fae5;
+  --card-ring: #10b981;
+  --card-text: #065f46;
+  --card-accent: #a7f3d0;
+  --card-hover: #ecfdf5;
+}
+
+/* Education Theme */
+.education-theme {
+  --card-bg: #e0e7ff;
+  --card-ring: #6366f1;
+  --card-text: #312e81;
+  --card-accent: #c7d2fe;
+  --card-hover: #f0f4ff;
+}
+
+/* Business Theme */
+.business-theme {
+  --card-bg: #f3e8ff;
+  --card-ring: #8b5cf6;
+  --card-text: #581c87;
+  --card-accent: #ddd6fe;
+  --card-hover: #faf5ff;
+}
+
+/* Technology Theme */
+.technology-theme {
+  --card-bg: #fef2f2;
+  --card-ring: #ef4444;
+  --card-text: #7f1d1d;
+  --card-accent: #fecaca;
+  --card-hover: #fef7f7;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 640px) {
+  .expandable-card {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .card-image {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .card-title {
+    font-size: 1.125rem;
+  }
+  
+  .card-description {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* For grouping cards in case studies */
+.case-study-section {
+  margin-bottom: 3rem;
+}
+
+.case-study-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.demo-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+}
+
+.demo-content {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.demo-main-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+
+@media (prefers-color-scheme: dark) {
+  .expandable-card {
+    --card-bg: #1e293b;
+    --card-ring: #64748b;
+    --card-text: #f1f5f9;
+    --card-accent: #334155;
+    --card-hover: #475569;
+  }
+  
+  .demo-container {
+    background-color: #0f172a;
+  }
+  
+  .demo-main-title,
+  .case-study-title {
+    color: #f1f5f9;
+  }
+  
+  /* Override theme colors for dark mode if needed */
+  .healthcare-theme {
+    --card-bg: #1e3a8a;
+    --card-ring: #3b82f6;
+    --card-text: #dbeafe;
+    --card-accent: #1e40af;
+    --card-hover: #1d4ed8;
+  }
+  
+  .environment-theme {
+    --card-bg: #92400e;
+    --card-ring: #f59e0b;
+    --card-text: #fef3c7;
+    --card-accent: #a16207;
+    --card-hover: #b45309;
+  }
+  
+  .wellness-theme {
+    --card-bg: #065f46;
+    --card-ring: #10b981;
+    --card-text: #d1fae5;
+    --card-accent: #047857;
+    --card-hover: #059669;
+  }
+}

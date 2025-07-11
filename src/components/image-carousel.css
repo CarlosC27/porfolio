@@ -1,0 +1,115 @@
+/* ImageCarousel.css */
+
+/* Main carousel container */
+.carousel-container {
+  height: auto;
+}
+
+/* Main carousel layout with navigation */
+.carousel-main {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation buttons */
+.carousel-nav-btn {
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  background-color: var(--buttonColor, #F1E9D2);
+  color: var(--primaryColor, #2C5243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-nav-btn:hover {
+  transform: scale(1.1);
+}
+
+.carousel-nav-left {
+  margin-right: 1rem;
+}
+
+.carousel-nav-right {
+  margin-left: 1rem;
+}
+
+/* Image container */
+.carousel-img-container {
+  flex: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: var(--carouselWidth, 400px);
+}
+
+/* Main image */
+.carousel-img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dot indicators container */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Individual dot */
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secondaryColor, #E5D599);
+}
+
+.carousel-dot:hover {
+  transform: scale(1.1);
+}
+
+.carousel-dot-active {
+  background-color: var(--primaryColor, #2C5243);
+}
+
+/* Empty state */
+.carousel-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  height: var(--carouselHeight, 400px);
+}
+
+.carousel-empty p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-nav-left {
+    margin-right: 0.5rem;
+  }
+  
+  .carousel-nav-right {
+    margin-left: 0.5rem;
+  }
+  
+  .carousel-nav-btn {
+    padding: 0.375rem;
+  }
+}
