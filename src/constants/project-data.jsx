@@ -9,22 +9,7 @@ const projects = [
         projectLink: "/Aegeliss",
         projectImg: images.aegeliss_img_card
     },
-    // {
-    //     title: 'Coast 2 Coast Cousins BBQ',
-    //     projectType: 'Web Design | Frontend Development',
-    //     techStack: 'React, JavaScripts, HTML, CSS, Figma',
-    //     description: "Designed the company’s website layout and user interface to create an engaging, user-friendly experience. I then developed the site using React, incorporating functionality and aesthetics for a seamless, polished online presence, while also adding custom photography to enhance the brand’s visual storytelling.",
-    //     projectLink: "/Coast-2-Coast-Cousins-BBQ",
-    //     projectImg: images.c2cccbbq_img_card
-    // },
-    // {
-    //     title: 'Paws & Claws Reminder',
-    //     projectType: 'Android Development | Firebase',
-    //     techStack: 'Kotlin, XML, Firebase',
-    //     description: "Collaborated with a team to develop a pet management app using Kotlin, Android Jetpack, and Firebase. Implemented secure authentication, real-time data sync, and dynamic pet profiles. Enhanced UI/UX with modern components and optimized performance with Kotlin Coroutines for a seamless user experience.",
-    //     projectLink: "/Projects",
-    //     projectImg: images.pacs_img_card
-    // },
+
     {
         title: 'RÉVISEMÉ',
         projectType: 'Server Side Dev | RESTful API Dev',
@@ -49,14 +34,7 @@ const projects = [
         projectLink: "/The-City-Between-Article",
         projectImg: images.gritCityMag_img_card
     },
-    // {
-    //     title: 'Viable Veganism Website',
-    //     projectType: 'Web Design | UI/UX Design',
-    //     techStack: 'Figma, Adobe CC',
-    //     description: "Collaborated closely with designers and developers to create a cohesive website design. Contributed to crafting an engaging user experience that aligned with the brand's mission, ensuring the website was visually appealing and user-friendly.",
-    //     projectLink: "/Viable-Veganism",
-    //     projectImg: images.viableVeganism_img_card
-    // },
+ 
     {
         title: "Husky Fitness App",
         projectType: 'UI/UX Design | Product Design',
@@ -67,4 +45,32 @@ const projects = [
     }
 ]
 
-export default projects;
+export default projects;    
+
+
+
+// {
+    //     title: 'Coast 2 Coast Cousins BBQ',
+    //     projectType: 'Web Design | Frontend Development',
+    //     techStack: 'React, JavaScripts, HTML, CSS, Figma',
+    //     description: "Designed the company’s website layout and user interface to create an engaging, user-friendly experience. I then developed the site using React, incorporating functionality and aesthetics for a seamless, polished online presence, while also adding custom photography to enhance the brand’s visual storytelling.",
+    //     projectLink: "/Coast-2-Coast-Cousins-BBQ",
+    //     projectImg: images.c2cccbbq_img_card
+    // },
+    // {
+    //     title: 'Paws & Claws Reminder',
+    //     projectType: 'Android Development | Firebase',
+    //     techStack: 'Kotlin, XML, Firebase',
+    //     description: "Collaborated with a team to develop a pet management app using Kotlin, Android Jetpack, and Firebase. Implemented secure authentication, real-time data sync, and dynamic pet profiles. Enhanced UI/UX with modern components and optimized performance with Kotlin Coroutines for a seamless user experience.",
+    //     projectLink: "/Projects",
+    //     projectImg: images.pacs_img_card
+    // },   
+    // 
+    // // {
+    //     title: 'Viable Veganism Website',
+    //     projectType: 'Web Design | UI/UX Design',
+    //     techStack: 'Figma, Adobe CC',
+    //     description: "Collaborated closely with designers and developers to create a cohesive website design. Contributed to crafting an engaging user experience that aligned with the brand's mission, ensuring the website was visually appealing and user-friendly.",
+    //     projectLink: "/Viable-Veganism",
+    //     projectImg: images.viableVeganism_img_card
+    // },
