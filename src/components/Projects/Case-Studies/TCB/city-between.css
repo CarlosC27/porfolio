@@ -1,0 +1,758 @@
+:root {
+    --color-green: #2C5243;
+    --color-dark-green: #2E3A38;
+    --color-light-green: #C3D1BF;
+    --color-cream: #F0ECE3;
+    --color-yellow: #E5D599;
+    --color-orange: #C87041;
+    --color-blue: #A8B9C0;
+    --color-white: #F5F5F5;
+    --color-black: #333333;
+  }
+  
+  body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: #D5D1C5;
+    font-family:   "DM Sans",sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    color: var(--color-black);
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-family: 'regards.oft';
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    margin: 0.5rem 0;
+  }
+
+  h2{
+    color: #2C394C;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  .tcb-intro{
+    background-color: #ABBEC2;
+    color: #2C394C;
+    box-shadow: 0px 67px 80px 0px rgba(0, 0, 0, 0.07), 0px 24.456px 29.201px 0px rgba(0, 0, 0, 0.05), 0px 11.873px 14.177px 0px rgba(0, 0, 0, 0.04), 0px 5.82px 6.95px 0px rgba(0, 0, 0, 0.03), 0px 2.301px 2.748px 0px rgba(0, 0, 0, 0.02);
+    padding: 2rem 0.75rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tcb-intro h1{
+    color: #2C394C;
+  }
+
+
+  .tech-stack-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech-stack-items{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .ts-item{
+    background-color: #435061;
+    color: #abccdb;
+    padding: 4px 16px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+
+
+ .tcb-intro .tech-stack-items{
+    flex-wrap: wrap;
+  }
+
+  .tcb-intro .ts-item{
+    color: #ABBEC2;
+    background-color: #2C394C;
+  }
+
+  .ts-item:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .hero-img{
+    max-width: 280px;
+    height: auto;
+  }
+
+
+  .about-gcm-section, .collaboration-section, .final-product-section, .impact-and-learnings, .get-your-copy-section{
+    margin: 0.75rem;
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-gcm-section img {
+    max-width: 280px;
+    height: auto;
+    align-self: center;
+  }
+
+  .the-challenge-section{
+    margin: 0.75rem;
+  }
+
+  .the-challenge-list{
+    padding-inline-start: 0;
+  }
+
+  .challenge-item{
+    list-style-type: none;
+    color: #D5D1C5;
+    margin: 1rem 0;
+    padding: .75rem;
+    border-radius: 20px;
+    background-color: #2C394C;
+  }
+
+  .challenge-item:hover, .frl-item:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .process-and-design-section, .growth-section, .reflection-section{
+    padding:2rem 0.75rem;
+    margin-top:2rem;
+    background-color:#ABBEC2;
+  }
+  
+  h3, h4{
+    margin: 0.5rem 0
+  }
+
+  .typography-title{
+    font-family: 'regards.oft';
+    color:#2C394C;
+    font-weight: 300;
+  }
+
+  .swanky-font{
+      font-family: "Swanky and Moo Moo", cursive;
+      font-weight: 400;
+  }
+
+  .font-rationale-list, .drawing-rational-list, .photography-rational-list, .postcard-rational-list, .growth-section ul, .design-choices-list{
+     padding-inline-start: 0;
+  }
+
+
+  .frl-item, .drl-item, .prl-item, .pcrl-item{
+    list-style-type: none;
+    margin: 1rem 0;
+    background-color: #2C394C;
+    color: #ABBEC2;
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+
+  .typography-section{
+    display: flex;
+    flex-direction: column;
+  }
+  .typography-section img{
+    max-width: 280px;
+    height: auto;
+    align-self: center;
+  }
+
+  .cb-sketches{
+    margin: 3rem 0;
+  }
+
+  .cb-sketches .carousel-img-container{
+    box-shadow: none;
+  }
+
+  .ellens-photos, .magazine-iterations{
+    margin: 2rem 0;
+  }
+
+  .tcb-page .airplane-text-button{
+    color: #2C394C;
+  }
+
+   .growth-section li, .dcl-item{
+    list-style-type: none;
+    margin: 1rem 0;
+    background-color: #D5D1C5;
+    color: #2C394C;
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+
+  .growth-section h3{
+    color: #2C394C;
+  }
+
+  .fmd-p{
+    margin: 0;
+  }
+
+  .ial-container img{
+    max-width: 290px;
+    border-radius: 20px;
+    margin: 1rem 0;
+  }
+
+  .team-work-and-img img{
+    max-width: 290px;
+    border-radius: 20px;
+  }
+
+  .gcm23{
+    max-width: 290px;
+    margin: 1rem 0;
+    border-radius: 20px;
+  }
+
+  .ial-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+    .team-work-and-img, .gcm-text-and-img{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-work-and-img img, .impact-and-learnings img, .gcm-text-and-img img, .tcb-intro img{
+        align-self: center;
+    }
+
+    .cb-sketches .carousel-img{
+        max-height: 118px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .ellens-photos .carousel-img{
+        max-height: 260px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations .carousel-img{
+        max-height: 134px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .tcb-title-and-img{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .typography-list-and-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .padd-title{
+        margin-bottom: 0;
+    }
+
+    .carousel-container{
+        margin: 3rem 0 2rem;
+    }
+
+
+  @media(min-width: 375px){
+    h1{
+        font-size: 2.2rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    .tcb-intro img{
+        max-width: 360px;
+    }
+
+    .typography-section img{
+        max-width: 360px;
+    }
+    
+    .ial-container img, .team-work-and-img img, .gcm23 {
+        max-width: 340px;
+    }
+
+
+    .cb-sketches .carousel-img{
+        max-height: 140px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .ellens-photos .carousel-img{
+        max-height: 348px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations .carousel-img{
+        max-height: 180px;
+        width: fit-content;
+        justify-self: center;
+    }
+  
+    .about-gcm-section h2{
+        margin-top: 1.2em;
+    }
+
+  }
+
+  @media(min-width: 430px){
+
+    .typography-section img{
+        max-width: 390px;
+    }
+
+    .cb-sketches .carousel-img{
+        max-height: 180px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .ellens-photos .carousel-img{
+        max-height: 396px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations .carousel-img{
+        max-height: 204px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+  }
+
+  @media(min-width: 768px){
+    body{
+        font-size: 20px;
+        line-height: 1.8rem;
+      }
+
+      .tcb-intro img{
+        max-width: 85%;
+      }
+
+      h1{
+        font-size: 2.5em;
+        line-height: 1em;
+      }
+      h2{
+        font-size: 2em;
+        line-height: 1.2em;
+      }
+
+      h3{
+        font-size: 1.6em;
+        line-height: 1.2em;
+        margin: 0.4em 0;
+      }
+      h4{
+        font-size: 1.4em;
+        margin: 0.3em 0;
+      }
+
+      .tcb-intro{
+        padding: 2.5em 2em;
+
+      }
+
+      .process-and-design-section, .growth-section, .reflection-section{
+        padding: 2em;
+      }
+
+      .tech-stack-container{
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .the-challenge-list, .font-rationale-list, .drawing-rational-list, .photography-rational-list, .postcard-rational-list, .growth-section ul, .reflection-section ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+    .challenge-item, .frl-item, .drl-item, .prl-item, .pcrl-item, .growth-section li, .reflection-section li{
+        padding: 1em;
+        margin: 0;
+    }
+
+    .about-gcm-section, .impact-and-learnings, .the-challenge-section, .collaboration-section, .final-product-section, .get-your-copy-section{
+        margin: 2em;
+    }
+
+     .about-gcm-section{
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .carousel-img{
+        max-height: 380px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+     .cb-sketches .carousel-img{
+        max-height: 300px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .ellens-photos .carousel-img{
+        max-height: 752px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations .carousel-img{
+        max-height: 388px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .magazine-iterations .carousel-img{
+        max-height: 768px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .typography-section img{
+        max-width: 600px;
+    }
+    .impact-and-learnings img{
+        max-width: 668px;
+    }
+
+    .team-work-and-img{
+        flex-direction: row;
+        gap: 1.5em;
+        align-items: center;
+        margin: 2em 0;
+    }
+
+    .team-work-and-img img{
+        max-width: 280px;
+    }
+
+    .gcm-text-and-img{
+        flex-direction: row-reverse;
+        gap: 1.5em;
+        align-items: center;
+    }
+    .gcm23{
+        max-width: 280px;
+    }
+
+    .airplane-text-button{
+        font-size: 1em;
+    }
+
+    .carousel-container{
+        margin: 3em 0;
+    }
+
+    .magazine-iterations, .postcard-iterations{
+        margin-bottom: 0;
+    }
+
+
+  }
+
+  @media(min-width: 1024px){
+
+    .tcb-intro{
+        /* gap: 2em; */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tcb-title-and-img{
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .tcb-intro{
+        padding: 4em;
+    }
+
+    .tcb-intro img{
+        max-width: 50%;
+    }
+
+    h1{
+        font-size: 2.8em;
+        margin: 1rem 0;
+    }
+
+    h2{
+        font-size: 2.2em;
+        margin: 0.5em 0;
+    }
+
+    .tcb-intro .tech-stack-container{
+        margin: 1em 0;
+        align-items: center;
+    }
+
+    .tpsmy{
+        display: flex;
+        gap: 40px;
+    }
+
+    .about-gcm-section, .the-challenge-section, .collaboration-section, .final-product-section, .impact-and-learnings, .get-your-copy-section{
+        margin: 4em;
+    }
+
+    .about-gcm-section{
+        gap: 40px;
+    }
+
+    .the-challenge-list, .drawing-rational-list, .photography-rational-list, .postcard-rational-list, .growth-section ul, .reflection-section ul{
+        margin: 1em 3em;
+        gap: 1.5em;
+    }
+
+    .challenge-item{
+        padding: 1.4em;
+    }
+
+    .process-and-design-section, .growth-section, .reflection-section{
+        padding: 4em;
+    }
+
+    .font-rationale-list{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .typography-list-and-img{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .typography-list-and-img img{
+        max-width: 500px;
+    }
+
+
+    .cb-sketches .carousel-img{
+        max-height: 248px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .ellens-photos .carousel-main, .postcard-iterations .carousel-main, .magazine-iterations .carousel-main{
+        justify-content: space-around;
+    }
+
+    .ellens-photos .carousel-img-container{
+        max-width: 600px;
+        
+    }
+
+    .ellens-photos .carousel-img{
+        max-height: 752px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations .carousel-img-container{
+        max-width: 900px;
+    }
+    .postcard-iterations .carousel-img{
+        max-height: 588px;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .postcard-iterations{
+        margin: 2em 0;
+    }
+
+    .magazine-iterations .carousel-img-container{
+        max-width: 558px;
+    }
+
+    .magazine-iterations .carousel-img{
+        max-height: 512px;
+        width: fit-content;
+        justify-self: center; 
+    }
+
+    .ial-container{
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .team-work-and-img{
+        justify-content: space-evenly;
+    }
+    .twai-text{
+        max-width: 50%;
+    }
+
+    .team-work-and-img img{
+        max-width: 320px;
+    }
+
+    .gcm23{
+        max-width: 320px;
+    }
+    .gcm-text-and-img{
+        gap:80px ;}
+
+    .gcmtai-text p{
+        max-width: 70%;
+    }
+
+    .drawings-section{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .drawing-rational-list{
+        display: flex;
+        flex-direction: column;
+        margin-right:0 ;
+    }
+
+    .drawings-text{
+        max-width: 54%;
+    }
+
+    .collab-grid{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 2em; 
+       margin-top: 2em;
+    }
+
+    .collaboration-section h2{
+        margin-top: 0;
+    }
+
+    .final-product-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .final-product-text{
+        max-width: 50%;
+    }
+
+   .gcm23{
+    max-width: 360px;
+   }
+
+   .about-gcm-section img{
+    max-width: 320px;
+   }
+    
+  }
+
+  @media(min-width: 1440px){
+    .tcb-intro{
+        padding: 3em 6em;
+    }
+
+    .tcb-intro img{
+        max-width: 55%;
+    }
+
+    h1{
+        font-size: 3.6em;
+    }
+
+    h2{
+        font-size: 2.6em;
+    }
+    .about-gcm-section h2{
+        margin-top: 0.8em;
+    }
+
+    .about-gcm-section, .the-challenge-section, .collaboration-section, .final-product-section, .impact-and-learnings, .get-your-copy-section{
+        margin: 6em;
+    }
+
+    .process-and-design-section, .reflection-section, .growth-section{
+        padding: 6em;
+    }
+
+    .about-gcm-section p{
+        max-width: 74%;
+    }
+
+    /* h3{
+        font-size: ;
+    } */
+
+    .tcb-intro p{
+        font-size: 1.2em;
+    }
+    .tcb-intro .tech-stack-container{
+        align-items: center;
+    }
+
+    .drawings-text{
+        max-width:50%;
+    }
+
+   
+
+  }
+
+  @media(min-width: 1728px){
+    .tcb-intro, .process-and-design-section, .growth-section, .reflection-section{
+        padding: 6em 8em;
+    }
+
+    .get-your-copy-section, .final-product-section, .impact-and-learnings, .collaboration-section, .about-gcm-section, .the-challenge-section{
+        margin: 6em 8em;
+    }
+
+  }
+
+  @media(min-width: 2200px){
+    .tcb-intro,.process-and-design-section, .growth-section, .reflection-section{
+        padding-left: 32em;
+        padding-right: 32em;
+    }
+
+    .get-your-copy-section, .final-product-section, .impact-and-learnings, .collaboration-section, .about-gcm-section, .the-challenge-section{
+        margin-left: 32em;
+        margin-right: 32em;
+    }
+
+  }

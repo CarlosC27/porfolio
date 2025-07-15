@@ -12,24 +12,6 @@ const About = (props) => {
     return(
         <div>
             <main className='about-page-content'>
-                <section className='about-intro-section'>
-                    <div className='about-intro-img'>
-                        <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-1"/>
-                        <img src={images.picnic_polaroid} alt='polaroid of Carlos at a picnic' className="about-intro-polaroid about-img-2"/>
-                        <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-3"/>
-                        <img src={images.picnic_polaroid} alt='polaroid of Carlos at a picnic' className="about-intro-polaroid about-img-4"/>
-                        <img src={images.mascota_polaroid} alt='polaroid of Carlos in Mascota, Jalisco' className="about-intro-polaroid about-img-5"/>
-                    </div>
-                    <div className='title-profile-img-text'>
-                        <h1 className='orange-title'>It's Me! Hi!</h1>
-                        <p className='about-intro-p'>
-                            I am <strong>Carlos Alexis Carrillo-Sandoval</strong>, a <strong>designer</strong> and <strong>developer</strong> based in <strong>Seattle</strong>. I’m in my final quarter at the <strong>University of Washington</strong>,
-                            where I will be earning my Bachelor of Science in Informatics. Throughout my academic journey, I’ve honed my skills in <strong>web</strong> and <strong>mobile 
-                            development</strong>  while also exploring <strong>product</strong> and <strong>user experience design</strong>. I thrive on tackling complex problems with a thoughtful approach, transforming ideas from 
-                            concept to reality while balancing functionality and user experience.
-                            </p>
-                    </div>
-                </section>
                 <section className='skills-section'>
                     <h2 className='skills-title'>My Coding & Crafting Kit  💻</h2>
                     <div className='my-skills'>

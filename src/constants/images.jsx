@@ -40,6 +40,7 @@ const cream_pa = new URL('../assets/personal-brand/Paper-Airplane-Cream.PNG', im
 const blue_pa = new URL('../assets/personal-brand/Paper-Airplane-Blue.PNG', import.meta.url).href;
 const yellow_pa = new URL('../assets/personal-brand/Paper-Airplane-Yellow.PNG', import.meta.url).href;
 const orange_pa = new URL('../assets/personal-brand/Paper-Airplane-Orange.PNG', import.meta.url).href;
+const tcb_pa = new URL('../assets/personal-brand/Paper-Airplane-tcb.PNG', import.meta.url).href;
 
 const footer_logo = new URL('../assets/personal-brand/Footer-Logo.PNG', import.meta.url).href;
 
@@ -53,7 +54,7 @@ const huskyFitness_img_card = new URL('../assets/case-studies/husky-fitness/husk
 const huskyFitness_hp_mockup = new URL('../assets/case-studies/husky-fitness/husky-fitness-homepage.PNG', import.meta.url).href;
 
 const rotator_img_card = new URL('../assets/case-studies/rotator-creative/rotator-mockup.PNG', import.meta.url).href;
-const rotator_hp_mockup = new URL('../assets/case-studies/rotator-creative/rotator-home-page.PNG', import.meta.url).href;
+const rotator_hp_mockup = new URL('../assets/case-studies/rotator-creative/rotator-intro-img.PNG', import.meta.url).href;
 
 const viableVeganism_img_card = new URL('../assets/case-studies/viable-veganism/viable-veganism-mockup.JPG', import.meta.url).href;
 const viableVeganism_hp_mockup = new URL('../assets/case-studies/viable-veganism/viable-veganism-homepage.PNG', import.meta.url).href;
@@ -101,6 +102,7 @@ export default {
     blue_pa,
     yellow_pa,
     orange_pa,
+    tcb_pa,
     footer_logo,
     c2cccbbq_img_card,
     gritCityMag_img_card,

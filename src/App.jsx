@@ -10,8 +10,8 @@ import Construction from "./components/construction-page";
 import Aegeliss from "./components/Projects/Case-Studies/Aegeliss/aegeliss-page";
 import Rotator from "./components/Projects/Case-Studies/Rotator/rotator-page";
 import Coast2Coast from "./components/Projects/Case-Studies/c2c-page";
-import TheCityBetween from "./components/Projects/Case-Studies/citybtwn-page";
-import Revisime from "./components/Projects/Case-Studies/revisime-page";
+import TheCityBetween from "./components/Projects/Case-Studies/TCB/citybtwn-page";
+import Revisime from "./components/Projects/Case-Studies/Reviseme/revisime-page";
 import ViableVegansim from "./components/Projects/Case-Studies/viable-veganism-page";
 import HuskyFitness from "./components/Projects/Case-Studies/husky-fitness-page";
 
