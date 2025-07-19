@@ -89,7 +89,7 @@
     padding-inline-start: 0;
   }
 
-  .cpl-item, .responsibility-item, .ph2-activity-item, .solution-item, .iar-item{
+  .rotator-page .cpl-item, .rotator-page .responsibility-item, .rotator-page .ph2-activity-item, .rotator-page .solution-item, .rotator-page .iar-item{
     list-style-type: none;
     background-color: #8C3335;
     color: #fcf8ee;
@@ -98,7 +98,7 @@
     border-radius: 24px;
   }
 
-  .sc-item, .rtr-project-item, .ds-item, .kl-item{
+  .sc-item, .rtr-project-item, .ds-item, .rotator-page .kl-item{
     list-style-type: none;
     color: #8C3335;
     background-color: #fefefe;

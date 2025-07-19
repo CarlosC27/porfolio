@@ -2,10 +2,17 @@ import React from "react";
 import images from "../../../../constants/images";
 import projects from "../../../../constants/project-data";
 import Rtrtimgs from "../../../../constants/rotator-imgs";
+import ImageCarousel from "../../../image-carousel";
 import OregonCityAnimation from "./oregon-city-animation";
+import FigmaEmbed from "../figma-component";
 import "./../Rotator/rotator.css"
 
+
 const Rotator = (props) => {
+
+    const rtrNotes = [Rtrtimgs.rtr_notes_1, Rtrtimgs.rtr_notes_2,Rtrtimgs.rtr_notes_3,Rtrtimgs.rtr_notes_4,Rtrtimgs.rtr_notes_5, Rtrtimgs.rtr_notes_6,Rtrtimgs.rtr_notes_7,Rtrtimgs.rtr_notes_8];
+    const heroImages = [Rtrtimgs.ya_hi, Rtrtimgs.jblm_hi, Rtrtimgs.swell_hi, Rtrtimgs.oat_hi, Rtrtimgs.gcm_hi, Rtrtimgs.oc_hi];
+    const mockupImages = [Rtrtimgs.oc_mockup_1, Rtrtimgs.oat_mockup_3, Rtrtimgs.jblm_illustration, Rtrtimgs.oat_mockup_2, Rtrtimgs.oc_mockup_2, Rtrtimgs.oat_mockup_1];
     return(
         <div>
             <main className="rotator-page">
@@ -62,7 +69,13 @@ const Rotator = (props) => {
                             <li className="sc-item">Cases with strong process documentation</li>
                             <li className="sc-item">Projects with measurable impact</li>
                         </ul>
-                        {/* insert notes imgs here */}
+                        <ImageCarousel
+                        images={rtrNotes}
+                        primaryColor="#402001"
+                        secondaryColor="#fcf8ee"
+                        buttonColor="#fcf8ee"
+                        className="rotator-notes-carousel"
+                        />
                         <h4>Final Selection:</h4>
                         <ul className="rtr-projects-list">
                             <li className="rtr-project-item">Greater Tacoma Community Foundation</li>
@@ -70,20 +83,39 @@ const Rotator = (props) => {
                             <li className="rtr-project-item">Port of Tacoma Sculpture</li>
                             <li className="rtr-project-item">Oregon Agricultural Trust</li>
                             <li className="rtr-project-item">Grit City Magazine</li>
-                            <li className="rtr-project-item">Port of Tacoma Sculpture</li>
+                            <li className="rtr-project-item">Oregon City</li>
                         </ul>
+                        <ImageCarousel
+                        images={heroImages}
+                        primaryColor="#402001"
+                        secondaryColor="#fcf8ee"
+                        buttonColor="#fcf8ee"
+                        className="rotator-projects-carousel"
+                        />
+                        
                 </section>
                 <section className="phase-2">
                         <h3>Phase 2: Process Documentation and Storytelling</h3>
                         <p>I dove deep into project archives, reviewing everything from initial proposals to final deliverables. This gave me insight into Rotator's design methodology and helped me craft authentic case study narratives.</p>
-                        <h4>Key Activities</h4>
-                        <ul className="phase-2-activies-list">
-                            <li className="ph2-activity-item">Analyzed complete project files and iterations</li>
-                            <li className="ph2-activity-item">Documented design rationale and decision-making process</li>
-                            <li className="ph2-activity-item">Selected compelling visuals that showed progression from concept to completion</li>
-                            <li className="ph2-activity-item">Created project-specific mockups that honored each client's branding</li>
-                            <li className="ph2-activity-item">Iterated on the project narrative and visuals based on the design team's feedback and suggestions</li>
-                        </ul>
+                        <div className="rtr-key-activites">
+                            <div className="rtr-key-activites-text">
+                                <h4>Key Activities</h4>
+                                <ul className="phase-2-activies-list">
+                                    <li className="ph2-activity-item">Analyzed complete project files and iterations</li>
+                                    <li className="ph2-activity-item">Documented design rationale and decision-making process</li>
+                                    <li className="ph2-activity-item">Selected compelling visuals that showed progression from concept to completion</li>
+                                    <li className="ph2-activity-item">Created project-specific mockups that honored each client's branding</li>
+                                    <li className="ph2-activity-item">Iterated on the project narrative and visuals based on the design team's feedback and suggestions</li>
+                                </ul>
+                            </div>
+                            <ImageCarousel
+                            images={mockupImages}
+                            primaryColor="#F7EDD4"
+                            secondaryColor="#8C3335"
+                            buttonColor="#8C3335"
+                            className="rotator-mockups-carousel"
+                            />
+                        </div>
                         {/* Instert vidoe here */}
                 </section>
                 <section className="phase-3">
@@ -94,7 +126,13 @@ const Rotator = (props) => {
                             <li className="ds-item">Responsive layouts optimized for all screen sizes</li>
                             <li className="ds-item">Custom mockups maintaining brand consistency across projects</li>
                         </ul>
-                        {/* insert figma here */}
+                        {/* <FigmaEmbed
+                        figmaUrl="https://embed.figma.com/proto/INmFZWizeGPxZ4NWvKLj8F/Aegeliss-Website?page-id=87%3A2&node-id=89-2&viewport=1602%2C641%2C0.05&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=89%3A2&embed-host=share"
+                        title="Prototype"
+                        aspectRatio="16/9"
+                        /> */}
+
+                    
                 </section>
                 <section className="phase-4">
                         <h3>Phase 4: Motion Graphics Integration</h3>
