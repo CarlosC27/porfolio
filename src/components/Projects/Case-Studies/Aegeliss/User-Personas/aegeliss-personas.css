@@ -1,115 +1,144 @@
-/* Container and Layout */
-.personas-container {
-  min-height: 100vh;
-  padding: 2rem;
+/* Base Styles - Mobile First */
+.aegeliss-page .aegeliss-user-personas {
+  font-size: 16px;
+  line-height: 1.6rem;
+}
+
+.aegeliss-page .aegeliss-user-personas .personas-container {
+  padding: 1.25rem 0.75rem;
   transition: background-color 0.3s ease;
+  font-family: "DM Sans", sans-serif;
 }
 
-.personas-container.persona-a {
-  background-color: #fce4ec; /* Pink background for Persona A */
+.aegeliss-page .aegeliss-user-personas .personas-container.persona-a {
+  background-color: #F6A6A0; 
 }
 
-.personas-container.persona-b {
-  background-color: #e3f2fd; /* Blue background for Persona B */
+.aegeliss-page .aegeliss-user-personas .personas-container.persona-b {
+  background-color: #B6DBEB; 
 }
 
-.personas-wrapper {
+.aegeliss-page .aegeliss-user-personas .personas-wrapper {
   max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Typography */
-.personas-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #4a5568;
-  margin-bottom: 3rem;
-  text-align: left;
-}
-
-.persona-name {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-.section-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #4a5568;
-  margin-bottom: 0.75rem;
-}
-
-.highlight {
-  color: #3182ce; /* Blue accent color */
-}
-
-.section-text {
-  color: #4a5568;
-  line-height: 1.6;
   margin: 0;
 }
 
-.key-need-text {
-  color: #4a5568;
+/* Typography */
+.aegeliss-page .aegeliss-user-personas .personas-title {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+  color: #122D43;
+  margin-bottom: 0;
+  justify-self: center;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-name {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  color: #122D43;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.aegeliss-page .aegeliss-user-personas .section-title,
+.aegeliss-page .aegeliss-user-personas .persona-section-title {
+  font-size: 1.17rem;
+  font-weight: bold;
+  color: #122D43;
+  margin-bottom: 0.75rem;
+}
+
+.aegeliss-page .aegeliss-user-personas .key-need-text {
+  color: #122D43;
   font-style: italic;
   line-height: 1.6;
   margin: 0;
 }
 
+.aegeliss-page .aegeliss-user-personas .persona-section-text {
+  color: #122D43;
+  line-height: 1.6;
+}
+
 /* Toggle Buttons */
-.toggle-container {
+.aegeliss-page .aegeliss-user-personas .toggle-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
-.toggle-buttons {
-  background-color: #4a5568;
-  border-radius: 9999px;
-  padding: 0.25rem;
+.aegeliss-page .aegeliss-user-personas .personas-container .toggle-buttons {
+  background-color: #122D43;
+  border-radius: 80px;
+  padding: 0.5rem;
   display: flex;
   gap: 0;
+  background-color: #122D43;
+  max-width: 228px;
+  margin-top: 1.5rem;
 }
 
-.toggle-btn {
+.aegeliss-page .aegeliss-user-personas .personas-container .toggle-btn {
   padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
+  border-radius: 80px;
   font-weight: 500;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
   color: #cbd5e0;
-  background: transparent;
+  background: #122D43;
 }
 
-.toggle-btn:hover {
-  color: white;
+.aegeliss-page .aegeliss-user-personas .persona-a .toggle-buttons .toggle-btn:not(.active):hover {
+  color: #B6DBEB;
 }
 
-.toggle-btn.active {
-  background-color: #2d3748;
-  color: white;
+.aegeliss-page .aegeliss-user-personas .persona-b .toggle-buttons .toggle-btn:not(.active):hover {
+  color: #F6A6A0;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-a .toggle-btn.active {
+  background-color: #F6A6A0;
+  color: #122D43;
+  font-weight: bolder;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-b .toggle-btn.active {
+  background-color: #B6DBEB;
+  color: #122D43;
+  font-weight: bolder;
 }
 
 /* Persona Content Layout */
-.persona-content {
+.aegeliss-page .aegeliss-user-personas .persona-content {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
-.persona-content.image-right {
+.aegeliss-page .aegeliss-user-personas .personas-container h1, 
+.aegeliss-page .aegeliss-user-personas .persona-name {
+  justify-self: center;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-content.image-right {
   flex-direction: row-reverse;
 }
 
-.persona-image-container {
+.aegeliss-page .aegeliss-user-personas .persona-image-container {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-.persona-image {
+.aegeliss-page .aegeliss-user-personas .persona-image {
   width: 320px;
   height: 384px;
   background-color: #e2e8f0;
@@ -118,120 +147,175 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.persona-photo {
+.aegeliss-page .aegeliss-user-personas .persona-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.persona-details {
+.aegeliss-page .aegeliss-user-personas .persona-details,
+.aegeliss-page .aegeliss-user-personas .persona-deatils {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 
 /* Background Section */
-.persona-section {
-  margin-bottom: 1.5rem;
+.aegeliss-page .aegeliss-user-personas .persona-section {
+  text-align: start;
 }
 
-.background-list {
+.aegeliss-page .aegeliss-user-personas .persona-background-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: flex-start;
+  text-align: start;
 }
 
-.background-item {
-  color: #4a5568;
+.aegeliss-page .aegeliss-user-personas .background-item {
+  color: #122D43;
   line-height: 1.4;
 }
 
-.label {
+.aegeliss-page .aegeliss-user-personas .label {
   font-weight: 600;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .personas-container {
-    padding: 1rem;
-  }
-  
-  .personas-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .persona-content,
-  .persona-content.image-right {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .persona-image {
-    width: 280px;
-    height: 320px;
-  }
-  
-  .persona-name {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  .toggle-buttons {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .toggle-btn {
-    flex: 1;
-    padding: 0.5rem 1rem;
-  }
+.aegeliss-page .aegeliss-user-personas .toggle-buttons {
+  width: 100%;
+  max-width: 300px;
 }
 
-@media (max-width: 480px) {
-  .personas-title {
-    font-size: 1.75rem;
-  }
-  
-  .persona-image {
-    width: 240px;
-    height: 280px;
-  }
-  
-  .persona-name {
-    font-size: 1.25rem;
-  }
-  
-  .section-title {
-    font-size: 1.1rem;
-  }
+.aegeliss-page .aegeliss-user-personas .toggle-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-image {
+  width: 280px;
+  height: 320px;
+}
+
+.aegeliss-page .aegeliss-user-personas .persona-content,
+.aegeliss-page .aegeliss-user-personas .persona-content.image-right {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Animation for smooth transitions */
-.persona-content {
+.aegeliss-page .aegeliss-user-personas .persona-content {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 /* Focus states for accessibility */
-.toggle-btn:focus {
+.aegeliss-page .aegeliss-user-personas .toggle-btn:focus {
   outline: 2px solid #3182ce;
   outline-offset: 2px;
 }
 
+@media (min-width: 375px) {
+  .aegeliss-page .aegeliss-user-personas .personas-title,
+  .aegeliss-page .aegeliss-user-personas .persona-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .aegeliss-page .aegeliss-user-personas {
+    font-size: 20px;
+    line-height: 1.8rem;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .personas-container {
+    padding: 2em;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .personas-title,
+  .aegeliss-page .aegeliss-user-personas .persona-name {
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .section-title,
+  .aegeliss-page .aegeliss-user-personas .persona-section-title {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+
+
+  .aegeliss-page .aegeliss-user-personas .personas-title{
+    margin-top: 0;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .persona-image-container .persona-name {
+    align-self: flex-start;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .aegeliss-page .aegeliss-user-personas .personas-container {
+    padding: 4em;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .personas-title,
+  .aegeliss-page .aegeliss-user-personas .persona-name {
+    font-size: 2.2em;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .persona-content{
+    flex-direction: row;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .persona-content.image-right{
+    flex-direction: row-reverse;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .persona-image-container{
+    width: 40%;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .aegeliss-page .aegeliss-user-personas .personas-container {
+    padding: 6em;
+  }
+
+  .aegeliss-page .aegeliss-user-personas .personas-title,
+  .aegeliss-page .aegeliss-user-personas .persona-name {
+    font-size: 2.6em;
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1728px) {
+  .aegeliss-page .aegeliss-user-personas .personas-container {
+    padding: 8em;
+  }
+}
+
+@media(min-width: 2200px){
+  .aegeliss-page .aegeliss-user-personas .personas-container{
+    padding-left: 32em;
+    padding-right: 32em;
+  }
+}
+
 /* Print styles */
 @media print {
-  .toggle-container {
+  .aegeliss-page .aegeliss-user-personas .toggle-container {
     display: none;
   }
   
-  .personas-container {
+  .aegeliss-page .aegeliss-user-personas .personas-container {
     background: white !important;
     color: black !important;
   }

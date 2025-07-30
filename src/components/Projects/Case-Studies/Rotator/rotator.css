@@ -161,6 +161,33 @@
     filter: drop-shadow(0px 6.65px 5.32px rgba(0, 0, 0, 0.03)) drop-shadow(0px 22.336px 17.869px rgba(0, 0, 0, 0.04)) drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07));
 }
 
+.rtr-wf-carousel{
+  margin: 2rem 0;
+}
+
+.rtr-impact-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rtr-impact-div img{
+  max-width: 280px;
+}
+
+.rotator-notes-carousel img{
+  max-height: 320px;
+}
+
+.rotator-mockups-carousel img{
+  max-height: 136px;
+  /* width: fit-content; */
+  justify-self: center;
+}
+
+.rtr-bq{
+  margin-top: 2rem;
+}
 @supports not (aspect-ratio: 1) {
   .oregon-city-video {
     height: calc(100vw * 864 / 5472);
@@ -173,20 +200,49 @@
         min-height: calc(100vw * 864 / 5472);
     }
 
+     h1{
+        font-size: 2.2rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    .rotator-notes-carousel img{
+      max-height: 412px;
+    }
+
+    .rotator-mockups-carousel img{
+      max-height: 182px;
+    }
+
+    .ph4-tx-and-img img{
+      max-width: 364px;
+    }
+
+    .rtr-impact-div img{
+      max-width: 332px;
+    }
+
   }
 
   @media(min-width: 430px){
 
-    
+    .rotator-notes-carousel img{
+      max-height: 472px;
+    }
+
+    .rotator-mockups-carousel img{
+      max-height: 200px;
+    }
     
   }
 
   @media(min-width: 768px){
-    body{
+    body .rotator-page{
         font-size: 20px;
         line-height: 1.8rem;
       }
-
       
       .tech-stack-container{
         flex-direction: row;
@@ -198,76 +254,382 @@
         min-height: calc(100vw * 864 / 5472);
     }
 
+    .rotator-page h1{
+        font-size: 2.5em;
+        line-height: 1em;
+      }
+
+    .rotator-page h2{
+        font-size: 2em;
+        line-height: 1.2em;
+      }
+
+    .rotator-page h3{
+        font-size: 1.6em;
+        line-height: 1.2em;
+        margin: 0.4em 0;
+      }
+      .rotator-page h4{
+        font-size: 1.4em;
+        margin: 0.3em 0;
+      }
+
+      .rotator-intro{
+        padding: 3em 2em;
+      }
+
+     .rotator-page .phase-1, .rotator-page .phase-3, .rotator-page .key-learning-section{
+      padding: 2em;
+     }
+
+     .rotator-page .the-challenge-section, .rotator-page .my-role-and-approach, .rotator-page .phase-2, .rotator-page .phase-4, .rotator-page .solution-section{
+      margin: 2em;
+     }
+
+     .rotator-page .my-responsibilities-list, .rotator-page .selection-criteria-list, .rotator-page .rtr-projects-list, .rotator-page .phase-2-activies-list, .rotator-page .key-learnings-list, .rotator-page .solutions-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem; 
+      list-style: none;
+      padding: 0;
+    }
+
+    .rotator-page .responsibility-item, .rotator-page .sc-item, .rotator-page .rtr-project-item, .rotator-page .ph2-activity-item, .rotator-page .kl-item, .rotator-page .solution-item{
+      margin: 0;
+      padding: 1.5em;
+    }
+
+    .rotator-page .responsibility-item:last-child , .rotator-page .ph2-activity-item:last-child, .rotator-page .solution-item:last-child{
+      grid-column: 1 / -1; 
+      justify-self: center; 
+      max-width: calc(50% - 0.5rem); 
+    }
+
+    .rotator-notes-carousel img{
+      max-height: 520px;
+    }
+
+    .rotator-notes-carousel{
+      max-width: 448px;
+      height: auto;
+      justify-self: center;
+    }
+
+    .rotator-mockups-carousel img{
+      max-height: 364px;
+    }
+
+    .rotator-wireframes-carousel img{
+      max-height: 972px;
+    }
+
+    .rotator-wireframes-carousel .carousel-container{
+      max-width: 496px;
+      height: auto;
+      justify-self: center;
+    }
+    .ph4-tx-and-img{
+      flex-direction: row;
+    }
+
+    .rtr-impact-div{
+      flex-direction: row;
+      gap: 2em;
+    }
+
+    .rotator-page .ds-item{
+      width: 520px;
+      justify-self: center;
+    }
+
+
   }
 
   @media(min-width: 1024px){
 
+    .rotator-page h1{
+        font-size: 2.8em;
+        margin: 1rem 0;
+    }
+
+    .rotator-page h2{
+        font-size: 2.2em;
+        margin: 0.5em 0;
+    }
+    .rotator-intro img{
+      max-width: 58%;
+    }
+
     .rotator-intro{
-        padding: 7.2em 4em;
-        gap: 2em;
-        flex-direction: row;
+        padding: 3em 4em;
+        gap: 0;
         justify-content: space-between;
     }
 
+    .rtr-intro-tpm{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rotator-page .the-challenge-section, .rotator-page .my-role-and-approach, .rotator-page .phase-2, .rotator-page .phase-4, .rotator-page .solution-section{
+      margin: 4em;
+    }
+
+     .rotator-page .phase-1, .rotator-page .phase-3, .rotator-page .key-learning-section{
+      padding: 4em;
+     }
+
+     .rotator-page .my-responsibilities-list, .rotator-page .selection-criteria-list, .rotator-page .rtr-projects-list, .rotator-page .phase-2-activies-list, .rotator-page .key-learnings-list{
+      gap: 2em;
+     }
+
+     .rotator-page .core-problems-list{
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+     }
+
+     .rotator-page .cpl-item{
+      margin: 0;
+      max-width: 70%;
+     }
+
+     .rotator-page .cpl-item:last-child{
+      margin-bottom: 1em;
+     }
+
+     .rotator-page .rtr-projects-list, .rotator-page .phase-2-activies-list, .rotator-page .phase-2-activies-list{
+      display: flex;
+      flex-direction: column;
+      max-width: 40%;
+      gap: 1.5em;
+     }
+
+     .rotator-page .phase-2-activies-list{
+      max-width: 100%;
+     }
+
+     .rtr-key-activites-text{
+      max-width: 30%;
+     }
+
+     .rotator-page .ph2-activity-item:last-child{
+      max-width: 100%;
+     }
+
+     .rotator-page .rtr-project-item, .rotator-page .ph2-activity-item{
+      padding: 1em;
+     }
     
+     .rtr-final-selection, .rtr-key-activites{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+     }
+
+     .rtr-key-activites-text{
+      max-width: 400px;
+     }
+
+     .rtr-key-activites{
+      flex-direction: row-reverse;
+     }
+
+     .rotator-projects-carousel img{
+      max-height: 400px;
+     }
+
+     .rotator-mockups-carousel img{
+      max-height: 380px;
+     }
+
+     .phase-2 .carousel-container.rotator-mockups-carousel{
+      max-width: 680px;
+     }
+
+     .rtr-final-selection .carousel-container, .rtr-key-activites .carousel-container{
+      width: 100%;
+     }
+
+     .rtr-key-activites .carousel-container{
+      max-width: 740px;
+     }
+
+     .rotator-projects-carousel{
+      justify-self: center;
+      max-width: 700px;
+      margin: 0 2em;
+     }
+
+     .rotator-wireframes-carousel img{
+      max-height: 680px;
+     }
+
+     .rotator-page .ds-item{
+      justify-self: flex-start;
+     }
+
+     .rtr-p3-text{
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+     }
+
+     .rtr-p3 .carousel-container{
+      max-width: 500px;
+     }
+
+     .rtr-p3{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+     }
+
+     .ph4-tx-and-img img {
+      max-width: 600px;
+     }
+
+     .ph4-tx-and-img p{
+      max-width: 33%;
+     }
+
+     .ph4-tx-and-img{
+      justify-content: space-around;
+     }
+
+     .rtr-impact-div img{
+      max-width: 500px;
+     }
+
+     .rtr-bq{
+      margin-top: 3em;
+     }
+
+     .rtr-ph-1{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3em;
+     }
+
+     .rotator-page .selection-criteria-list{
+      display: flex;
+      flex-direction: column;
+     }
+
+     .rotator-page .sc-item{
+      padding: 1em;
+     }
+
+    .rotator-page .the-challenge-section{
+      margin-bottom: 0;
+    }
+
+     .rotator-page .my-role-and-approach{
+      margin-top: 2em;
+    }
+
     
   }
 
   @media(min-width: 1440px){
-    .aegeliss-intro{
-        padding: 7em 6em;
+    .rotator-page h1{
+        font-size: 3.6em;
     }
 
-    .rotator-intro, .hf-intro{
-        padding: 7.1em 6em;
+    .rotator-page h2{
+        font-size: 2.6em;
     }
 
-    .revisime-intro, .vv-intro{
-        padding: 6em;
+    .rotator-intro img{
+      max-width: 50%;
     }
 
-    .c2c-intro{
-        padding: 6.4em 6em;
+    .rotator-intro{
+      padding: 3em 6em;
     }
 
-    .tcb-intro{
-        padding: 4.6em 6em;
+    .rotator-page .the-challenge-section, .rotator-page .my-role-and-approach, .rotator-page .phase-2, .rotator-page .phase-4, .rotator-page .solution-section{
+      margin: 6em;
     }
 
-    .c2c-intro img{
-        max-width: 35%;
+     .rotator-page .phase-1, .rotator-page .phase-3, .rotator-page .key-learning-section{
+      padding: 6em;
+     }
+    
+
+    .rtr-key-activites-text{
+      max-width: 600px;
+     }
+
+     .rotator-page .my-role-and-approach{
+      margin-top: 0;
     }
 
-    .tcb-intro img{
-        max-width: 40%;
+    .rotator-page .the-challenge-section{
+      margin-bottom: 2em;
     }
 
-    .revisime-intro img{
-        max-width: 40%;
+    .rtr-key-activites-text{
+      max-width: 43%;
     }
-
-    h1{
-        font-size: 4.5em;
-    }
-
-    .aegeliss-intro p, .rotator-intro p, .c2c-intro p, .tcb-intro p, .revisime-intro p, .vv-intro p, .hf-intro p{
-        font-size: 1.2em;
-    }
-
-    .c2c-intro .tech-stack-container, .tcb-intro .tech-stack-container{
-        align-items: center;
-    }
-
   }
 
   @media(min-width: 1728px){
     
+    .rotator-page .the-challenge-section, .rotator-page .my-role-and-approach, .rotator-page .phase-2, .rotator-page .phase-4, .rotator-page .solution-section{
+      margin: 6em 8em;
+    }
+
+     .rotator-page .phase-1, .rotator-page .phase-3, .rotator-page .key-learning-section{
+      padding: 6em 8em;
+     }
+
+     .rotator-page .my-role-and-approach{
+      margin-top: 0;
+    }
+
+    .rotator-page .the-challenge-section{
+      margin-bottom: 2em;
+    }
+
+    .rotator-projects-carousel img{
+      max-height: 540px;
+    }
+
+    .rtr-key-activites-text{
+      max-width: 35%;
+    }
+
+    .rtr-final-selection .carousel-container{
+      max-width: 940px;
+    }
+
+    .rotator-page .rotator-mockups-carousel img{
+      max-height:448px;
+    }
+
+   .phase-2 .carousel-container.rotator-mockups-carousel{
+      max-width: 848px;
+    }
     
   }
 
   @media(min-width: 2200px){
-    .rotator-intro{
+    .rotator-intro,  .rotator-page .phase-1, .rotator-page .phase-3, .rotator-page .key-learning-section{
         padding-left: 32em;
         padding-right: 32em;
+    }
+
+    .rotator-page .the-challenge-section, .rotator-page .my-role-and-approach, .rotator-page .phase-2, .rotator-page .phase-4, .rotator-page .solution-section{
+      margin-left: 32em;
+      margin-right: 32em;
+    }
+
+    .rtr-final-selection, .rtr-key-activites-text{
+      gap: 2em;
     }
   }

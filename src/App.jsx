@@ -12,8 +12,7 @@ import Rotator from "./components/Projects/Case-Studies/Rotator/rotator-page";
 import Coast2Coast from "./components/Projects/Case-Studies/c2c-page";
 import TheCityBetween from "./components/Projects/Case-Studies/TCB/citybtwn-page";
 import Revisime from "./components/Projects/Case-Studies/Reviseme/revisime-page";
-import ViableVegansim from "./components/Projects/Case-Studies/viable-veganism-page";
-import HuskyFitness from "./components/Projects/Case-Studies/husky-fitness-page";
+import HuskyFitness from "./components/Projects/Case-Studies/Husky-Fitness/husky-fitness-page";
 
 function App(){
   return (
@@ -31,7 +30,6 @@ function App(){
             <Route path="Coast-2-Coast-Cousins-BBQ" element={<Coast2Coast/>}/>
             <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
             <Route path="RÉVISEMÉ" element={<Revisime/>}/>
-            <Route path="Viable-Veganism" element={<ViableVegansim/>}/>
             <Route path="Husky-Fitness" element={<HuskyFitness/>}/>
           </Routes>
         <Footer />

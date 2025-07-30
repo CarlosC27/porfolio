@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import personaImgs from '../../../../../constants/aegeliss-imgs'
 import './../User-Personas/aegeliss-personas.css'
 
 const AegelissUserPersonas = () =>{
@@ -8,9 +9,9 @@ const AegelissUserPersonas = () =>{
         A: {
             name: "Jennie Swift",
             title: "Primary Family Caregiver",
-            image: "",
+            image: personaImgs.jenni_persona,
             background: {
-                age_and_profession: "45, Creative Writing Professor",
+                age: "45, Creative Writing Professor",
                 education: "PhD in English Language and Literature",
                 caregiving: "Primary caregiver for her mother with recently diagnosed Alzheimer's",
                 balance: "Balancing caregiving with full-time work and family responsibilities"
@@ -19,12 +20,13 @@ const AegelissUserPersonas = () =>{
             keyNeed: "I want practical strategies that aren't overwhelming—something that helps me understand what's happening and what I can do about it.",
             bgColor: "bg-pink-200",
             textColor: "text-gray-800",
+            theme: "persona-a",
             layout: "image-left"
         },
         B: {
             name: "Allen Day",
             title: "Professional Caregiver",
-            image: "",
+            image: personaImgs.allen_persona,
             background: {
                 age: "27, Nurse Practitioner",
                 education: "Recent Nursing Graduate (BSN, RN)",
@@ -35,6 +37,7 @@ const AegelissUserPersonas = () =>{
             keyNeed: "I want evidence-based resources that help residents maintain independence and engagement—tools I can actually use and explain to others.",
             bgColor: "bg-blue-200",
             textColor: "text-gray-800",
+            theme: "persona-b",
             layout: "image-right"
         }
     }
@@ -42,9 +45,9 @@ const AegelissUserPersonas = () =>{
     const currentPersona = personas[activePersona];
 
     return(
-        <div className={`personat-container ${currentPersona.theme}`}>
+        <div className={`personas-container ${currentPersona.theme}`}>
             <div className='personas-wrapper'>
-                <h1 className='personas-title'>User Personas</h1>
+                <h2 className='personas-title'>User Personas</h2>
                 <div className='toggle-container'>
                     <div className='toggle-buttons'>
                         <button onClick={()=> setActivePersona('A')} className={`toggle-btn ${activePersona === 'A' ? 'active' : ''}`}>Persona A</button>
@@ -60,14 +63,14 @@ const AegelissUserPersonas = () =>{
                                 className='persona-photo'
                                 />
                         </div>
+                        <h2 className='persona-name'>{currentPersona.name} - {currentPersona.title}</h2>
                     </div>
                     <div className='persona-deatils'>
-                        <h2 className='persona-name'>{currentPersona.name} - {currentPersona.title}</h2>
                         <div className='persona-section'>
                             <h3 className='persona-section-title'>Background:</h3>
                             <ul className='persona-background-list'>
-                                 <li className="background-item"><span className="label">Age:</span> {currentPersona.background.age}</li>
-                                 <li className="background-item"><span className="label">Education:</span> {currentPersona.background.education}</li>
+                                 <li className="background-item"><span className="alabel"><b>Age:</b></span> {currentPersona.background.age}</li>
+                                 <li className="background-item"><span className="alabel"><b>Education:</b></span> {currentPersona.background.education}</li>
                                  <li className="background-item">{currentPersona.background.caregiving}</li>
                                  <li className="background-item">{currentPersona.background.balance}</li>
                             </ul>

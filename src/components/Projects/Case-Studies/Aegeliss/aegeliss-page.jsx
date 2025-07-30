@@ -3,13 +3,14 @@ import images from "../../../../constants/images";
 import aegelissImgs from "../../../../constants/aegeliss-imgs";
 import projects from "../../../../constants/project-data";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { FaBookOpenReader } from "react-icons/fa6";
+import { ChevronUp, ChevronDown } from 'lucide-react';
 import ExpandableCard from "../../../expandable-card";
 import AegelissUserPersonas from "./User-Personas/aegeliss-personas";
 import AegelissUserTesting from "./User-Testing/user-testing";
 import ImageCarousel from "../../../image-carousel";
+import WirefamesCarousel from "../../../wireframes-carousel";
 import '../../../expandableCards.css';
-import "./../case-studies.css"
+import "../Aegeliss/aegeliss.css"
 
 const Aegeliss = (props) => {
 
@@ -135,6 +136,7 @@ const Aegeliss = (props) => {
         }
      ]
 
+     const aegelissWireframes = [aegelissImgs.home_page, aegelissImgs.resources, aegelissImgs.education_page, aegelissImgs.our_story];
 
     return(
         <div>
@@ -143,9 +145,11 @@ const Aegeliss = (props) => {
                     <div className="aegeliss-intro-text">
                         <h1>Aegeliss</h1>
                         <h2>Empowering Dementia Caregivers with Montessori-Inspired Design: A Platform That Honors Dignity</h2>
-                        <p><b>Timeline:</b> January 2025 - June 2025</p>
-                        <p><b>Project Scope:</b> {projects.at(0).projectType}</p>
-                        <p><b>My Role:</b> Lead UX/UI Designer, UX Researcher, and Shopify Developer</p>
+                        <div className="aegeliss-tpr">
+                            <p><b>Timeline:</b> January 2025 - June 2025</p>
+                            <p><b>Project Scope:</b> {projects.at(0).projectType}</p>
+                            <p><b>My Role:</b> Lead UX/UI Designer, UX Researcher, and Shopify Developer</p>
+                        </div>
                         <div className="tech-stack-container">
                             <p><b>Tools Used:</b></p>
                             <div className="tech-stack-items"> 
@@ -166,7 +170,7 @@ const Aegeliss = (props) => {
                         <h3>TL:DR</h3>
                     <p>With 57 million people living with dementia, caregivers are overwhelmed by clinical, sterile resources that ignored the human side of care. As lead UX designer, I led the creation of a warm, accessible digital platform for dementia caregivers, rejecting the medical aesthetic that dominates this space in favor of modular content, cultural accessibility, and emotionally supportive design. The result: a sustainable Shopify platform that won two UW Capstone awards, helped Dementia Friends Washington reach 4,000 members, and proved healthcare design can be both professional and deeply human.</p>
                     </div>
-                    <img src={images.aegeliss_hp_mockup} alt="an iMac with the Aegeliss website homepage displayed"/>
+                    <img src={aegelissImgs.aegeliss_intro_img} alt="an iMac with the Aegeliss website homepage displayed"/>
                 </section>
                 <section className="aegeliss-project-overview-section">
                     <h2 className="case-study-subsections-titles">Overview</h2>
@@ -178,7 +182,10 @@ const Aegeliss = (props) => {
                     <div className="meet-the-team-container">
                         <button className="meet-the-team-accordion-header" onClick={toggleTeamAccordion} aria-expanded={isTeamOpen}>
                             <h3>More about the Team</h3>
-                            <IoIosArrowDown className={`accordion-arrow ${isTeamOpen ? 'rotated' : ''}`} />
+                            {isTeamOpen ? (
+                                <ChevronUp className="accordion-arrow"/> ) : (
+                                    <ChevronDown className="accordion-arrow" />
+                            )}
                         </button>
                         {isTeamOpen && (
                             <div className="meet-the-team-content">
@@ -195,9 +202,8 @@ const Aegeliss = (props) => {
                             </div>
                         )}
                     </div>
-                    
                 </section>
-                <section className="ageliss-user-research-section">
+                <section className="aegeliss-user-research-section">
                     <h2>User Research</h2>
                     <p>To understand the challenges facing dementia caregivers, we did took a comprehensive research approach that combined multiple methodologies for a holistic view of user needs while exploring how Montessori principles could be applied to dementia care.</p>
                     <h3>Research Methods</h3>
@@ -211,8 +217,11 @@ const Aegeliss = (props) => {
                     </ul>
                     <div className="aegeliss-more-user-research-container">
                         <button className="more-user-research-accordion-header" onClick={toggleMoreResearchAccordion} aria-expanded={isMoreResearchOpen}>
-                            <h3>Intresesed in our Interview Process and Montessori Integegration? Read all about it here <FaBookOpenReader /></h3>
-                            <IoIosArrowDown className={`accordion-arrow ${isTeamOpen ? 'rotated' : ''}`} />
+                            <h3>More about our research process</h3>
+                            {isTeamOpen ? (
+                                <ChevronUp className="accordion-arrow"/> ) : (
+                                    <ChevronDown className="accordion-arrow" />
+                            )}
                         </button>
                         {isMoreResearchOpen && (
                             <div className="more-user-research-content">
@@ -220,7 +229,7 @@ const Aegeliss = (props) => {
                                 <p>We conducted <b>45-60 minute</b> semi-structured interviews with caregivers representing diverse experiences: first-generation immigrant caregivers facing language barriers, sandwich generation caregivers balancing work and remote caregiving, and professional caregivers managing <b>11+ patients</b>. <br></br>Key questions explored how caregivers currently seek information, barriers they face in providing care, cultural considerations in caregiving approaches, and what would make their caregiving journey more manageable.</p>
                                 <h3>Montessori Research Integration</h3>
                                 <p>Working with Ju Tu's vision to apply Montessori principles to dementia care, we researched how these educational approaches emphasizing dignity, independence, and individualized engagement could address the gaps we were discovering in traditional medical-focused care models. This research revealed that Montessori methods align perfectly with what caregivers desperately needed: person-centered approaches that honor individual capabilities rather than focusing solely on deficits.</p>
-                                <div className="montesorri-principles-cards">
+                                {/* <div className="montesorri-principles-cards">
                                     <h4>Montesorri Principles in Dementia Care</h4>
                                     <p>These core principles guide our approach to creating dignified, person-centered care experiences:</p>
                                     <div className="mp-card-grid">
@@ -235,7 +244,7 @@ const Aegeliss = (props) => {
                                         ))}
                                     </div>
 
-                                </div>
+                                </div> */}
                             </div>
                         )}
                     </div>
@@ -256,26 +265,28 @@ const Aegeliss = (props) => {
                     <p>Without better solutions, we risk a cascade of negative outcomes: caregiver burnout and mental health challenges, declining quality of life for people with dementia, escalating healthcare costs, cultural barriers preventing equitable care access, and lost opportunities for precious family connections as the disease progresses.<br>
                     </br>These insights, combined with Montessori-inspired principles, became the foundation for our design approach, prioritizing features that address both practical caregiving needs and emotional well-being while honoring the dignity and individual capabilities of people living with dementia.</p>
                 </section>
-                <section className="aegeliss-user-personas">
-                    <AegelissUserPersonas />
-                </section>
                 <section className="ideation-and-design-section">
                     <h2>Ideation & Design Process</h2>
                     <p>After synthesizing our research insights, I led the team through a structured ideation process to transform our findings into actionable design solutions for the Aegeliss platform.</p>
-                    <div>
+                    <div className="iads-d1">
                         <div>
                             <h3>Feature Ideation & Brainstorming</h3>
                             <p>We began with collaborative brainstorming sessions, generating ideas that directly addressed the gaps we identified in our research. Our ideation focused on three key areas: accessibility features (good contrast, seamless UI design, key term definitions), user engagement elements (personal stories, intuitive navigation, multilingual support), and practical functionality (search features, text-to-speech options, cultural considerations).</p>
                         </div>
-                        <div>
-                            <h3>Market Research & Competitive Analysis</h3>
-                            <p>To understand the current landscape, we conducted comprehensive market research examining existing dementia and memory care websites. Our analysis revealed a consistent pattern: most sites in this space had a sterile, medical feel with dense text and clinical language that could overwhelm caregivers already facing significant stress.
-                                However, one website stood out as exceptional—Dementia Australia—which our sponsor Ju Tu recommended. This site successfully balanced professional credibility with warmth and accessibility, using concise text and an inviting design that made complex information digestible for diverse audiences.</p>
+                        <div className="agl-mrkt-research-div">
+                            <div className="agl-mrkt-research-text">
+                                <h3>Market Research & Competitive Analysis</h3>
+                                <p>To understand the current landscape, we conducted comprehensive market research examining existing dementia and memory care websites. Our analysis revealed a consistent pattern: most sites in this space had a sterile, medical feel with dense text and clinical language that could overwhelm caregivers already facing significant stress.
+                                    However, one website stood out as exceptional—Dementia Australia—which our sponsor Ju Tu recommended. This site successfully balanced professional credibility with warmth and accessibility, using concise text and an inviting design that made complex information digestible for diverse audiences.</p>
+                            </div>
+                            <img src={aegelissImgs.market_research} alt="the demtenita australia website screenshots with notes by Carlos Carrillo about the websites design"/>
                         </div>
                     </div>
-                    <div>
-                        <h3>Prioritization & Feature Ranking</h3>
-                        <p>Using insights from our research and market analysis, we systematically prioritized features through impact-effort mapping. High-priority features included multilingual support, descriptive visuals, colorful and friendly design schemes, and cultural incorporation, all directly addressing the barriers our research participants identified. We also prioritized accessibility features like text-to-speech options, keyboard accessibility, and high contrast visuals to ensure the platform could serve caregivers with varying technical comfort levels.</p>
+                    <div className="iads-d2">
+                        <div className="iads-d2-text">
+                            <h3>Prioritization & Feature Ranking</h3>
+                            <p>Using insights from our research and market analysis, we systematically prioritized features through impact-effort mapping. High-priority features included multilingual support, descriptive visuals, colorful and friendly design schemes, and cultural incorporation, all directly addressing the barriers our research participants identified. We also prioritized accessibility features like text-to-speech options, keyboard accessibility, and high contrast visuals to ensure the platform could serve caregivers with varying technical comfort levels.</p>
+                        </div>
                         <img src={aegelissImgs.idea_map} alt="Aegeliss features brainstoming map" className="aegeliss-brainstorm-map"/>
                     </div>
                     <h2>Design Approach</h2>
@@ -289,12 +300,18 @@ const Aegeliss = (props) => {
                             <h3>Accessibility-First Considerations</h3>
                             <p>We prioritized navigation clarity, readability, and information organization throughout our design process. Recognizing that our stakeholders span a wide age range and varying levels of medical background and technical comfort, we implemented features like alt text for all images, keyboard accessibility, and text-to-speech functionality. Our design remained intentionally simple, with carefully chosen color palettes and typography to ensure information never felt overwhelming.</p>
                         </div>
-                        <div>
-                            <h3>Guiding Design Principles</h3>
-                            <p>Leveraging Aegeliss's existing brand guide, we embraced warm, inviting colors rather than the sterile aesthetics common in medical websites. Our primary palette used off-white backgrounds with dark blue headings, switching to dark blue backgrounds with yellow headings when contrast was needed. This approach created visual balance while maintaining the welcoming atmosphere essential for stressed caregivers seeking support and guidance.</p>
+                        <div className="age-gp-div">
+                            <div className="age-gp-text">
+                                <h3>Guiding Design Principles</h3>
+                                <p>Leveraging Aegeliss's existing brand guide, we embraced warm, inviting colors rather than the sterile aesthetics common in medical websites. Our primary palette used off-white backgrounds with dark blue headings, switching to dark blue backgrounds with yellow headings when contrast was needed. This approach created visual balance while maintaining the welcoming atmosphere essential for stressed caregivers seeking support and guidance.</p>
+                            </div>
+                            <img src={aegelissImgs.color_palette} alt="the Aegeliss color palette"/>
                         </div>
                     </div>
                     <p>The result was a platform that honored both the practical needs identified in our research and the emotional needs of people navigating one of life's most challenging experiences.</p>
+                </section>
+                <section className="aegeliss-user-personas">
+                    <AegelissUserPersonas />
                 </section>
                 <section className="wireframing-and-protoyping">
                     <h2>Wireframes & Prototyping</h2>
@@ -307,24 +324,22 @@ const Aegeliss = (props) => {
                         </div>
                         <ImageCarousel
                             images={intialWirframingImgs}
-                            primaryColor="#122D43"
-                            secondaryColor="#344F66"
-                            // buttonColor="#122D43"
+                            primaryColor="#B6DBEB"
+                            secondaryColor="#122D43"
+                            buttonColor="#122D43"
                             width="200px"
                             className="ageliss-initial-wireframing"
                         />
                     </div>
                 </section>
-                <section className="design-system-and-hifi-fidelit-section">
+                <section className="design-system-and-hifi-fidelity-section">
                     <h2>Design System & High-Fidelity Wireframes</h2>
-                    <div>
-                        <div>
+                    <div className="agl-cbd-div">
+                        <div className="agl-cbd-text">
                             <h3>Component-Based Design System</h3>
                             <p>To ensure efficiency and consistency across the platform, I developed a comprehensive design system featuring reusable components. This included creating standardized navigation elements with multiple states (active, hover, default), color-coded content cards for different resource categories, and interactive dropdown menus that could be applied across different sections.</p>
                         </div>
-                        <div>
-
-                        </div>
+                        <img src={aegelissImgs.aegeliss_componets} alt="the Aegeliss website components designed in Figma"/>
                     </div>
                     <div>
                         <div>
@@ -335,32 +350,25 @@ const Aegeliss = (props) => {
                             
                         </div>
                     </div>
-                    <div>
-                        <div>
+                    <div className="agl-afn-div">
+                        <div className="agl-afn-text">
                             <h3>Accessibility-Focused Navigation</h3>
                             <p>The high-fidelity wireframes prioritized accessibility through high-contrast color combinations, multiple navigation options, and clear visual hierarchy. The navigation system accommodated users who might prefer linear browsing versus those comfortable with more complex interactions, ensuring the platform remained welcoming to our diverse user base.</p>
                         </div>
-                        <div>
-                            
-                        </div>
                     </div>
-                    <div>
-                        <div>
+                    <div className="agl-fca-div">
+                        <div className="agl-fca-text">
                             <h3>Flexible Content Architecture</h3>
                             <p>For content-heavy sections, I designed flexible dropdown components that minimized cognitive load while maintaining comprehensive information access. This was particularly important for sensitive topics like dementia education, where we needed to balance thoroughness with digestibility. For serious content sections, I opted for linear dividers instead of playful waves to ensure visual elements aligned with content tone.</p>
                         </div>
-                        <div>
-                            
-                        </div>
+                        <img src={aegelissImgs.waves} alt="the Aegeliss wave divders designed in figma"/>
                     </div>
-                    <div>
-                        <div>
+                    <div className="agl-std-div">
+                        <div className="agl-std-text">
                             <h3>Storytelling Through Design</h3>
                             <p>For content-heavy sections, I designed flexible dropdown components that minimized cognitive load while maintaining comprehensive information access. This was particularly important for sensitive topics like dementia education, where we needed to balance thoroughness with digestibility. For serious content sections, I opted for linear dividers instead of playful waves to ensure visual elements aligned with content tone.</p>
                         </div>
-                        <div>
-                            
-                        </div>
+                        <img src={aegelissImgs.dropdowns}alt="the Aegeliss website dropdown components designed in Figma"/>
                     </div>
                     <p>This component-based approach not only accelerated our design and development process but also ensured that every interface element served our core mission: creating a platform that feels supportive, accessible, and dignified for caregivers navigating one of life's most challenging experiences.</p>
                 </section>
@@ -418,16 +426,33 @@ const Aegeliss = (props) => {
                     <h2>Results and Impact</h2>
                     <h3>Project Deliverables</h3>
                     <p>After six months of intensive research and design, our team delivered comprehensive solutions that directly addressed the gaps we identified in dementia care resources. We provided Ju Tu with a detailed research report documenting our findings about caregiver needs, cultural barriers, and opportunities for Montessori-inspired approaches to dementia care. Most importantly, we designed and developed a fully functional website on Shopify that now serves as Aegeliss's primary digital presence and e-commerce platform.</p>
+                    <WirefamesCarousel
+                    images={aegelissWireframes}
+                    primaryColor="#B6DBEB"
+                    secondaryColor="#122D43"
+                    buttonColor="#122D43"
+                    className="aegeliss-hifi-wireframes"
+                    />
                     <h3>Successful Knowledge Transfer</h3>
                     <p>The website implementation prioritized Ju's long-term independence, ensuring she could confidently manage content updates, product listings, and customer communications without ongoing technical support. We provided comprehensive documentation and conducted thorough handoff sessions, enabling Ju to continue evolving the platform as her Montessori-inspired product line grows.</p>
-                    <h3>Community Impact & Recognition</h3>
-                    <p>Our work's significance was validated through multiple community engagements and formal recognition. At the UW Information School Capstone Showcase, our project received two prestigious awards:</p>
-                    <ul>
-                        <li><b>The Bridge-Builder Award for Equity</b> - recognizing our focus on addressing cultural barriers and accessibility challenges in dementia care</li>
-                        <li><b>The Visionary Lens Award for Insightfulness</b> - honoring our innovative application of Montessori principles to digital caregiver support</li>
-                    </ul>
-                    <h3>Real-World Application</h3>
-                    <p>Beyond digital deliverables, our community engagement created tangible impact. Our partnership with Dementia Friends Washington helped surpass their milestone of 4,000 Dementia Friends, while our hands-on volunteering with Elderwise provided authentic insights that directly influenced our design decisions. These experiences validated our research findings and demonstrated the real-world need for the solutions we created.</p>
+                    <div className="agl-cir-div">
+                        <div className="agl-cir-text">
+                            <h3>Community Impact & Recognition</h3>
+                            <p>Our work's significance was validated through multiple community engagements and formal recognition. At the UW Information School Capstone Showcase, our project received two prestigious awards:</p>
+                            <ul>
+                                <li><b>The Bridge-Builder Award for Equity</b> - recognizing our focus on addressing cultural barriers and accessibility challenges in dementia care</li>
+                                <li><b>The Visionary Lens Award for Insightfulness</b> - honoring our innovative application of Montessori principles to digital caregiver support</li>
+                            </ul>
+                        </div>
+                        <img src={aegelissImgs.showcase_2} alt="the Aegeliss Team, from left to right: Anushka Verma, Carlos Carrillo, June Mi Hong, Ju Tu, Kayla Tounalom, and Hung Tran"/>
+                    </div>
+                    <div className="agl-rwa-div">
+                        <div className="agl-rwa-tex">
+                            <h3>Real-World Application</h3>
+                            <p>Beyond digital deliverables, our community engagement created tangible impact. Our partnership with Dementia Friends Washington helped surpass their milestone of 4,000 Dementia Friends, while our hands-on volunteering with Elderwise provided authentic insights that directly influenced our design decisions. These experiences validated our research findings and demonstrated the real-world need for the solutions we created.</p>
+                        </div>
+                        <img src={aegelissImgs.dementia_friends} alt="the Aegeliss Team and Katie Zeilter, from left to right: Katie Zeilter, Carlos Carrillo, June Mi Hong, Anushka Verma, Kayla Tounalom, and Hung Tran"/>
+                    </div>
                 </section>
                 <section className="key-learnings-and-refelection">
                     <h2>Key Learnings and Reflections</h2>
@@ -439,10 +464,15 @@ const Aegeliss = (props) => {
                     <p>Perhaps most importantly, this project deepened my understanding of how design choices can either reinforce or challenge societal stigmas. Our decision to move away from clinical aesthetics toward warm, dignified visuals wasn't just about preferences, it was about honoring the humanity and capabilities of people living with dementia and their caregivers.</p>
                 </section>
                 <section className="looking-forward-section">
-                    <h2>Looking Forward</h2>
-                    <p>The Aegeliss platform now provides Ju Tu with a strong foundation to grow her business while serving dementia caregivers who need accessible, dignified resources. Our research findings continue to inform her product development, ensuring that future Montessori-inspired tools address the real needs we documented throughout our comprehensive research process. 
-                        <br></br>This project demonstrated how thoughtful UX research and design can bridge the gap between academic insights and practical solutions that make a meaningful difference in people's lives during some of their most challenging moments.</p>
-                    <p>This project was completed as part of the University of Washington Informatics Capstone program under the guidance of professors Clare Hegg and Andrew Neang, whose support and insights were instrumental to our success.</p>
+                    <div className="agl-lfs-div">
+                        <div className="agl-lfs-text">
+                            <h2>Looking Forward</h2>
+                            <p>The Aegeliss platform now provides Ju Tu with a strong foundation to grow her business while serving dementia caregivers who need accessible, dignified resources. Our research findings continue to inform her product development, ensuring that future Montessori-inspired tools address the real needs we documented throughout our comprehensive research process. 
+                                <br></br>This project demonstrated how thoughtful UX research and design can bridge the gap between academic insights and practical solutions that make a meaningful difference in people's lives during some of their most challenging moments.</p>
+                        </div>
+                        <img src={images.aegeliss_img_card} alt="the Aegeliss website homepage displayed on a Mac"/>
+                    </div>
+                    <p><em>This project was completed as part of the University of Washington Informatics Capstone program under the guidance of professors Clare Hegg and Andrew Neang, whose support and insights were instrumental to our success.</em></p>
                 </section>
             </main>
         </div>

@@ -2,9 +2,9 @@ import React from "react";
 import images from "../../../../constants/images";
 import projects from "../../../../constants/project-data";
 import Rtrtimgs from "../../../../constants/rotator-imgs";
+import WirefamesCarousel from "../../../wireframes-carousel";
 import ImageCarousel from "../../../image-carousel";
 import OregonCityAnimation from "./oregon-city-animation";
-import FigmaEmbed from "../figma-component";
 import "./../Rotator/rotator.css"
 
 
@@ -13,6 +13,8 @@ const Rotator = (props) => {
     const rtrNotes = [Rtrtimgs.rtr_notes_1, Rtrtimgs.rtr_notes_2,Rtrtimgs.rtr_notes_3,Rtrtimgs.rtr_notes_4,Rtrtimgs.rtr_notes_5, Rtrtimgs.rtr_notes_6,Rtrtimgs.rtr_notes_7,Rtrtimgs.rtr_notes_8];
     const heroImages = [Rtrtimgs.ya_hi, Rtrtimgs.jblm_hi, Rtrtimgs.swell_hi, Rtrtimgs.oat_hi, Rtrtimgs.gcm_hi, Rtrtimgs.oc_hi];
     const mockupImages = [Rtrtimgs.oc_mockup_1, Rtrtimgs.oat_mockup_3, Rtrtimgs.jblm_illustration, Rtrtimgs.oat_mockup_2, Rtrtimgs.oc_mockup_2, Rtrtimgs.oat_mockup_1];
+    const wireFrameImgs = [Rtrtimgs.interactive_components, Rtrtimgs.gtcf_wf, Rtrtimgs.jblm_wf,  Rtrtimgs.swell_wf, Rtrtimgs.oat_wf, Rtrtimgs.gcm_wf, Rtrtimgs.oc_wf];
+    const finalImgs = [Rtrtimgs.rtr_about_final, Rtrtimgs.oat_final, Rtrtimgs.gcm_final, Rtrtimgs.oc_final, Rtrtimgs.swell_final, Rtrtimgs.gtcf_final, Rtrtimgs.jblm_final];
     return(
         <div>
             <main className="rotator-page">
@@ -20,9 +22,11 @@ const Rotator = (props) => {
                     <div className="rotator-intro-text">
                         <h1>Rotator Creative</h1>
                         <h2>Transforming a multi-disciplinary creative agency's digital presence</h2>
-                        <p><b>Timeline: </b>June 2024 - August 2024</p>
-                        <p><b>Project Scope:</b> {projects.at(2).projectType}</p>
-                        <p><b>My Role: </b>UX/UI Desdign Intern</p>
+                        <div className="rtr-intro-tpm">
+                            <p><b>Timeline: </b>June 2024 - August 2024</p>
+                            <p><b>Project Scope:</b> {projects.at(2).projectType}</p>
+                            <p><b>My Role: </b>UX/UI Desdign Intern</p>
+                        </div>
                         <div className="tech-stack-container">
                             <p><b>Tech Stack:</b></p>
                             <div className="tech-stack-items"> 
@@ -59,39 +63,45 @@ const Rotator = (props) => {
                     </ul>
                 </section>
                 <section className="phase-1">
-                        <h2>Process</h2>
-                        <h3>Phase 1: Strategic Portfolio Curation</h3>
-                        <p>Rather than trying to showcase everything, I worked with Kendon to identify work that best represented the team's diverse capabilities while maintaining quality standards.</p>
-                        <h4>Selection Criteria</h4>
-                        <ul className="selection-criteria-list">
-                            <li className="sc-item">Projects the team was genuinely proud of</li>
-                            <li className="sc-item">Work that demonstrated range across different mediums</li>
-                            <li className="sc-item">Cases with strong process documentation</li>
-                            <li className="sc-item">Projects with measurable impact</li>
-                        </ul>
-                        <ImageCarousel
-                        images={rtrNotes}
-                        primaryColor="#402001"
-                        secondaryColor="#fcf8ee"
-                        buttonColor="#fcf8ee"
-                        className="rotator-notes-carousel"
-                        />
+                    <h2>Process</h2>
+                    <div className="rtr-ph-1">
+                        <div className="rtr-h1-txt">
+                                <h3>Phase 1: Strategic Portfolio Curation</h3>
+                                <p>Rather than trying to showcase everything, I worked with Kendon to identify work that best represented the team's diverse capabilities while maintaining quality standards.</p>
+                                <h4>Selection Criteria</h4>
+                                <ul className="selection-criteria-list">
+                                    <li className="sc-item">Projects the team was genuinely proud of</li>
+                                    <li className="sc-item">Work that demonstrated range across different mediums</li>
+                                    <li className="sc-item">Cases with strong process documentation</li>
+                                    <li className="sc-item">Projects with measurable impact</li>
+                                </ul>
+                            </div>
+                            <ImageCarousel
+                            images={rtrNotes}
+                            primaryColor="#402001"
+                            secondaryColor="#fcf8ee"
+                            buttonColor="#fcf8ee"
+                            className="rotator-notes-carousel"
+                            />
+                        </div>
                         <h4>Final Selection:</h4>
-                        <ul className="rtr-projects-list">
-                            <li className="rtr-project-item">Greater Tacoma Community Foundation</li>
-                            <li className="rtr-project-item">Children's Museum at JBLM</li>
-                            <li className="rtr-project-item">Port of Tacoma Sculpture</li>
-                            <li className="rtr-project-item">Oregon Agricultural Trust</li>
-                            <li className="rtr-project-item">Grit City Magazine</li>
-                            <li className="rtr-project-item">Oregon City</li>
-                        </ul>
-                        <ImageCarousel
-                        images={heroImages}
-                        primaryColor="#402001"
-                        secondaryColor="#fcf8ee"
-                        buttonColor="#fcf8ee"
-                        className="rotator-projects-carousel"
-                        />
+                        <div className="rtr-final-selection">
+                            <ul className="rtr-projects-list">
+                                <li className="rtr-project-item">Greater Tacoma Community Foundation</li>
+                                <li className="rtr-project-item">Children's Museum at JBLM</li>
+                                <li className="rtr-project-item">Port of Tacoma Sculpture</li>
+                                <li className="rtr-project-item">Oregon Agricultural Trust</li>
+                                <li className="rtr-project-item">Grit City Magazine</li>
+                                <li className="rtr-project-item">Oregon City</li>
+                            </ul>
+                            <ImageCarousel
+                            images={heroImages}
+                            primaryColor="#402001"
+                            secondaryColor="#fcf8ee"
+                            buttonColor="#fcf8ee"
+                            className="rotator-projects-carousel"
+                            />
+                        </div>
                         
                 </section>
                 <section className="phase-2">
@@ -116,23 +126,27 @@ const Rotator = (props) => {
                             className="rotator-mockups-carousel"
                             />
                         </div>
-                        {/* Instert vidoe here */}
                 </section>
                 <section className="phase-3">
-                        <h3>Phase 3: Interactive Design and Prototyping</h3>
-                        <p>Moving beyond static layouts, I designed interactive components to bring the case studies to life. Additionally, I would have design critique sessions with the design team on a weekly basis to review the progess and recieve suggestions for improvement</p>
-                        <ul className="design-solutions-list">
-                            <li className="ds-item">Figma prototypes for carousels and hover states</li>
-                            <li className="ds-item">Responsive layouts optimized for all screen sizes</li>
-                            <li className="ds-item">Custom mockups maintaining brand consistency across projects</li>
-                        </ul>
-                        {/* <FigmaEmbed
-                        figmaUrl="https://embed.figma.com/proto/INmFZWizeGPxZ4NWvKLj8F/Aegeliss-Website?page-id=87%3A2&node-id=89-2&viewport=1602%2C641%2C0.05&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=89%3A2&embed-host=share"
-                        title="Prototype"
-                        aspectRatio="16/9"
-                        /> */}
-
                     
+                    <div className="rtr-p3">
+                        <div className="rtr-p3-text">
+                            <h3>Phase 3: Interactive Design and Prototyping</h3>
+                            <p>Moving beyond static layouts, I designed interactive components to bring the case studies to life. Additionally, I would have design critique sessions with the design team on a weekly basis to review the progess and recieve suggestions for improvement</p>
+                            <ul className="design-solutions-list">
+                                <li className="ds-item">Figma prototypes for carousels and hover states</li>
+                                <li className="ds-item">Responsive layouts optimized for all screen sizes</li>
+                                <li className="ds-item">Custom mockups maintaining brand consistency across projects</li>
+                            </ul>
+                        </div>
+                        <ImageCarousel
+                            images={wireFrameImgs}
+                            primaryColor="#402001"
+                            secondaryColor="#fcf8ee"
+                            buttonColor="#fcf8ee"
+                            className="rotator-wireframes-carousel"
+                            />
+                    </div>
                 </section>
                 <section className="phase-4">
                         <h3>Phase 4: Motion Graphics Integration</h3>
@@ -146,21 +160,36 @@ const Rotator = (props) => {
                 </section>
                 <section className="solution-section">
                     <h2>Solution</h2>
-                    <p>I delivered a complete website redesign featuring:</p>
-                    <ul className="solutions-list">
-                        <li className="solution-item"><b>6 Comprehensive Case Studies</b> - Each telling a complete story from challenge to solution to impact</li>
-                        <li className="solution-item"><b>Redesigned Homepage</b> - Clear value proposition and intuitive navigation to featured work</li>
-                        <li className="solution-item"><b>Enhanced About Page</b> - Better communication of team capabilities and company culture</li>
-                        <li className="solution-item"><b>Interactive Elements</b> - Engaging carousels, hover states, and motion graphics</li>
-                        <li className="solution-item"><b>Responsive Design System</b> - Consistent experience across all devices and screen sizes</li>
-                    </ul>
-                    {/* instert mockups here  */}
+                    <div className="rtr-solution-div">
+                        <div className="rtr-solution-text">
+                            <p>I delivered a complete website redesign featuring:</p>
+                            <ul className="solutions-list">
+                                <li className="solution-item"><b>6 Comprehensive Case Studies</b> - Each telling a complete story from challenge to solution to impact</li>
+                                <li className="solution-item"><b>Redesigned Homepage</b> - Clear value proposition and intuitive navigation to featured work</li>
+                                <li className="solution-item"><b>Enhanced About Page</b> - Better communication of team capabilities and company culture</li>
+                                <li className="solution-item"><b>Interactive Elements</b> - Engaging carousels, hover states, and motion graphics</li>
+                                <li className="solution-item"><b>Responsive Design System</b> - Consistent experience across all devices and screen sizes</li>
+                            </ul>
+                        </div>
+                        <WirefamesCarousel
+                        images={finalImgs}
+                        primaryColor="#F7EDD4"
+                        secondaryColor="#8C3335"
+                        buttonColor="#8C3335"
+                        className="rtr-wf-carousel"
+                        />
+                    </div>
                     <h2>Impact and Results</h2>
-                    <ul className="impact-and-result-list">
-                        <li className="iar-item"> <b>Solved a 3-year roadblock:</b> Gave Rotator Creative the digital presence they deserved</li>
-                        <li className="iar-item"> <b>Enhanced team morale:</b> The team was genuinely excited about their new digital home</li>
-                        <li className="iar-item"> <b>Process documentation:</b> Created a scalable system for adding future case studies</li>
-                    </ul>
+                    <div className="rtr-impact-div">
+                        <div className="rtr-impact-text">
+                            <ul className="impact-and-result-list">
+                                <li className="iar-item"> <b>Solved a 3-year roadblock:</b> Gave Rotator Creative the digital presence they deserved</li>
+                                <li className="iar-item"> <b>Enhanced team morale:</b> The team was genuinely excited about their new digital home</li>
+                                <li className="iar-item"> <b>Process documentation:</b> Created a scalable system for adding future case studies</li>
+                            </ul>
+                        </div>
+                        <img src={Rtrtimgs.rtr_work_quote} alt="the rotator create porfolio page"/>
+                    </div>
                 </section>
                 <section className="key-learning-section">
                     <h2>Key Learnings</h2>
@@ -170,7 +199,7 @@ const Rotator = (props) => {
                         <li className="kl-item"><b>Collaboration:</b> Working within an active design agency taught me how to balance creative ambition with practical constraints and client priorities.</li>
                         <li className="kl-item"><b>Systems Thinking</b> Building for a design agency meant creating something that was both polished enough to represent their capabilities and flexible enough for future updates.</li>
                     </ul>
-                    <blockquote>This project reinforced my belief that great design often starts with great strategy. By helping Rotator Creative get clear on their story first, we were able to create a website that truly represents their incredible range and quality of work.</blockquote>
+                    <blockquote className="rtr-bq"><em>This project reinforced my belief that great design often starts with great strategy. By helping Rotator Creative get clear on their story first, we were able to create a website that truly represents their incredible range and quality of work.</em></blockquote>
                 </section>
             </main>
         </div>

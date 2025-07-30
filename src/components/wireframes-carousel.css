@@ -1,0 +1,212 @@
+/* PortfolioCarousel.css - Mobile First Responsive Design */
+
+/* CSS Custom Properties for dynamic theming */
+.wf-carousel-container {
+  --primary-color: #f9fafb;
+  --secondary-color: #374151;
+  --button-color: #ffffff;
+  --button-text-color: #374151;
+  --dot-inactive-color: #9ca3af;
+  --dot-hover-color: #6b7280;
+}
+
+/* Base styles (Mobile) */
+.wf-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wf-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wf-carousel-arrow {
+  background-color: var(--button-color);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.wf-carousel-arrow:hover {
+  transform: scale(1.1);
+}
+
+.wf-carousel-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.wf-carousel-viewport {
+  position: relative;
+  aspect-ratio: 16 / 10.5;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  flex: 1;
+}
+
+.wf-carousel-scroll-container {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #e5e7eb;
+}
+
+.wf-carousel-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wf-carousel-scroll-container::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+.wf-carousel-scroll-container::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 3px;
+}
+
+.wf-carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.wf-carousel-scroll-indicator {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  z-index: 10;
+  /* animation: bounce 1s infinite; */
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40%, 43% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+.wf-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.wf-carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.wf-carousel-dot:hover {
+  background-color: var(--secondary-color);
+}
+
+.wf-carousel-dot.active {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.wf-carousel-scroll-indicator{
+  font-size: 8px;
+}
+
+/* Tablet styles */
+@media (min-width: 640px) {
+  .wf-carousel-container {
+    padding: 0 1.5rem;
+  }
+
+  .wf-carousel-wrapper {
+    gap: 1rem;
+  }
+
+  .wf-carousel-arrow {
+    padding: 0.75rem;
+  }
+
+  .wf-carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .wf-carousel-viewport {
+    border-radius: 0.75rem;
+  }
+
+  .wf-carousel-dots {
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .wf-carousel-scroll-indicator{
+  font-size: 12px;
+}
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .wf-carousel-container {
+    max-width: 64rem;
+    justify-self: center;
+  }
+
+  .wf-carousel-wrapper {
+    gap: 1.5rem;
+  }
+
+  .wf-carousel-arrow {
+    padding: 0.75rem;
+  }
+
+  .wf-carousel-viewport {
+    border-radius: 0.75rem;
+  }
+
+  .wf-carousel-scroll-indicator {
+    bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1024px) {
+  .wf-carousel-wrapper {
+    gap: 2rem;
+  }
+
+  .wf-carousel-arrow {
+    padding: 1rem;
+  }
+}
