@@ -188,7 +188,7 @@ const Rotator = (props) => {
                                 <li className="iar-item"> <b>Process documentation:</b> Created a scalable system for adding future case studies</li>
                             </ul>
                         </div>
-                        <img src={Rtrtimgs.rtr_work_quote} alt="the rotator create porfolio page"/>
+                        <img src={images.rotator_img_card} alt="the rotator create porfolio page"/>
                     </div>
                 </section>
                 <section className="key-learning-section">

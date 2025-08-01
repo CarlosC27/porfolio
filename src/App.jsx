@@ -9,7 +9,6 @@ import Footer from "./components/footer";
 import Construction from "./components/construction-page";
 import Aegeliss from "./components/Projects/Case-Studies/Aegeliss/aegeliss-page";
 import Rotator from "./components/Projects/Case-Studies/Rotator/rotator-page";
-import Coast2Coast from "./components/Projects/Case-Studies/c2c-page";
 import TheCityBetween from "./components/Projects/Case-Studies/TCB/citybtwn-page";
 import Revisime from "./components/Projects/Case-Studies/Reviseme/revisime-page";
 import HuskyFitness from "./components/Projects/Case-Studies/Husky-Fitness/husky-fitness-page";
@@ -27,7 +26,6 @@ function App(){
             <Route path="construction" element={<Construction/>}/>
             <Route path="Aegeliss" element={<Aegeliss/>}/>
             <Route path="Rotator-Creative" element={<Rotator/>}/>
-            <Route path="Coast-2-Coast-Cousins-BBQ" element={<Coast2Coast/>}/>
             <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
             <Route path="RÉVISEMÉ" element={<Revisime/>}/>
             <Route path="Husky-Fitness" element={<HuskyFitness/>}/>

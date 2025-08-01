@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.hf-research-section {
+    --color-primary-purple: #4B2E83;
+    --color-light-purple: #E8E3F0;
+    --color-pastel-purple: #F5F3FF;
+    --color-accent-gold: #B8A77B;
+    --color-wellness-green: #2C5243;
+    --color-text-light: #FEFEFE;
+    --color-text-dark: #1F2937;
+    --color-neutral-gray: #6B7280;
+    --color-background: #FAFAFF;
+}
+
+.hf-research-section * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hf-research-section {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    font-size: 16px;
+    line-height: 1.6rem;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.hf-research-section .dashboard {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-light-purple);
+}
+
+.hf-research-section .header {
+    background-color: var(--color-light-purple);
+    color: var(--color-text-dark);
+    padding: 2rem 0.75rem;
+    text-align: center;
+    /* filter: drop-shadow(0px 6.65px 5.32px rgba(0, 0, 0, 0.03)) 
+            drop-shadow(0px 22.336px 17.869px rgba(0, 0, 0, 0.04)) 
+            drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)); */
+}
+
+.hf-research-section .header h1 {
+    color: var(--color-primary-purple);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.hf-research-section .header p {
+    color: var(--color-neutral-gray);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.hf-research-section .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0rem 0.75rem;
+}
+
+.hf-research-section .card {
+    background-color: var(--color-text-light);
+    border-radius: 24px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0px 6.65px 5.32px rgba(0, 0, 0, 0.03)) 
+            drop-shadow(0px 22.336px 17.869px rgba(0, 0, 0, 0.04));
+}
+
+.hf-research-section .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(75, 46, 131, 0.2);
+}
+
+.hf-research-section .card h3 {
+    color: var(--color-accent-gold);
+    margin: 0.8rem 0 0.4rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hf-research-section .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary-purple);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.hf-research-section .stat-label {
+    text-align: center;
+    color: var(--color-neutral-gray);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hf-research-section .progress-bar {
+    background: var(--color-pastel-purple);
+    border-radius: 16px;
+    height: 24px;
+    margin: 1rem 0;
+    overflow: hidden;
+    border: 2px solid var(--color-light-purple);
+}
+
+.hf-research-section .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary-purple), var(--color-accent-gold));
+    transition: width 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.hf-research-section .motivation-item, 
+.hf-research-section .obstacle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--color-light-purple);
+    border-radius: 24px;
+    color: var(--color-primary-purple);
+    transition: transform 0.3s ease;
+}
+
+.hf-research-section .motivation-item:hover, 
+.hf-research-section .obstacle-item:hover {
+    transform: translateX(5px);
+}
+
+.hf-research-section .frequency {
+    background-color: var(--color-primary-purple);
+    color: var(--color-text-light);
+    padding: 4px 16px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hf-research-section .frequency:hover {
+    transform: scale(1.1);
+    background-color: var(--color-accent-gold);
+}
+
+.hf-research-section .demographics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.hf-research-section .demo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: var(--color-pastel-purple);
+    border-radius: 12px;
+    color: var(--color-text-dark);
+}
+
+.hf-research-section .frequency-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-primary-purple);
+}
+
+.hf-research-section .frequency-list {
+    margin: 0.5rem 0;
+    color: var(--color-neutral-gray);
+}
+
+.hf-research-section .ima-section {
+    margin: 2rem 0.75rem;
+}
+
+
+.hf-research-section .ima-stats {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.hf-research-section .ima-stat-number {
+    font-size: 2rem;
+}
+
+.hf-research-section .experience-section {
+    background-color: var(--color-pastel-purple);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+}
+
+.hf-research-section .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hf-research-section .positive, 
+.hf-research-section .negative {
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: var(--color-text-light);
+}
+
+.hf-research-section .positive {
+    background-color: var(--color-accent-gold);
+}
+
+.hf-research-section .negative {
+    background-color: var(--color-primary-purple);
+}
+
+.hf-research-section .positive h4, 
+.hf-research-section .negative h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hf-research-section .positive ul, 
+.hf-research-section .negative ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hf-research-section .positive li, 
+.hf-research-section .negative li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.hf-research-section .positive li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+.hf-research-section .negative li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+.hf-research-section .insights {
+    background-color: var(--color-primary-purple);
+    color: var(--color-text-light);
+    padding: 2rem 0.75rem;
+    margin: 2.5rem 0;
+}
+
+.hf-research-section .insights h2 {
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.hf-research-section .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.hf-research-section .insight-item {
+    background-color: var(--color-light-purple);
+    color: var(--color-text-dark);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.hf-research-section .insight-item h4 {
+    color: var(--color-primary-purple);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hf-research-section .insight-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media(min-width: 375px) {
+    .hf-research-section .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hf-research-section .demographics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .hf-research-section {
+        font-size: 20px;
+        line-height: 1.8rem;
+    }
+
+    .hf-research-section .header {
+        padding: 3rem 2rem;
+        padding-bottom: 0;
+    }
+
+    .hf-research-section .header h1 {
+        font-size: 2.5rem;
+        line-height: 1rem;
+    }
+
+    .hf-research-section .header p {
+        font-size: 1.2rem;
+    }
+
+    .hf-research-section .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .hf-research-section .card {
+        padding: 1.5rem;
+    }
+
+    .hf-research-section .ima-section {
+        margin: 2rem;
+    }
+
+    .hf-research-section .insights {
+        padding: 2rem;
+    }
+
+    .hf-research-section .insights h2 {
+        font-size: 2rem;
+        line-height: 1.2rem;
+    }
+
+    .hf-research-section .insight-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .hf-research-section .experience-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .hf-research-section .demographics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1024px) {
+    .hf-research-section .header h1 {
+        font-size: 2.8rem;
+        margin: 1rem 0;
+    }
+
+    .hf-research-section .header h2 {
+        font-size: 2.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .hf-research-section .header {
+        padding: 3rem 4rem;
+    }
+
+    .hf-research-section .grid {
+        margin: 4rem;
+        gap: 2rem;
+    }
+
+    .hf-research-section .ima-section {
+        margin: 4rem;
+    }
+
+    .hf-research-section .insights {
+        padding: 4rem;
+    }
+
+    .hf-research-section .insight-grid {
+        gap: 2rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .hf-research-section .header h1 {
+        font-size: 3.6rem;
+    }
+
+    .hf-research-section .header h2 {
+        font-size: 2.6rem;
+    }
+
+    .hf-research-section .header {
+        padding: 3rem 6rem;
+         padding-bottom: 0;
+    }
+
+    .hf-research-section .grid {
+        margin: 6rem;
+    }
+
+    .hf-research-section .ima-section {
+        margin: 6rem;
+    }
+
+    .hf-research-section .insights {
+        padding: 6rem;
+    }
+}
+
+@media(min-width: 1728px) {
+    .hf-research-section .header, 
+    .hf-research-section .insights {
+        padding: 6rem 8rem;
+         padding-bottom: 0;
+    }
+
+    .hf-research-section .grid {
+        margin: 6rem 8rem;
+    }
+
+    .hf-research-section .ima-section {
+        margin: 6rem 8rem;
+    }
+
+        .hf-research-section .insight-grid{
+            padding-bottom: 6em;
+        }
+}
+
+@media(min-width: 2200px) {
+    .hf-research-section .header, 
+    .hf-research-section .insights {
+        padding-left: 32rem;
+        padding-right: 32rem;
+    }
+
+    .hf-research-section .grid {
+        margin-left: 32rem;
+        margin-right: 32rem;
+    }
+
+    .hf-research-section .ima-section {
+        margin-left: 32rem;
+        margin-right: 32rem;
+    }
+}

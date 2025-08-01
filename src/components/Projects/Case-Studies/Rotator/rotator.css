@@ -173,6 +173,7 @@
 
 .rtr-impact-div img{
   max-width: 280px;
+  border-radius: 16px;
 }
 
 .rotator-notes-carousel img{
@@ -188,6 +189,13 @@
 .rtr-bq{
   margin-top: 2rem;
 }
+
+.cpl-item:hover, .responsibility-item:hover, .sc-item:hover, .rtr-project-item:hover, .ph2-activity-item:hover, .ds-item:hover, .solution-item:hover, .iar-item:hover, .kl-item:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
 @supports not (aspect-ratio: 1) {
   .oregon-city-video {
     height: calc(100vw * 864 / 5472);
@@ -501,6 +509,7 @@
 
      .rtr-impact-div img{
       max-width: 500px;
+      border-radius: 32px;
      }
 
      .rtr-bq{

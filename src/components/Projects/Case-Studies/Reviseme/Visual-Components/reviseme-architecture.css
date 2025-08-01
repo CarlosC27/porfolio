@@ -1,0 +1,330 @@
+:root {
+    --color-primary-dark: #1A1D29;
+    --color-primary-light: #F1E9DC;
+    --color-accent-blue: #2C3E50;
+    --color-accent-indigo: #648DB6;
+    --color-text-light: #F8FAFC;
+    --color-text-dark: #1E293B;
+    --color-neutral-gray: #64748B;
+    --color-background: #F1F5F9;
+}
+
+.revisime-page .development-process .reviseme-architecture {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--color-primary-light);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    color: var(--color-accent-blue);
+    font-size: 16px;
+    line-height: 1.6rem;
+}
+
+.revisime-page .development-process .architecture-title {
+    text-align: center;
+    color: var(--color-accent-blue);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.revisime-page .development-process .architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.revisime-page .development-process .layer {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 2px solid rgba(44, 62, 80, 0.1);
+    transition: all 0.3s ease;
+}
+
+.revisime-page .development-process .layer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(44, 62, 80, 0.1);
+}
+
+.revisime-page .development-process .layer-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.revisime-page .development-process .frontend .layer-title { 
+    background: var(--color-accent-blue); 
+}
+.revisime-page .development-process .backend .layer-title { 
+    background: var(--color-accent-indigo); 
+}
+.revisime-page .development-process .external .layer-title { 
+    background: var(--color-neutral-gray); 
+}
+
+.revisime-page .development-process .component {
+    background: white;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: var(--color-accent-blue);
+}
+
+.revisime-page .development-process .component:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
+}
+
+.revisime-page .development-process .frontend .component { 
+    border-left-color: var(--color-accent-blue); 
+}
+.revisime-page .development-process .backend .component { 
+    border-left-color: var(--color-accent-indigo); 
+}
+.revisime-page .development-process .external .component { 
+    border-left-color: var(--color-neutral-gray); 
+}
+
+.revisime-page .development-process .tech-stack {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--color-accent-blue);
+    border-radius: 12px;
+    color: var(--color-text-light);
+}
+
+.revisime-page .development-process .tech-stack h3 {
+    margin: 0 0 1rem 0;
+    color: var(--color-text-light);
+}
+
+.revisime-page .development-process .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+}
+
+.revisime-page .development-process .tech-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.revisime-page .development-process .tech-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.revisime-page .development-process .data-flow {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.revisime-page .development-process .data-flow h3 {
+    color: var(--color-accent-blue);
+    margin-bottom: 1rem;
+}
+
+.revisime-page .development-process .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.revisime-page .development-process .flow-step {
+    background: var(--color-accent-blue);
+    color: var(--color-text-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.revisime-page .development-process .flow-step.highlight {
+    background: var(--color-accent-indigo);
+    animation: highlight 1s ease-in-out infinite alternate;
+}
+
+.revisime-page .development-process .flow-step.highlight.animate {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.revisime-page .development-process .flow-arrow {
+    color: var(--color-neutral-gray);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@keyframes highlight {
+    from { background: var(--color-accent-indigo); }
+    to { background: #2C3E50; }
+}
+
+/* MEDIA QUERIES */
+@media(min-width: 375px) {
+    .revisime-page .development-process .architecture-title {
+        font-size: 2rem;
+    }
+    
+    .revisime-page .development-process .flow-steps {
+        gap: 0.75rem;
+    }
+    
+    .revisime-page .development-process .flow-step {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media(min-width: 768px) {
+    .revisime-page .development-process .reviseme-architecture {
+        font-size: 18px;
+        line-height: 1.8rem;
+        padding: 2rem;
+    }
+
+    .revisime-page .development-process .architecture-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .revisime-page .development-process .architecture-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .revisime-page .development-process .layer {
+        padding: 1.5rem;
+    }
+
+    .revisime-page .development-process .layer-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .revisime-page .development-process .component {
+        font-size: 1rem;
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    .revisime-page .development-process .tech-stack {
+        padding: 2rem;
+    }
+
+    .revisime-page .development-process .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .revisime-page .development-process .tech-item {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    .revisime-page .development-process .data-flow {
+        margin-top: 2.5rem;
+    }
+
+    .revisime-page .development-process .data-flow h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .revisime-page .development-process .flow-steps {
+        gap: 1rem;
+    }
+
+    .revisime-page .development-process .flow-step {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .revisime-page .development-process .flow-arrow {
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .revisime-page .development-process .reviseme-architecture {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .development-process .architecture-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .revisime-page .development-process .architecture-grid {
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .revisime-page .development-process .layer {
+        padding: 2rem;
+    }
+
+    .revisime-page .development-process .component {
+        padding: 15px;
+        margin: 12px 0;
+    }
+
+    .revisime-page .development-process .tech-stack {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .development-process .tech-grid {
+        gap: 1.5rem;
+    }
+
+    .revisime-page .development-process .data-flow {
+        margin-top: 3rem;
+    }
+
+    .revisime-page .development-process .flow-steps {
+        gap: 1.5rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .revisime-page .development-process .architecture-title {
+        font-size: 2.8rem;
+    }
+
+    .revisime-page .development-process .reviseme-architecture {
+        padding: 3rem;
+    }
+
+    .revisime-page .development-process .architecture-grid {
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .revisime-page .development-process .tech-stack {
+        padding: 3rem;
+    }
+
+    .revisime-page .development-process .data-flow {
+        margin-top: 3.5rem;
+    }
+}

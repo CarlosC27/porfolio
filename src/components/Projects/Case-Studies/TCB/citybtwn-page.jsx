@@ -263,7 +263,7 @@ const TheCityBetween = (props) => {
                             <h2>Get Your Copy!</h2>
                             <p>Get your own copy of the 23rd Issue...or many more.</p>
                             <p>Grit City Magazine is available through their website, with each issue containting unique stories and imagery. You can buy individual issues or subscribe and recieve an issue each quarter!</p>
-                            <AirplaneTextButton to="https://gritcitymag.com/" text="Get Your Magazine Here" image={images.tcb_pa}/>
+                            <AirplaneTextButton to="https://gritcitymag.com/" external={true} text="Get Your Magazine Here" image={images.tcb_pa}/>
                         </div>
                         <img src={citybtwnimgs.issue_23_cover} alt="Grit City Magazine's 23rd issue" className="gcm23"/>
                     </div>

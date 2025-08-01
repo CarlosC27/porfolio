@@ -28,7 +28,7 @@ const Homepage = (props) => {
                     </div>
                     <div className='intro-images'>
                             <img src={images.countryBoards_polaroid} alt='polaroid of Carlos' className="intro-polaroid intro-img-1"/>
-                            <img src={images.elotes_polaroid} alt='polaroid of Carlos holding an elote' className="intro-polaroid intro-img-2"/>
+                            <img src={images.carlos_grad} alt='polaroid of Carlos holdinghis graduation cap' className="intro-polaroid intro-img-2"/>
                     </div>
                 </section>
                 <section className='recent-projects-section'>
@@ -60,10 +60,10 @@ const Homepage = (props) => {
                         </p>
                         <AirplaneTextButton to='/About' text='Learn More About Me' image={images.green_pa}/>
                     </div>
-                    <img src={images.elotes_polaroid} alt='Carlos holding an elote, polaroid image' className='about-me-section-img' />
+                    <img src={images.ash_and_i} alt='Carlos meeting his favorite youtuber Ashley Ippolito' className='about-me-section-img' />
                 </section>
                 <section className='contact-me-section'>
-                    <img src={images.picnic_polaroid} alt='Carlos at a picnic, polaroid picture' className='contact-me-section-img'/>
+                    <img src={images.joe_and_i_polaroid} alt='Carlos at a picnic, polaroid picture' className='contact-me-section-img'/>
                     <div className='contact-me-text-content'>
                         <h2 className='yellow-subtitle'>Contact Me</h2>
                         <p>
@@ -78,15 +78,15 @@ const Homepage = (props) => {
                     <div className='socials-container'>
                         <div className='social-link'>
                             <img src={images.green_github_logo} alt='the GitHub logo in green' className='social-link-icon'/>
-                            <AirplaneTextButton text='GitHub' to="https://github.com/CarlosC27" image={images.green_pa} />
+                            <AirplaneTextButton text='GitHub' external={true} to="https://github.com/CarlosC27" image={images.green_pa} />
                         </div>
                         <div className='social-link'>
                             <img src={images.green_linkedin_logo} alt='the LinkedIn logo in green' className='social-link-icon'/>
-                            <AirplaneTextButton text='LinkedIn' to="https://www.linkedin.com/in/cacs27/" image={images.green_pa} />
+                            <AirplaneTextButton text='LinkedIn' external={true} to="https://www.linkedin.com/in/cacs27/" image={images.green_pa} />
                         </div>
                         <div className='social-link'>
                             <img src={images.green_instagram_logo} alt='the Instagram logo in green' className='social-link-icon' />
-                            <AirplaneTextButton text='Instagram' to="https://www.instagram.com/carlosjtj13/" image={images.green_pa} />
+                            <AirplaneTextButton text='Instagram'external={true} to="https://www.instagram.com/carlosjtj13/" image={images.green_pa} />
                         </div>
                     </div>
                 </section>

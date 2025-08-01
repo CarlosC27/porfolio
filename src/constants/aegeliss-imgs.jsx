@@ -19,6 +19,7 @@ const memory_hub = new URL('../assets/case-studies/aegeliss/memory-hub.jpg', imp
 const showcase_1 = new URL('../assets/case-studies/aegeliss/showcase-1.JPG', import.meta.url).href;
 const showcase_2 = new URL('../assets/case-studies/aegeliss/showcase-2.JPG', import.meta.url).href;
 const dementia_friends= new URL('../assets/case-studies/aegeliss/dementia-friends.jpg', import.meta.url).href;
+const aegeliss_dark_blue_pa = new URL('../assets/case-studies/aegeliss/aegeliss-dark-blue-pa.png', import.meta.url).href;
 
 export default{
     idea_map,
@@ -41,5 +42,6 @@ export default{
     memory_hub,
     showcase_1,
     showcase_2,
-    dementia_friends
+    dementia_friends,
+    aegeliss_dark_blue_pa
 };

@@ -1,15 +1,15 @@
 import React from "react";
 import images from "../../../../constants/images";
 import projects from "../../../../constants/project-data";
+import RevisemeRefactorComponent from "./Visual-Components/reviseme-refactor-component";
+import RevisemeArchitectureComponent from "./Visual-Components/reviseme-architecture-component";
+import RevisemeResultsComponent from "./Visual-Components/reviseme-result";
+import AirplaneTextButton from "../../../airplane-text-buttons";
 import "../Reviseme/reviseme.css"
 
-const Revisime = (props) => {
- // Placeholder arrays for future images
-    const architectureDiagrams = []; // System architecture, API flow diagrams
-    const codeSnippets = []; // Key code examples, API endpoints
-    const teamProcess = []; // Team collaboration photos, sprint boards
-    const beforeAfter = []; // Refactor comparison, user flow improvements
 
+const Revisime = (props) => {
+ 
     return(
         <div>
             <main className="revisime-page">
@@ -18,7 +18,7 @@ const Revisime = (props) => {
                         <h1>RÉVISEMÉ</h1>
                         <h2>A rapid development sprint integrating LLM technology to solve real job market challenges</h2>
                         <div className="rv-intro-details">
-                            <p><b>Timeline:</b> 6 weeks, November 2024 - December 2024</p>
+                            <p><b>Timeline:</b> November 2024 - December 2024</p>
                             <p><b>Project Scope:</b> {projects.at(1).projectType}</p>
                             <p><b>My Role:</b> Full-Stack Developer & Technical Lead</p>
                         </div>
@@ -34,19 +34,14 @@ const Revisime = (props) => {
                         <p><b>Collaborators:</b> Olivia Sapp, Renusree Chittella, and Ayaan Rahim</p>
                        <p>{projects.at(1).description}</p>
                     </div>
-                    <img src={images.reviseme_mockup} alt="a macbook with the RÉVISEMÉ website homepage displayed"/>
+                    <img src={images.rev_intro} alt="the RÉVISEMÉ website homepage displayed"/>
                 </section>
 
                 <section className="challenge-section">
                     <h2>The Challenge</h2>
                     <p>The modern job application process creates a fundamental disconnect between qualified candidates and hiring opportunities. Recent graduates possess relevant skills but lack knowledge to present qualifications in ATS-friendly formats.</p>
                     
-                    <div className="challenge-visual-placeholder">
-                        {/* Visual: Problem illustration - ATS filtering process, statistics */}
-                        <div className="visual-placeholder">
-                            <p>📊 Visual: ATS Filtering Statistics & Problem Illustration</p>
-                        </div>
-                    </div>
+                 
 
                     <div className="core-problems">
                         <h3>Core Problems We Identified:</h3>
@@ -77,13 +72,6 @@ const Revisime = (props) => {
                                 <li className="resp-item">Team coordination and technical decision-making</li>
                             </ul>
                         </div>
-                        
-                        <div className="team-visual-placeholder">
-                            {/* Visual: Team collaboration photo, roles diagram */}
-                            <div className="visual-placeholder">
-                                <p>👥 Visual: Team Collaboration & Role Distribution</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
@@ -102,22 +90,9 @@ const Revisime = (props) => {
                                     <li className="arch-item"><b>File Processing:</b> Multi-format resume parsing (PDF, Word, text)</li>
                                 </ul>
                             </div>
-                            
-                            <div className="architecture-visual-placeholder">
-                                {/* Visual: System architecture diagram */}
-                                <div className="visual-placeholder">
-                                    <p>🏗️ Visual: System Architecture Diagram</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="api-endpoints-visual">
-                            {/* Visual: API endpoints flowchart */}
-                            <div className="visual-placeholder">
-                                <p>🔗 Visual: API Endpoints & Data Flow</p>
-                            </div>
                         </div>
                     </div>
+                    <RevisemeArchitectureComponent/>
                 </section>
 
                 <section className="great-refactor">
@@ -130,14 +105,9 @@ const Revisime = (props) => {
                             <h3>My Solution</h3>
                             <p>I took leadership in completely refactoring the project architecture, redesigning the user flow to handle empty states gracefully while maintaining functionality for existing users.</p>
                         </div>
-                        
-                        <div className="refactor-visual-placeholder">
-                            {/* Visual: Before/after user flow diagrams */}
-                            <div className="visual-placeholder">
-                                <p>🔄 Visual: Before/After User Flow & Refactor Process</p>
-                            </div>
-                        </div>
                     </div>
+
+                    <RevisemeRefactorComponent/>
 
                     <div className="lessons-learned">
                         <h3>Critical Lessons Learned:</h3>
@@ -162,39 +132,35 @@ const Revisime = (props) => {
                                 <li className="result-item">Scalable API architecture ready for future enhancements</li>
                                 <li className="result-item">Complete CRUD operations for saved reviews and user profiles</li>
                             </ul>
-
+                            <AirplaneTextButton to="https://github.com/CarlosC27/Info441_Final" external={true} text="View GitHub repo" image={images.rev_pa}/>
                             <div className="impact-metrics">
                                 <h3>Technical Achievements:</h3>
                                 <p><b>Problem Solved:</b> Bridged the gap between student resumes and ATS requirements</p>
                                 <p><b>Team Leadership:</b> Successfully managed crisis refactor while meeting sprint deadlines</p>
                                 <p><b>Integration Success:</b> Seamless LLM API integration with error handling and fallbacks</p>
-                            </div>
-                        </div>
 
-                        <div className="final-product-visual">
-                            {/* Visual: Screenshots of final product, user interface */}
-                            <div className="visual-placeholder">
-                                <p>💻 Visual: Final Product Screenshots & User Interface</p>
                             </div>
                         </div>
                     </div>
+                     <RevisemeResultsComponent/>
+                   
                 </section>
 
                 <section className="key-learnings">
                     <h2>Key Technical Learnings</h2>
-                    <ul className="learnings-list">
-                        <li className="learning-item"><b>Architecture Planning:</b> Complex integrations require upfront workflow and dataflow planning, regardless of sprint timelines</li>
-                        <li className="learning-item"><b>LLM Integration:</b> AI services require different approaches than typical APIs - prompt engineering, response parsing, and robust fallback mechanisms are essential</li>
-                        <li className="learning-item"><b>Crisis Leadership:</b> Taking ownership during critical failures and leading technical solutions under pressure built invaluable leadership skills</li>
-                        <li className="learning-item"><b>Full-Stack Coordination:</b> Managing both frontend and backend simultaneously requires careful state management and comprehensive error handling</li>
-                    </ul>
-
-                    <div className="code-examples-visual">
-                        {/* Visual: Code snippets, technical examples */}
-                        <div className="visual-placeholder">
-                            <p>💾 Visual: Key Code Examples & Technical Implementation</p>
+                    <div className="rvs-ktl-div">
+                        <div className="rvs-ktl-text">
+                            <ul className="learnings-list">
+                                <li className="learning-item"><b>Architecture Planning:</b> Complex integrations require upfront workflow and dataflow planning, regardless of sprint timelines</li>
+                                <li className="learning-item"><b>LLM Integration:</b> AI services require different approaches than typical APIs - prompt engineering, response parsing, and robust fallback mechanisms are essential</li>
+                                <li className="learning-item"><b>Crisis Leadership:</b> Taking ownership during critical failures and leading technical solutions under pressure built invaluable leadership skills</li>
+                                <li className="learning-item"><b>Full-Stack Coordination:</b> Managing both frontend and backend simultaneously requires careful state management and comprehensive error handling</li>
+                            </ul>
                         </div>
+                        <img src={images.reviseme_img_card} alt="the RÉVISEMÉ website displayed on a MacBook Pro"/>
                     </div>
+
+                   
 
                     <blockquote className="rv-final-quote">
                         <em>This sprint project taught me that even rapid development benefits enormously from architectural planning. The refactoring crisis became the most valuable learning experience, showing how technical leadership and problem-solving under pressure can save entire projects.</em>

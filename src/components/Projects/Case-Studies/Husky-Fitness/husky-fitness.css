@@ -2,7 +2,7 @@
     --color-primary-purple: #4B2E83;
     --color-light-purple: #E8E3F0;
     --color-pastel-purple: #F5F3FF;
-    --color-accent-gold: #FFB81C;
+    --color-accent-gold: #B8A77B;
     --color-wellness-green: #22C55E;
     --color-text-light: #FEFEFE;
     --color-text-dark: #1F2937;
@@ -40,13 +40,13 @@ body .hf-page {
 }
 
 .hf-page h3 {
-    color: var(--color-accent-gold);
+    color: var(--color-primary-purple);
     margin: 0.8rem 0 0.4rem 0;
 }
 
 .hf-intro {
     background-color: var(--color-light-purple);
-    color: var(--color-text-dark);
+    color: var(--color-primary-purple);
     padding: 2rem 0.75rem;
     display: flex;
     flex-direction: column-reverse;
@@ -57,7 +57,7 @@ body .hf-page {
 }
 
 .hf-intro img {
-    max-width: 98%;
+    max-width: 60%;
     height: auto;
     align-self: center;
 }
@@ -65,7 +65,6 @@ body .hf-page {
 .hf-intro-details {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     margin: 1rem 0;
 }
 
@@ -92,7 +91,6 @@ body .hf-page {
 
 .ts-item:hover {
     transform: scale(1.1);
-    background-color: var(--color-accent-gold);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -114,7 +112,7 @@ body .hf-page {
     color: var(--color-light-purple);
 }
 
-.user-insights-section {
+.user-insights-section-1, .user-insights-section-2 {
     margin: 2rem 0.75rem;
 }
 
@@ -144,13 +142,21 @@ body .hf-page {
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 24px;
-    border-left: 4px solid var(--color-accent-gold);
 }
 
 .leadership-content, .personas-content, .design-content, .results-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.design-content img{
+    max-width: 280px;
+    align-self: center;
+    border-radius: 16px;
+    filter: drop-shadow(0px 6.65px 5.32px rgba(0, 0, 0, 0.03)) 
+            drop-shadow(0px 22.336px 17.869px rgba(0, 0, 0, 0.04)) 
+            drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07));
 }
 
 .visual-placeholder {
@@ -169,21 +175,15 @@ body .hf-page {
 }
 
 .hf-challenge-quote, .hf-final-quote {
-    background-color: var(--color-accent-gold);
-    color: var(--color-text-dark);
     padding: 1.5rem;
+    padding-top: 0;
     border-radius: 16px;
-    margin: 2rem 0;
-    border-left: 6px solid var(--color-primary-purple);
+    margin: 0;
     font-style: italic;
 }
 
-.impact-metrics {
-    background-color: var(--color-pastel-purple);
+.hf-impact-metrics {
     padding: 1.5rem;
-    border-radius: 16px;
-    margin: 1.5rem 0;
-    border: 2px solid var(--color-wellness-green);
 }
 
 .impact-metrics h3 {
@@ -192,11 +192,9 @@ body .hf-page {
 }
 
 .strategy-decision {
-    background-color: var(--color-pastel-purple);
     padding: 1.5rem;
     border-radius: 16px;
     margin: 2rem 0;
-    border-left: 4px solid var(--color-wellness-green);
 }
 
 .strategy-decision h3 {
@@ -205,17 +203,68 @@ body .hf-page {
 }
 
 .future-opportunities {
-    background-color: var(--color-light-purple);
     padding: 1.5rem;
     border-radius: 16px;
     margin: 2rem 0;
-    border: 2px solid var(--color-accent-gold);
 }
 
 .future-opportunities h3 {
-    color: var(--color-primary-purple);
     margin-top: 0;
 }
+
+.design-process .hf-lofi-wireframing img{
+    border-radius: 16px;
+}
+
+.hf-page .hf-hifi-wireframing img{
+    max-height: 400px;
+    width: auto;
+    align-self: center;
+}
+
+ .hf-page .hf-hifi-wireframing .carousel-img-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+ }
+
+ .hf-impact-metrics{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hf-page .hf-hifi-wireframing .carousel-main{
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .hf-key-learnings-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hf-page .key-learnings img{
+        max-width: 280px;
+        border-radius: 16px;
+    }
+
+    .hf-page .design-process .airplane-text-button{
+        color: #C6CAE6;
+        margin-bottom: 2rem;
+    }
+
+    .hf-page .hf-impact-metrics .airplane-text-button{
+        color: #4B2E83;
+        margin-bottom: 1rem;
+    }
+
+    .resp-item:hover, .insight-item:hover, .feature-item:hover, .decision-item:hover, .result-item:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
 @media(min-width: 375px) {
     .hf-page h1 {
@@ -231,8 +280,54 @@ body .hf-page {
         flex-wrap: wrap;
         gap: 1rem;
     }
+
+    .design-content img{
+        max-width: 348px;
+    }
+
+     .hf-page .hf-hifi-wireframing img{
+        max-height: 580px;
+        width: auto;
+        align-self: center;
+        border-radius: 20px;
+    }
+
+    .hf-page .hf-hifi-wireframing .carousel-main{
+        max-width: 340px;
+    }
+
+    .hf-page .key-learnings img{
+        max-width: 360px;
+    }
+
+    .hf-intro img{
+        max-width: 80%;
+    }
+   
 }
 
+
+
+@media(min-width: 430px){
+    .design-content img{
+        max-width: 388px;
+    }
+
+     .hf-page .hf-hifi-wireframing img{
+        max-height: 700px;
+        width: auto;
+        align-self: center;
+        border-radius: 20px;
+    }
+
+     .hf-page .hf-hifi-wireframing .carousel-main{
+        max-width: 400px;
+    }
+
+    .hf-page .key-learnings img{
+        max-width: 400px;
+    }
+}
 @media(min-width: 768px) {
     body .hf-page {
         font-size: 20px;
@@ -263,9 +358,7 @@ body .hf-page {
 
     .hf-intro {
         padding: 3em 2em;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        
     }
 
     .hf-intro img {
@@ -276,7 +369,7 @@ body .hf-page {
         padding: 2em;
     }
 
-    .challenge-section, .user-insights-section, .results-section {
+    .challenge-section, .user-insights-section-1, .user-insights-section-2, .results-section {
         margin: 2em;
     }
 
@@ -288,15 +381,19 @@ body .hf-page {
         padding: 0;
     }
 
-    .problem-item, .resp-item, .persona-item, .feature-item, .decision-item, .result-item, .learning-item {
+    .problem-item, .resp-item, .persona-item, .feature-item, .decision-item, .result-item {
         margin: 0;
         padding: 1.5em;
     }
 
-    .leadership-content, .personas-content, .design-content, .results-content {
+    .leadership-content, .personas-content,  .results-content {
         flex-direction: row;
         align-items: center;
         gap: 3rem;
+    }
+
+    .design-content img{
+        max-width: 688px;
     }
 
     .leadership-text, .personas-text, .design-text, .results-text {
@@ -307,6 +404,31 @@ body .hf-page {
         min-height: 200px;
         flex: 1;
     }
+
+    .design-process .hf-lofi-wireframing img{
+        border-radius: 28px;
+    }
+
+      .hf-page .hf-hifi-wireframing img{
+        max-height: 800px;
+        width: auto;
+        align-self: center;
+        border-radius: 28px;
+    }
+
+     .hf-page .hf-hifi-wireframing .carousel-main{
+        max-width: 760px;
+    }
+
+     .hf-page .key-learnings img{
+        max-width: 700px;
+    }
+
+    .hf-page .responsibilities-list .resp-item:last-child, .hf-page .results-list .result-item:last-child{
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+
 }
 
 @media(min-width: 1024px) {
@@ -320,11 +442,18 @@ body .hf-page {
         margin: 0.5em 0;
     }
 
-    .hf-intro {
-        padding: 3em 4em;
+    .hf-intro img{
+        max-width: 40%;
     }
 
-    .challenge-section, .user-insights-section, .results-section {
+    .hf-intro {
+        padding: 3em 4em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .challenge-section, .user-insights-section-1, .user-insights-section-2, .results-section {
         margin: 4em;
     }
 
@@ -332,7 +461,7 @@ body .hf-page {
         padding: 4em;
     }
 
-    .problems-list, .responsibilities-list, .personas-list, .features-list, .decisions-list, .results-list, .learnings-list {
+    .problems-list, .responsibilities-list, .personas-list, .features-list, .decisions-list, .results-list {
         gap: 2em;
     }
 
@@ -353,6 +482,46 @@ body .hf-page {
     .persona-item {
         padding: 1.5em;
     }
+
+    .design-content{
+        flex-direction: row;
+        margin:1em 0;
+        align-items: center;
+        gap:8em;
+    }
+
+    .design-content img{
+        max-width: 500px;
+    }
+
+     .design-process .hf-lofi-wireframing img{
+        max-height: 600px;
+     }
+
+      .hf-page .hf-hifi-wireframing img{
+        max-height: 700px;
+        width: auto;
+        align-self: center;
+        border-radius: 28px;
+    }
+
+     .hf-page .hf-hifi-wireframing .carousel-main{
+        max-width: 760px;
+    }
+
+    .hf-impact-metrics{
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .hf-key-learnings-div{
+        flex-direction: row;
+        gap: 2em;
+    }
+
+     .hf-page .key-learnings img{
+        max-width: 500px;
+    }
 }
 
 @media(min-width: 1440px) {
@@ -368,13 +537,17 @@ body .hf-page {
         padding: 3em 6em;
     }
 
-    .challenge-section, .user-insights-section, .results-section {
+    .challenge-section, .user-insights-section-1, .user-insights-section-2, .results-section {
         margin: 6em;
     }
 
     .leadership-section, .design-process, .key-learnings {
         padding: 6em;
     }
+
+     .design-process .hf-lofi-wireframing img{
+        max-height: 700px;
+     }
 }
 
 @media(min-width: 1728px) {
@@ -382,7 +555,7 @@ body .hf-page {
         padding: 6em 8em;
     }
 
-    .challenge-section, .user-insights-section, .results-section {
+    .challenge-section, .user-insights-section-1, .user-insights-section-2, .results-section {
         margin: 6em 8em;
     }
 }
@@ -393,7 +566,7 @@ body .hf-page {
         padding-right: 32em;
     }
 
-    .challenge-section, .user-insights-section, .results-section {
+    .challenge-section, .user-insights-section-1, .user-insights-section-2, .results-section {
         margin-left: 32em;
         margin-right: 32em;
     }

@@ -6,6 +6,11 @@ const picnic_polaroid = new URL('../assets/images/Picnic.JPG', import.meta.url).
 const scrabble_polaroid = new URL('../assets/images/Playing-Scrabble.JPG', import.meta.url).href;
 const profile_picture = new URL('../assets/images/Profile-Picture.JPG', import.meta.url).href;
 const countryBoards_polaroid = new URL('../assets/images/country-surf-boards.JPG', import.meta.url).href;
+const ash_and_i = new URL('../assets/images/carlos-and-ash.JPG', import.meta.url).href;
+const carlos_grad = new URL('../assets/images/carlos-polaroid.JPG', import.meta.url).href;
+const office_polaroid = new URL('../assets/images/office-polaroid.JPG', import.meta.url).href;
+const uw_polaroid = new URL('../assets/images/uw-polaroid.JPG', import.meta.url).href;
+const joe_and_i_polaroid = new URL('../assets/images/joe-and-i.JPG', import.meta.url).href;
 
 const dumbo = new URL('../assets/images/joe-and-i-dumbo.JPG', import.meta.url).href;
 const bella_crazy_hair = new URL('../assets/images/bella-crazy-hair.JPG', import.meta.url).href;
@@ -84,7 +89,8 @@ const cherry_blossoms_uw = new URL('../assets/images/uw-cherry-blossoms.JPG', im
 
 const keyboard_temp = new URL('../assets/images/keyboard-temp.png', import.meta.url).href;
 
-
+const rev_intro = new URL('../assets/case-studies/révisemé/reviseme-intro.png', import.meta.url).href;
+const rev_pa = new URL('../assets/case-studies/révisemé/revi-pa.png', import.meta.url).href;
 
 const labubus_desk = new URL('../assets/images/labubu-desk.jpg', import.meta.url).href;
 
@@ -158,6 +164,13 @@ export default {
     reviseme_mockup,
     pacs_mockup,
     huskyFitness_hp_mockup,
-    viableVeganism_hp_mockup
+    viableVeganism_hp_mockup,
+    rev_intro,
+    rev_pa,
+    ash_and_i,
+    carlos_grad,
+    joe_and_i_polaroid,
+    office_polaroid,
+    uw_polaroid
 
 };

@@ -23,7 +23,8 @@ const NavBar = () => {
             "/Projects" : "projects-page",
             // "/Contact" : "contact-page",
             "/Resume" : "resume-page",
-            "/Under-Constrction": "construction-page"
+            "/Under-Constrction": "construction-page",
+
         }
 
     document.body.classList.remove('home-page', 'about-page', 'projects-page', 'resume-page', "construction-page");
@@ -45,17 +46,28 @@ const NavBar = () => {
             <button className="close-menu" onClick={mobileMenu}>✕</button>
                 {["Home", "About", "Projects"].map((item) => (
                 <Link
-                key={item}
-                to={`/${item === "Home" ? "" : item.toLowerCase()}`}
-                className={`nav-link ${location.pathname === `/${item === "Home" ? "" : item.toLowerCase()}` ? "active" : ""}`}
-                >{item}</Link>
+                    key={item}
+                    to={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                    className={`nav-link ${location.pathname === `/${item === "Home" ? "" : item.toLowerCase()}` ? "active" : ""}`}
+                    onClick={() => {
+                        if (isMobileMenuOpen) mobileMenu();
+                    }}
+                    >
+                    {item}
+                </Link>
                 ))}
-                <a 
-                    href="https://drive.google.com/file/d/1GKadfyRqqP2JBeLvW041i6KJYBUAto7J/view?usp=sharing" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="nav-link"
-                    >Resume</a>
+               <a 
+                href="https://drive.google.com/file/d/1GKadfyRqqP2JBeLvW041i6KJYBUAto7J/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="nav-link"
+                onClick={() => {
+                    if (isMobileMenuOpen) mobileMenu();
+                }}
+                >
+                Resume
+                </a>
+
             </div>
         </nav>
     )

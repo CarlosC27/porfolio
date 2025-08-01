@@ -72,7 +72,7 @@ const About = (props) => {
                             </ul>
                         </div>
                     </div>
-                    <img src={images.keyboard_temp} alt='hands on keyboard' className='keyboard-img'/> 
+                    {/* <img src={images.keyboard_temp} alt='hands on keyboard' className='keyboard-img'/>  */}
                 </section>
                 <section className='my-journey-section'>
                     <h2 className='orange-subtitle my-journey-title'>My Journey</h2>
@@ -291,8 +291,8 @@ const About = (props) => {
                         <p>Feel free to reach out—I’m always happy to meet new people and strike up a good conversation! Whether it’s about work opportunities, concert experiences, record stores, travel plans, or anything in between, I’m all ears. Let’s connect and share stories—I’d love to hear from you! 🎉</p>
                         <div className='lets-chat-buttons'>
                             <AirplaneTextButton to="mailto:carlos.cs.2799@gmail.com" text='Email me at carlos.cs.2799@gmail.com' image={images.green_pa}/>
-                            <AirplaneTextButton text='Connect with me on LinkedIn' to="https://www.linkedin.com/in/cacs27/" image={images.green_pa} />
-                            <AirplaneTextButton text='Follow me on Instagram' to="https://www.instagram.com/carlosjtj13/" image={images.green_pa} />
+                            <AirplaneTextButton text='Connect with me on LinkedIn'external={true} to="https://www.linkedin.com/in/cacs27/" image={images.green_pa} />
+                            <AirplaneTextButton text='Follow me on Instagram' external={true} to="https://www.instagram.com/carlosjtj13/" image={images.green_pa} />
                         </div>
                     </div>
                 </section>

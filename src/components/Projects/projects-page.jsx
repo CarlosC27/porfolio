@@ -18,7 +18,7 @@ const Projects = (props) => {
                             creativity, problem-solving, and a little bit of late-night coding magic. So sit back, explore, and enjoy the show! 🎬✨
                         </p>
                     </div>
-                    <img src={images.mascota_polaroid} alt='of carlos in the town of Masocta Jalisco' className='project-intro-img'/>
+                    <img src={images.office_polaroid} alt='Carlos at home office' className='project-intro-img'/>
                 </section>
                 <section className='project-page-info-cards'>
                     <div className='projects-row-1'>
@@ -31,12 +31,12 @@ const Projects = (props) => {
                             imgSource={projects.at(0).projectImg} 
                             />
                          <InfoCard 
-                            title={projects.at(4).title}
-                            projectType={projects.at(4).projectType}
-                            techStack={projects.at(4).techStack}
-                            description={projects.at(4).description}
-                            projectLink={projects.at(4).projectLink}
-                            imgSource={projects.at(4).projectImg} 
+                            title={projects.at(2).title}
+                            projectType={projects.at(2).projectType}
+                            techStack={projects.at(2).techStack}
+                            description={projects.at(2).description}
+                            projectLink={projects.at(2).projectLink}
+                            imgSource={projects.at(2).projectImg} 
                             />
                        
                     </div>
@@ -59,18 +59,15 @@ const Projects = (props) => {
                             projectLink={projects.at(3).projectLink}
                             imgSource={projects.at(3).projectImg} />
                          <InfoCard 
-                            title={projects.at(2).title}
-                            projectType={projects.at(2).projectType}
-                            techStack={projects.at(2).techStack}
-                            description={projects.at(2).description}
-                            projectLink={projects.at(2).projectLink}
-                            imgSource={projects.at(2).projectImg} />
+                            title={projects.at(4).title}
+                            projectType={projects.at(4).projectType}
+                            techStack={projects.at(4).techStack}
+                            description={projects.at(4).description}
+                            projectLink={projects.at(4).projectLink}
+                            imgSource={projects.at(4).projectImg} />
                     </div>
                 </section>
                 <section className='website-dev-journey'>
-                    <p className='wdj-p'>
-                        And yes, this website was designed and developed by yours truly.
-                    </p>
                 </section>
             </main>
         </div>

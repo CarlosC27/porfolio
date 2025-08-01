@@ -1,0 +1,659 @@
+:root {
+    --color-primary-dark: #1A1D29;
+    --color-primary-light: #F1E9DC;
+    --color-accent-blue: #2C3E50;
+    --color-accent-indigo: #648DB6;
+    --color-text-light: #F8FAFC;
+    --color-text-dark: #1E293B;
+    --color-neutral-gray: #64748B;
+    --color-background: #F1F5F9;
+}
+
+
+.revisime-page .results-section .reviseme-results-container {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-background);
+    border-radius: 20px;
+    padding: 2rem;
+    color: var(--color-text-dark);
+}
+
+.revisime-page .results-section .header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.revisime-page .results-section .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-accent-indigo), var(--color-accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.625rem;
+    margin-top: 0;
+}
+
+.revisime-page .results-section .header p {
+    font-size: 1.1rem;
+    color: var(--color-neutral-gray);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.revisime-page .results-section .system-overview {
+    background: linear-gradient(135deg, var(--color-accent-blue) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-text-light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.revisime-page .results-section .system-overview h2 {
+    margin: 0 0 1rem 0;
+    color: var(--color-text-light);
+}
+
+.revisime-page .results-section .system-overview p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.revisime-page .results-section .overview-stats {
+   display: flex;
+   flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.revisime-page .results-section .stat {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.revisime-page .results-section .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-indigo);
+    margin-bottom: 5px;
+}
+
+.revisime-page .results-section .stat-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    color: var(--color-text-light);
+}
+
+.revisime-page .results-section .architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.revisime-page .results-section .section {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.revisime-page .results-section .section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.revisime-page .results-section .section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.revisime-page .results-section .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.revisime-page .results-section .ai-icon { 
+    background: linear-gradient(135deg, var(--color-accent-indigo), #7c3aed); 
+}
+.revisime-page .results-section .flow-icon { 
+    background: linear-gradient(135deg, #10b981, #059669); 
+}
+.revisime-page .results-section .db-icon { 
+    background: linear-gradient(135deg, var(--color-accent-indigo), #2563eb); 
+}
+.revisime-page .results-section .integration-icon { 
+    background: linear-gradient(135deg, #f59e0b, #d97706); 
+}
+
+.revisime-page .results-section .ai-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.revisime-page .results-section .ai-step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent-indigo);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .results-section .ai-step:hover {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    transform: translateX(8px);
+}
+
+
+.revisime-page .results-section .ai-step-number {
+    background: var(--color-accent-indigo);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.revisime-page .results-section .ai-step-content {
+    flex: 1;
+}
+
+.revisime-page .results-section .ai-step-title {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 4px;
+}
+
+.revisime-page .results-section .ai-step-desc {
+    font-size: 0.85rem;
+    color: var(--color-neutral-gray);
+    line-height: 1.4;
+}
+
+.revisime-page .results-section .ai-tech-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.revisime-page .results-section .tech-item {
+    background: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.revisime-page .results-section .user-flows {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.revisime-page .results-section .user-type {
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .results-section .user-type:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.revisime-page .results-section .new-user { 
+    border-color: #10b981; 
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+.revisime-page .results-section .returning-user { 
+    border-color: var(--color-accent-indigo); 
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+.revisime-page .results-section .power-user { 
+    border-color: #f59e0b; 
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+.revisime-page .results-section .user-type-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-dark);
+}
+
+.revisime-page .results-section .user-flow-steps {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.revisime-page .results-section .flow-step {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid;
+    opacity: 0.8;
+}
+
+.revisime-page .results-section .new-user .flow-step { 
+    border-color: #10b981; 
+    color: #10b981; 
+}
+.revisime-page .results-section .returning-user .flow-step { 
+    border-color: var(--color-accent-indigo); 
+    color: var(--color-accent-indigo); 
+}
+.revisime-page .results-section .power-user .flow-step { 
+    border-color: #f59e0b; 
+    color: #f59e0b; 
+}
+
+.revisime-page .results-section .complexity-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.revisime-page .results-section .complexity-metric {
+    text-align: center;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.revisime-page .results-section .metric-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-indigo);
+}
+
+.revisime-page .results-section .metric-text {
+    font-size: 0.75rem;
+    color: var(--color-neutral-gray);
+    margin-top: 4px;
+}
+
+.revisime-page .results-section .db-schemas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.revisime-page .results-section .db-table {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 10px;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .results-section .db-table:hover {
+    border-color: var(--color-accent-indigo);
+    transform: translateY(-3px);
+}
+
+.revisime-page .results-section .table-name {
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.revisime-page .results-section .table-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.revisime-page .results-section .table-field {
+    font-size: 0.8rem;
+    color: var(--color-neutral-gray);
+    padding: 4px 8px;
+    background: white;
+    border-radius: 4px;
+    border-left: 3px solid var(--color-accent-indigo);
+}
+
+.revisime-page .results-section .db-relationships {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-radius: 10px;
+    border: 2px solid #f59e0b;
+    display: flex;
+    flex-direction: column;
+}
+
+.revisime-page .results-section .relationships-title {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+}
+
+.revisime-page .results-section .relationship {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    flex-wrap: wrap;
+}
+
+.revisime-page .results-section .relationship-arrow {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.revisime-page .results-section .integration-section {
+    background: linear-gradient(135deg, var(--color-accent-indigo), var(--color-accent-blue));
+    color: white;
+    padding: 1.5rem;
+}
+
+.revisime-page .results-section .integration-section .section-title {
+    color: white;
+}
+
+.revisime-page .results-section .integration-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.revisime-page .results-section .integration-node {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .results-section .integration-node:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.revisime-page .results-section .integration-node h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    margin-top: 0;
+    color: white;
+}
+
+.revisime-page .results-section .integration-node p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.revisime-page .results-section .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.8rem;
+    animation: pulse 2s infinite;
+    transform: rotate(90deg);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.revisime-page .results-section .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.revisime-page .results-section .metric {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .results-section .metric:hover {
+    border-color: var(--color-accent-indigo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.revisime-page .results-section .metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-accent-indigo);
+    margin-bottom: 8px;
+}
+
+.revisime-page .results-section .metric-label {
+    font-size: 0.9rem;
+    color: var(--color-neutral-gray);
+    font-weight: 600;
+}
+
+.revisime-page .results-section .metric-desc {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+/* MEDIA QUERIES */
+@media(min-width: 375px) {
+    .revisime-page .results-section .header h1 {
+        font-size: 2.4rem;
+    }
+    
+    .revisime-page .results-section .overview-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .revisime-page .results-section .stat-value {
+        font-size: 1.6rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .revisime-page .results-section .reviseme-results-container {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .results-section .header h1 {
+        font-size: 2.6rem;
+    }
+
+    .revisime-page .results-section .header p {
+        font-size: 1.2rem;
+    }
+
+    .revisime-page .results-section .system-overview {
+        padding: 2rem;
+    }
+
+    .revisime-page .results-section .overview-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
+    }
+
+    .revisime-page .results-section .stat {
+        padding: 1.25rem;
+    }
+
+    .revisime-page .results-section .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .revisime-page .results-section .architecture-grid {
+       display: flex;
+       flex-direction: column;
+      justify-content: center;
+    }
+
+    .revisime-page .results-section .section {
+        padding: 2rem;
+    }
+
+    .revisime-page .results-section .section-title {
+        font-size: 1.4rem;
+    }
+
+    .revisime-page .results-section .db-schemas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .revisime-page .results-section .integration-flow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .revisime-page .results-section .integration-flow .integration-node{
+        max-width: 180px;
+    }
+
+    .revisime-page .results-section .arrow {
+        transform: rotate(0deg);
+    }
+
+    .revisime-page .results-section .integration-section {
+        grid-column: 1 / -1;
+        padding: 2rem;
+    }
+
+    .revisime-page .results-section .metrics {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .revisime-page .results-section .metric {
+        padding: 2rem;
+    }
+
+    .revisime-page .results-section .metric-value {
+        font-size: 2.2rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .revisime-page .results-section .reviseme-results-container {
+        padding: 3rem;
+    }
+
+    .revisime-page .results-section .header h1 {
+        font-size: 2.8rem;
+    }
+
+    .revisime-page .results-section .architecture-grid {
+        grid-template-rows: auto auto auto;
+        gap: 2.5rem;
+    }
+
+    .revisime-page .results-section .section {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .results-section .system-overview {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .results-section .integration-section {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .results-section .metrics {
+        gap: 2rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .revisime-page .results-section .header h1 {
+        font-size: 3rem;
+    }
+
+    .revisime-page .results-section .reviseme-results-container {
+        padding: 3.5rem;
+    }
+
+    .revisime-page .results-section .architecture-grid {
+        gap: 3rem;
+    }
+
+    .revisime-page .results-section .section {
+        padding: 3rem;
+    }
+
+    .revisime-page .results-section .system-overview {
+        padding: 3rem;
+    }
+
+    .revisime-page .results-section .integration-section {
+        padding: 3rem;
+    }
+}

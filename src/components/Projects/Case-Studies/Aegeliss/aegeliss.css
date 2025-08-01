@@ -32,10 +32,6 @@ body .aegeliss-page{
   }
 
 
-  .aegeliss-intro p{
-    font-size: 1.1rem;
-  }
-
   .aegeliss-intro img{
     max-width: 90%;
     height: auto;
@@ -108,6 +104,10 @@ body .aegeliss-page{
     animation: slideDown 0.3s ease-out;
   }
 
+.aegeliss-page .airplane-text-button{
+  color: #122D43;
+}
+
   @keyframes slideDown {
     from {
         opacity: 0;
@@ -170,6 +170,12 @@ body .aegeliss-page{
     filter: none;
   }
 
+  .research-methods-list li:hover, .ageliss-research-insights-list li:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
   @media(min-width: 375px){
    .aegeliss-page h1{
         font-size: 2.2rem;
@@ -201,10 +207,12 @@ body .aegeliss-page{
   }
 
   @media(min-width: 768px){
-    body .aegeliss-page{
+    body .aegeliss-page, .aegeliss-page .aegeliss-intro{
         font-size: 20px;
         line-height: 1.8rem;
       }
+
+
 
       .aegeliss-intro img, .hf-intro img{
         max-width: 60%;
@@ -295,12 +303,24 @@ body .aegeliss-page{
         margin: 2em 0;
     }
 
+    .meet-the-team-accordion-header, .more-user-research-accordion-header{
+        padding: 2em;
+    }
 
-
+    .meet-the-team-content, .more-user-research-content{
+        padding: 2em;
+    }
   }
 
   @media(min-width: 1024px){
 
+    .aegeliss-intro img{
+        max-width: 65%;
+    }
+
+    .aegeliss-intro{
+        padding: 3em 4em;
+    }
 
     .aegeliss-page .aegeliss-project-overview-section, .aegeliss-page .ideation-and-design-section, .aegeliss-page .wireframing-and-protoyping, .aegeliss-page .developement-section, .aegeliss-page .results-and-impact, .aegeliss-page .looking-forward-section{
         margin: 4em;
@@ -310,11 +330,110 @@ body .aegeliss-page{
         padding: 4em;
     }
     
+    .aegeliss-tpr{
+        display: flex;
+        flex-direction: row;
+       gap: 1em;
+    }
+
+    .tsc-and-tused, .agl-cbd-div{
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        align-items: center;
+    }
+
+    .agl-cbd-div img {
+        max-width: 380px;
+    }
+
+    .agl-mrkt-research-div, .agl-fca-div, .agl-rwa-div{
+        flex-direction: row-reverse;
+        gap: 2em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .agl-rwa-div img {
+        max-width: 540px;
+    }
+
+    .agl-fca-div img{
+        max-width: 480px;
+    }
+    .iads-d2, .age-gp-div{
+        flex-direction: row;
+        gap:2em;
+        align-items: center;
+    }
+
+    .agl-mrkt-research-div img, .iads-d2 img, .age-gp-div img{
+        max-width: 600px;
+    }
+
+    .da-text1-div, .agl-afn-div{
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .dev-chlg-div, .dev-strat-div, .agl-cir-div, .agl-lfs-div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .agl-lfs-div img{
+        max-width: 548px;
+    }
+
+    .agl-cir-div img{
+        max-width: 532px;
+    }
+
+   .dev-strat-item{
+    margin-bottom: 1.5em;
+   }
+
+   /* .aegeliss-page .carousel-container{
+    max-width: 800px;
+   }
+   .aegeliss-page .carousel-main{
+    max-width: 800px;
+   } */
+
+  .initial-wf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .aegeliss-page .carousel-img{
+    max-width: 400px;
+  }
+
   }
 
   @media(min-width: 1440px){
+
+    .aegeliss-page h1{
+        font-size: 3.6em;
+    }
+
+    .aegeliss-page h2{
+        font-size: 2.6em;
+    }
+
+    .aegeliss-intro img{
+        max-width: 45%;
+    }
+
+
     .aegeliss-intro{
-        padding: 7em 6em;
+        padding: 4em 6em;
     }
 
     .aegeliss-page .aegeliss-project-overview-section, .aegeliss-page .ideation-and-design-section, .aegeliss-page .wireframing-and-protoyping, .aegeliss-page .developement-section, .aegeliss-page .results-and-impact, .aegeliss-page .looking-forward-section{
@@ -324,6 +443,14 @@ body .aegeliss-page{
     .aegeliss-page .aegeliss-user-research-section, .aegeliss-page .design-system-and-hifi-fidelity-section, .aegeliss-page .key-learnings-and-refelection{
         padding: 6em;
     }
+
+    .agl-cbd-div img{
+        max-width: 440px;
+    }
+
+    .agl-std-div img{
+        max-width: 600px;
+    }
   }
 
   @media(min-width: 1728px){
@@ -331,15 +458,20 @@ body .aegeliss-page{
         margin: 8em;
     }
 
-    .aegeliss-page .aegeliss-user-research-section, .aegeliss-page .design-system-and-hifi-fidelity-section, .aegeliss-page .key-learnings-and-refelection{
+    .aegeliss-page .aegeliss-intro, .aegeliss-page .aegeliss-user-research-section, .aegeliss-page .design-system-and-hifi-fidelity-section, .aegeliss-page .key-learnings-and-refelection{
         padding: 8em;
     }
     
   }
 
   @media(min-width: 2200px){
-    .aegeliss-intro{
+    .aegeliss-page .aegeliss-intro, .aegeliss-page .aegeliss-user-research-section, .aegeliss-page .design-system-and-hifi-fidelity-section, .aegeliss-page .key-learnings-and-refelection{
         padding-left: 32em;
         padding-right: 32em;
+    }
+
+    .aegeliss-page .aegeliss-project-overview-section, .aegeliss-page .ideation-and-design-section, .aegeliss-page .wireframing-and-protoyping, .aegeliss-page .developement-section, .aegeliss-page .results-and-impact, .aegeliss-page .looking-forward-section{
+        margin-left: 32em;
+        margin-right: 32em;
     }
   } 

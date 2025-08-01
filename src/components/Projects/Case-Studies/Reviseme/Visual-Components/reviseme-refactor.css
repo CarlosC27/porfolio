@@ -1,0 +1,477 @@
+:root {
+    --color-primary-dark: #1A1D29;
+    --color-primary-light: #F1E9DC;
+    --color-accent-blue: #2C3E50;
+    --color-accent-indigo: #6366F1;
+    --color-text-light: #F8FAFC;
+    --color-text-dark: #1E293B;
+    --color-neutral-gray: #64748B;
+    --color-background: #F1F5F9;
+}
+
+.revisime-page .great-refactor .reviseme-refactor {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--color-accent-blue);
+    padding: 1.5rem;
+    color: var(--color-text-light);
+    font-size: 16px;
+    line-height: 1.6rem;
+}
+
+.revisime-page .great-refactor .refactor-title {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.revisime-page .great-refactor .crisis-alert {
+    background: #D35555;
+    color: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: pulse-warning 2s infinite;
+}
+
+.revisime-page .great-refactor .crisis-alert h2 {
+    margin: 0 0 0.625rem 0;
+    color: white;
+}
+
+.revisime-page .great-refactor .crisis-alert p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+@keyframes pulse-warning {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.revisime-page .great-refactor .comparison {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.revisime-page .great-refactor .before,
+.revisime-page .great-refactor .after {
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 3px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.revisime-page .great-refactor .before {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    color: var(--color-text-dark);
+}
+
+.revisime-page .great-refactor .after {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    color: var(--color-text-dark);
+}
+
+.revisime-page .great-refactor .section-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.revisime-page .great-refactor .before .section-title {
+    background: #D35555;
+}
+
+.revisime-page .great-refactor .after .section-title {
+    background: #2C5243;
+}
+
+.revisime-page .great-refactor .problem,
+.revisime-page .great-refactor .solution {
+    background: white;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .great-refactor .problem {
+    border-left-color: #D35555;
+}
+
+.revisime-page .great-refactor .solution {
+    border-left-color: #2C5243;
+}
+
+.revisime-page .great-refactor .problem:hover,
+.revisime-page .great-refactor .solution:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.revisime-page .great-refactor .code-snippet {
+    background: var(--color-primary-dark);
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.revisime-page .great-refactor .code-snippet pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.revisime-page .great-refactor .vs-divider {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #D8C3A5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.revisime-page .great-refactor .timeline {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.revisime-page .great-refactor .timeline-title {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    background-color: #2C3E50;
+     z-index: 9999; 
+
+}
+
+/* .revisime-page .great-refactor .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #ef4444, #f59e0b, #10b981);
+    transform: translateX(-50%);
+    display: none;
+} */
+
+.revisime-page .great-refactor .timeline-item {
+    display: flex;
+    margin: 20px 0;
+    position: relative;
+    justify-content: center;
+}
+
+.revisime-page .great-refactor .timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    color: var(--color-text-dark);
+}
+
+.revisime-page .great-refactor .timeline-marker {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid;
+    z-index: 2;
+}
+
+.revisime-page .great-refactor .crisis .timeline-marker { 
+    border-color: #D35555; 
+    display: none;
+}
+.revisime-page .great-refactor .analysis .timeline-marker { 
+    border-color: #D8C3A5; 
+}
+.revisime-page .great-refactor .solution-timeline .timeline-marker { 
+    border-color: #2C5243; 
+}
+
+.revisime-page .great-refactor .crisis-heading {
+    color: #D35555;
+    margin-top: 0;
+}
+
+.revisime-page .great-refactor .analysis-heading {
+    color: #D8C3A5;
+    margin-top: 0;
+}
+
+.revisime-page .great-refactor .solution-heading {
+    color: #2C5243;
+    margin-top: 0;
+}
+
+.revisime-page .great-refactor .impact-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #334155 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.revisime-page .great-refactor .impact-section h3 {
+    margin: 0 0 1rem 0;
+    color: white;
+}
+
+.revisime-page .great-refactor .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.revisime-page .great-refactor .metric {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.revisime-page .great-refactor .metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #D8C3A5;
+}
+
+.revisime-page .great-refactor .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.revisime-page .great-refactor .impact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.revisime-page .great-refactor .impact-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.revisime-page .great-refactor .impact-card h4 {
+    margin-top: 0;
+    color: white;
+}
+
+.revisime-page .great-refactor .leadership-highlight {
+    background: #D8C3A5;
+    color: #1E293B;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.revisime-page .great-refactor .leadership-highlight h3 {
+    margin: 0 0 1rem 0;
+    color: #1E293B;
+}
+
+.revisime-page .great-refactor .leadership-highlight p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+@media(min-width: 375px) {
+    .revisime-page .great-refactor .refactor-title {
+        font-size: 2rem;
+    }
+    
+    .revisime-page .great-refactor .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .revisime-page .great-refactor .metric-value {
+        font-size: 1.75rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .revisime-page .great-refactor .reviseme-refactor {
+        font-size: 18px;
+        line-height: 1.8rem;
+        padding: 2rem;
+    }
+
+    .revisime-page .great-refactor .refactor-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .revisime-page .great-refactor .comparison {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .revisime-page .great-refactor .vs-divider {
+        display: block;
+    }
+
+    .revisime-page .great-refactor .before,
+    .revisime-page .great-refactor .after {
+        padding: 2rem;
+    }
+
+    .revisime-page .great-refactor .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .revisime-page .great-refactor .problem,
+    .revisime-page .great-refactor .solution {
+        padding: 18px;
+        margin: 18px 0;
+    }
+
+    .revisime-page .great-refactor .timeline::before {
+        display: block;
+    }
+
+    .revisime-page .great-refactor .timeline-item:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    .revisime-page .great-refactor .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .revisime-page .great-refactor .timeline-content {
+        width: 45%;
+    }
+
+    .revisime-page .great-refactor .timeline-marker {
+        display: block;
+    }
+
+    .revisime-page .great-refactor .impact-section {
+        padding: 2rem;
+    }
+
+    .revisime-page .great-refactor .metrics {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .revisime-page .great-refactor .metric-value {
+        font-size: 2rem;
+    }
+
+    .revisime-page .great-refactor .impact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .revisime-page .great-refactor .leadership-highlight {
+        padding: 2rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .revisime-page .great-refactor .reviseme-refactor {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .great-refactor .refactor-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .revisime-page .great-refactor .comparison {
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .revisime-page .great-refactor .before,
+    .revisime-page .great-refactor .after {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .great-refactor .timeline {
+        margin-top: 3rem;
+    }
+
+    .revisime-page .great-refactor .impact-section {
+        padding: 2.5rem;
+    }
+
+    .revisime-page .great-refactor .impact-grid {
+        gap: 2rem;
+    }
+
+    .revisime-page .great-refactor .leadership-highlight {
+        padding: 2.5rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .revisime-page .great-refactor .refactor-title {
+        font-size: 2.8rem;
+    }
+
+    .revisime-page .great-refactor .reviseme-refactor {
+        padding: 3rem;
+    }
+
+    .revisime-page .great-refactor .comparison {
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .revisime-page .great-refactor .before,
+    .revisime-page .great-refactor .after {
+        padding: 3rem;
+    }
+
+    .revisime-page .great-refactor .impact-section {
+        padding: 3rem;
+    }
+
+    .revisime-page .great-refactor .timeline {
+        margin-top: 3.5rem;
+    }
+}

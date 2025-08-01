@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import images from "../../../../constants/images";
 import aegelissImgs from "../../../../constants/aegeliss-imgs";
 import projects from "../../../../constants/project-data";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import AirplaneTextButton from "../../../airplane-text-buttons";
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import ExpandableCard from "../../../expandable-card";
 import AegelissUserPersonas from "./User-Personas/aegeliss-personas";
@@ -150,20 +150,22 @@ const Aegeliss = (props) => {
                             <p><b>Project Scope:</b> {projects.at(0).projectType}</p>
                             <p><b>My Role:</b> Lead UX/UI Designer, UX Researcher, and Shopify Developer</p>
                         </div>
-                        <div className="tech-stack-container">
-                            <p><b>Tools Used:</b></p>
-                            <div className="tech-stack-items"> 
-                                <p className="ts-item">Figma</p>
-                                <p className="ts-item">Miro</p>
-                                <p className="ts-item">Shopify</p>
+                        <div className="tsc-and-tused">
+                            <div className="tech-stack-container">
+                                <p><b>Tools Used:</b></p>
+                                <div className="tech-stack-items"> 
+                                    <p className="ts-item">Figma</p>
+                                    <p className="ts-item">Miro</p>
+                                    <p className="ts-item">Shopify</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="tech-stack-container">
-                            <p><b>Tech Stack:</b></p>
-                            <div className="tech-stack-items"> 
-                                <p className="ts-item">HTML</p>
-                                <p className="ts-item">CSS</p>
-                                <p className="ts-item">Liquid</p>
+                            <div className="tech-stack-container">
+                                <p><b>Tech Stack:</b></p>
+                                <div className="tech-stack-items"> 
+                                    <p className="ts-item">HTML</p>
+                                    <p className="ts-item">CSS</p>
+                                    <p className="ts-item">Liquid</p>
+                                </div>
                             </div>
                         </div>
                         <p><b>Collaborators:</b> Ju Tu, Kayla Tounalom, Anushka Verma, June Mi Hong, and Hung Tran</p>
@@ -292,13 +294,15 @@ const Aegeliss = (props) => {
                     <h2>Design Approach</h2>
                     <p>Our team's design approach consisted of multiple complementary aspects that helped Aegeliss develop into a brand with strong focus on practicality and empathy. Understanding that our users, family caregivers, professional staff, and care partners, needed a welcoming, clear, and easy-to-use platform, we centered our approach around reducing cognitive load while maintaining comprehensive functionality.</p>
                     <div>
-                        <div>
-                            <h3>Research-Driven Design Decisions</h3>
-                            <p>Drawing from our interviews with 12 caregivers and community engagement experiences, we understood that traditional medical websites often alienated the very people they aimed to help. Our participants consistently expressed frustration with clinical language, overwhelming information density, and sterile aesthetics that felt disconnected from the warmth and dignity they wanted to provide in their caregiving relationships.</p>
-                        </div>
-                        <div>
-                            <h3>Accessibility-First Considerations</h3>
-                            <p>We prioritized navigation clarity, readability, and information organization throughout our design process. Recognizing that our stakeholders span a wide age range and varying levels of medical background and technical comfort, we implemented features like alt text for all images, keyboard accessibility, and text-to-speech functionality. Our design remained intentionally simple, with carefully chosen color palettes and typography to ensure information never felt overwhelming.</p>
+                        <div className="da-text1-div">
+                            <div>
+                                <h3>Research-Driven Design Decisions</h3>
+                                <p>Drawing from our interviews with 12 caregivers and community engagement experiences, we understood that traditional medical websites often alienated the very people they aimed to help. Our participants consistently expressed frustration with clinical language, overwhelming information density, and sterile aesthetics that felt disconnected from the warmth and dignity they wanted to provide in their caregiving relationships.</p>
+                            </div>
+                            <div>
+                                <h3>Accessibility-First Considerations</h3>
+                                <p>We prioritized navigation clarity, readability, and information organization throughout our design process. Recognizing that our stakeholders span a wide age range and varying levels of medical background and technical comfort, we implemented features like alt text for all images, keyboard accessibility, and text-to-speech functionality. Our design remained intentionally simple, with carefully chosen color palettes and typography to ensure information never felt overwhelming.</p>
+                            </div>
                         </div>
                         <div className="age-gp-div">
                             <div className="age-gp-text">
@@ -316,7 +320,7 @@ const Aegeliss = (props) => {
                 <section className="wireframing-and-protoyping">
                     <h2>Wireframes & Prototyping</h2>
                     <p>Due to our project's swift timeline, we took a non-traditional but efficient approach to wireframing that prioritized rapid iteration and stakeholder feedback over extensive low-fidelity exploration.</p>
-                    <div>
+                    <div className="initial-wf">
                         <div>
                             <h3>Sketching and Mid-fidelity Components</h3>
                             <p>I began with hand-drawn sketches to quickly explore layout concepts and information architecture. These initial sketches focused on key user flows and helped us visualize how different content sections could work together cohesively across the platform. The sketching phase allowed for rapid experimentation with navigation patterns, content hierarchy, and accessibility considerations without the constraints of digital tools.
@@ -341,16 +345,11 @@ const Aegeliss = (props) => {
                         </div>
                         <img src={aegelissImgs.aegeliss_componets} alt="the Aegeliss website components designed in Figma"/>
                     </div>
-                    <div>
+                    <div className="agl-afn-div">
                         <div>
                             <h3>Consistent Visual Language</h3>
                             <p>The design system established consistent brand elements including our signature wave dividers, carefully selected color palettes, and typography hierarchy that created visual cohesion throughout the platform. These wave dividers became a key brand element that created a friendly and inviting environment while effectively separating sections, contrasting sharply with the linear, clinical aesthetic common in medical websites.</p>
                         </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div className="agl-afn-div">
                         <div className="agl-afn-text">
                             <h3>Accessibility-Focused Navigation</h3>
                             <p>The high-fidelity wireframes prioritized accessibility through high-contrast color combinations, multiple navigation options, and clear visual hierarchy. The navigation system accommodated users who might prefer linear browsing versus those comfortable with more complex interactions, ensuring the platform remained welcoming to our diverse user base.</p>
@@ -371,6 +370,7 @@ const Aegeliss = (props) => {
                         <img src={aegelissImgs.dropdowns}alt="the Aegeliss website dropdown components designed in Figma"/>
                     </div>
                     <p>This component-based approach not only accelerated our design and development process but also ensured that every interface element served our core mission: creating a platform that feels supportive, accessible, and dignified for caregivers navigating one of life's most challenging experiences.</p>
+                    <AirplaneTextButton to="https://www.figma.com/design/INmFZWizeGPxZ4NWvKLj8F/Aegeliss-Website?node-id=222-318&t=UslfvJZNq4habc1y-1" external={true} text="View design file in Figma" image={aegelissImgs.aegeliss_dark_blue_pa}/>
                 </section>
                 <section className="developement-section">
                     <h2>Development</h2>
@@ -378,7 +378,7 @@ const Aegeliss = (props) => {
                         <br></br>While we could have built a custom website from scratch, we prioritized Ju's long-term ability to maintain and grow her business independently. Shopify's user-friendly content management system, built-in e-commerce functionality, and extensive template library made it the ideal choice for a founder who needed to focus on product development and customer relationships rather than technical website maintenance.</p>
                     <div>
                         <h3>Development Challenges</h3>
-                        <div>
+                        <div className="dev-chlg-div">
                             <div>
                                 <h4>Design Implementation Constraints</h4>
                                 <p>Despite Shopify's excellent templates and built-in features, the platform significantly limited our design flexibility and component creation capabilities. Shopify's section and block architecture constrained how we could structure web pages, often forcing us to compromise on our carefully designed layouts and interactions that had tested well with users.</p>
@@ -394,23 +394,23 @@ const Aegeliss = (props) => {
                         </div>
                         <div>
                             <h3>Development Strategy</h3>
-                            <div>
+                            <div className="dev-strat-div">
                                <div>
-                                    <div>
+                                    <div className="dev-strat-item">
                                         <h4>Built-in Components Priority</h4>
                                         <p>We prioritized using Shopify's native sections and blocks wherever possible, ensuring that Ju would be able to drag, drop, and edit content easily through the visual editor without touching any code. This approach maintained the user-friendly experience that motivated our platform choice.</p>
                                     </div>
-                                    <div>
+                                    <div className="dev-strat-item">
                                         <h4>Strategic CSS Implementation</h4>
                                         <p>For sections where built-in components couldn't achieve our design vision, we carefully implemented custom CSS while maintaining detailed documentation. Each custom style was thoroughly documented with explanations of its purpose and functionality, creating a reference guide for Ju to understand how modifications would affect the design.</p>
                                     </div> 
                                 </div>
                                 <div>
-                                    <div>
+                                    <div className="dev-strat-item">
                                         <h4>Custom Section Development</h4>
                                         <p>Through extensive research into Shopify's backend architecture, we developed custom sections and blocks that functioned identically to Shopify's built-in components. These custom elements maintained the same drag-and-drop functionality and editing interface that Ju was familiar with, ensuring seamless integration with her workflow.</p>
                                     </div>
-                                    <div>
+                                    <div className="dev-strat-item">
                                         <h4>Documentation and Knowledge Transfer</h4>
                                         <p>Understanding that our involvement was time-limited, we created comprehensive documentation covering all custom implementations, CSS modifications, and component functionality. This documentation serves as both a reference guide and a training manual for Ju's future website management.</p>
                                     </div> 
@@ -433,8 +433,16 @@ const Aegeliss = (props) => {
                     buttonColor="#122D43"
                     className="aegeliss-hifi-wireframes"
                     />
+                    <AirplaneTextButton to="https://www.figma.com/proto/INmFZWizeGPxZ4NWvKLj8F/Aegeliss-Website?page-id=87%3A2&node-id=89-2&viewport=483%2C588%2C0.05&t=zOIzFGFHKPrFwtmD-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=89%3A2" text="View interactive prototype in Figma" external={true} image={aegelissImgs.aegeliss_dark_blue_pa}/>
                     <h3>Successful Knowledge Transfer</h3>
                     <p>The website implementation prioritized Ju's long-term independence, ensuring she could confidently manage content updates, product listings, and customer communications without ongoing technical support. We provided comprehensive documentation and conducted thorough handoff sessions, enabling Ju to continue evolving the platform as her Montessori-inspired product line grows.</p>
+                     <div className="agl-rwa-div">
+                        <div className="agl-rwa-tex">
+                            <h3>Real-World Application</h3>
+                            <p>Beyond digital deliverables, our community engagement created tangible impact. Our partnership with Dementia Friends Washington helped surpass their milestone of 4,000 Dementia Friends, while our hands-on volunteering with Elderwise provided authentic insights that directly influenced our design decisions. These experiences validated our research findings and demonstrated the real-world need for the solutions we created.</p>
+                        </div>
+                        <img src={aegelissImgs.dementia_friends} alt="the Aegeliss Team and Katie Zeilter, from left to right: Katie Zeilter, Carlos Carrillo, June Mi Hong, Anushka Verma, Kayla Tounalom, and Hung Tran"/>
+                    </div>
                     <div className="agl-cir-div">
                         <div className="agl-cir-text">
                             <h3>Community Impact & Recognition</h3>
@@ -446,13 +454,7 @@ const Aegeliss = (props) => {
                         </div>
                         <img src={aegelissImgs.showcase_2} alt="the Aegeliss Team, from left to right: Anushka Verma, Carlos Carrillo, June Mi Hong, Ju Tu, Kayla Tounalom, and Hung Tran"/>
                     </div>
-                    <div className="agl-rwa-div">
-                        <div className="agl-rwa-tex">
-                            <h3>Real-World Application</h3>
-                            <p>Beyond digital deliverables, our community engagement created tangible impact. Our partnership with Dementia Friends Washington helped surpass their milestone of 4,000 Dementia Friends, while our hands-on volunteering with Elderwise provided authentic insights that directly influenced our design decisions. These experiences validated our research findings and demonstrated the real-world need for the solutions we created.</p>
-                        </div>
-                        <img src={aegelissImgs.dementia_friends} alt="the Aegeliss Team and Katie Zeilter, from left to right: Katie Zeilter, Carlos Carrillo, June Mi Hong, Anushka Verma, Kayla Tounalom, and Hung Tran"/>
-                    </div>
+                   
                 </section>
                 <section className="key-learnings-and-refelection">
                     <h2>Key Learnings and Reflections</h2>
