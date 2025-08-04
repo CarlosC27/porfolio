@@ -86,7 +86,7 @@ const About = (props) => {
                                     <img src={linePath} alt='orange dashedline' className='timeline-line'/>
                                     <JouneyCard
                                         date="2016"
-                                        title="The Beggining"
+                                        title="The Beginning"
                                         imgSource={images.mexico_and_friends}
                                         altText="Carlos and his friends in Mexico at a school event"
                                         paragraph="My journey toward earning this degree began during my sophomore year of high school in Mexico, where I was living in my family’s hometown of Las Varas, Nayarit. There, I studied graphic design before pivoting to computer programming in my junior year—a decision that instantly sparked my passion."
@@ -147,9 +147,9 @@ const About = (props) => {
                                     <JouneyCard
                                         date="2025"
                                         title="Reflecting on the Journey"
-                                        imgSource={images.cherry_blossoms_uw}
-                                        altText="Carlos at UW Seattle campus, at the quad during cherry blossom season"
-                                        paragraph="Looking back, I’m grateful for how my path unfolded, as it led me to where I am today—equipped with a diverse skill set and a passion for creating thoughtful, impactful solutions. With graduation approaching in June, I’m excited to see where my journey takes me next."
+                                        imgSource={images.carlos_graduation}
+                                        altText="Carlos at UW Seattle Graduation"
+                                        paragraph="Looking back, I’m grateful for how my path unfolded, as it led me to where I am today—equipped with a diverse skill set and a passion for creating thoughtful, impactful solutions. As a recent graduate of the University of Washington, I’m excited to see where my journey takes me next."
                                     /></div> 
                                     <div className='airplane-and-title'>
                                         <img src={images.orange_pa} alt='orange paper airplane' className='timeline-airplane'/>

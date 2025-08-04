@@ -52,11 +52,7 @@ const Homepage = (props) => {
                     <div className='about-me-text-content'>
                         <h2 className='orange-subtitle'>It's Me! Hi!</h2>
                         <p>
-                        I am a first generation student at the University of Washington. I am currently a senior majoring 
-                        in Informatics with a focus area in Software Development and Human-Computer Interaction. 
-                        I chose this major because of it’s focus on the intersectionality of technology and human values. 
-                        I have experience with computer programming, web development, and user experience design.
-                        My experience working in the hospitality industry has allowed me to develop an eye for attention to detail and managing multiple tasks in a timely manner. 
+                        As a recent University of Washington graduate with a Bachelor's degree in Informatics, I specialize in Software Development and Human-Computer Interaction. My academic focus centered on the critical intersection of technology and human values, driving my passion for creating digital solutions that prioritize user needs. I bring hands-on experience in computer programming, web development, and user experience design, complemented by strong project management and detail-oriented problem-solving skills developed through my background in hospitality management.
                         </p>
                         <AirplaneTextButton to='/About' text='Learn More About Me' image={images.green_pa}/>
                     </div>
@@ -67,7 +63,7 @@ const Homepage = (props) => {
                     <div className='contact-me-text-content'>
                         <h2 className='yellow-subtitle'>Contact Me</h2>
                         <p>
-                        I’m always open to chat about school, research or work opportunities, design, programming, pop culture, or simply just networking. 
+                        I’m always open to chat about work opportunities, collaborations, design, programming, pop culture, or simply just networking. 
                         Please feel free to reach out and include as much information as possible so I can respond appropriately.
                         </p>
                         <AirplaneTextButton to="mailto:carlos.cs.2799@gmail.com" text='Email me at carlos.cs.2799@gmail.com' image={images.cream_pa}/>

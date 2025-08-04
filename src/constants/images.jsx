@@ -11,7 +11,7 @@ const carlos_grad = new URL('../assets/images/carlos-polaroid.JPG', import.meta.
 const office_polaroid = new URL('../assets/images/office-polaroid.JPG', import.meta.url).href;
 const uw_polaroid = new URL('../assets/images/uw-polaroid.JPG', import.meta.url).href;
 const joe_and_i_polaroid = new URL('../assets/images/joe-and-i.JPG', import.meta.url).href;
-
+const carlos_graduation = new URL('../assets/images/carlos-graduation.JPG', import.meta.url).href;
 const dumbo = new URL('../assets/images/joe-and-i-dumbo.JPG', import.meta.url).href;
 const bella_crazy_hair = new URL('../assets/images/bella-crazy-hair.JPG', import.meta.url).href;
 const nyc_skyline = new URL('../assets/images/nyc-skyline.JPG', import.meta.url).href;
@@ -171,6 +171,7 @@ export default {
     carlos_grad,
     joe_and_i_polaroid,
     office_polaroid,
-    uw_polaroid
+    uw_polaroid,
+    carlos_graduation
 
 };

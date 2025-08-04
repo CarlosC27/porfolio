@@ -1,19 +1,27 @@
-/* ImageCarousel.css */
+/* FIXED ImageCarousel.css */
 
-/* Main carousel container */
+/* Main carousel container - NOW MOBILE RESPONSIVE */
 .carousel-container {
   height: auto;
+  width: 100%;
+  max-width: 100vw; /* Prevent viewport overflow */
+  margin: 1rem 0;
 }
 
-/* Main carousel layout with navigation */
+/* Main carousel layout with navigation - IMPROVED */
 .carousel-main {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the carousel */
+  gap: 0.5rem; /* Consistent spacing */
+  width: 100%;
 }
 
-/* Navigation buttons */
+/* Navigation buttons - LARGER TOUCH TARGETS */
 .carousel-nav-btn {
-  padding: 0.5rem;
+  padding: 0.75rem; /* Larger for mobile */
+  min-width: 44px; /* iOS touch target minimum */
+  min-height: 44px;
   border-radius: 50%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.2s ease-in-out;
@@ -25,38 +33,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Prevent button shrinking */
+  touch-action: manipulation; /* Better mobile interaction */
 }
 
 .carousel-nav-btn:hover {
   transform: scale(1.1);
 }
 
-.carousel-nav-left {
-  margin-right: 1rem;
-}
-
+/* Remove individual margins - using gap instead */
+.carousel-nav-left,
 .carousel-nav-right {
-  margin-left: 1rem;
+  margin: 0;
 }
 
-/* Image container */
+/* Image container - MAJOR FIX FOR MOBILE */
 .carousel-img-container {
   flex: 1;
   border-radius: 0.5rem;
-  /* overflow: hidden; */
-  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
-  width: var(--carouselWidth, 400px);
+  /* FIXED: Use mobile-first responsive width */
+  width: 100%;
+  max-width: var(--carouselMaxWidth, 90vw); /* Mobile-first */
+  min-width: 0; /* Allow shrinking */
+  display: flex;
+  justify-content: center;
 }
 
-/* Main image */
+/* Main image - FIXED FOR MOBILE */
 .carousel-img {
+  /* MOBILE FIRST SIZING */
   width: 100%;
-  height: fit-content;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto; /* CHANGED: was fit-content */
+  max-height: 60vh; /* Prevent images from being too tall on mobile */
+  
+  /* FIXED: Use contain instead of cover to show full image */
+  object-fit: contain; /* CHANGED: was cover */
+  
   display: block;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
- 
+  
+  /* Better loading behavior */
+  background-color: none;
+  
+  /* Prevent image selection on mobile */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Dot indicators container */
@@ -65,18 +88,22 @@
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
+  padding: 0.5rem; /* Add padding for easier mobile tapping */
 }
 
-/* Individual dot */
+/* Individual dot - IMPROVED FOR MOBILE */
 .carousel-dot {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.5rem; /* Slightly larger for mobile */
+  height: 0.5rem;
+  min-width: 12px; /* Minimum touch target */
+  min-height: 12px;
   border-radius: 50%;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
   background-color: var(--secondaryColor, #E5D599);
+  touch-action: manipulation;
 }
 
 .carousel-dot:hover {
@@ -94,7 +121,9 @@
   justify-content: center;
   background-color: #f3f4f6;
   border-radius: 0.5rem;
-  height: var(--carouselHeight, 400px);
+  height: var(--carouselHeight, 300px);
+  width: 100%;
+  max-width: 90vw;
 }
 
 .carousel-empty p {
@@ -102,21 +131,79 @@
   margin: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .carousel-nav-left {
-    margin-right: 0.5rem;
+/* COMPREHENSIVE MOBILE RESPONSIVE DESIGN */
+
+/* Small mobile phones */
+@media (max-width: 320px) {
+  .carousel-img-container {
+    max-width: 95vw;
   }
   
-  .carousel-nav-right {
-    margin-left: 0.5rem;
+  .carousel-img {
+    max-height: 50vh;
   }
   
   .carousel-nav-btn {
-    padding: 0.375rem;
+    padding: 0.5rem;
+    min-width: 40px;
+    min-height: 40px;
   }
+}
 
-  .carousel-img{
+/* Standard mobile phones */
+@media (max-width: 480px) {
+  .carousel-img-container {
+    max-width: 90vw;
+  }
+  
+  .carousel-img {
+    max-height: 55vh;
     border-radius: 12px;
+  }
+  
+  .carousel-main {
+    gap: 0.75rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel-img-container {
+    max-width: 80vw;
+  }
+  
+  .carousel-img {
+    max-height: 65vh;
+  }
+  
+  .carousel-main {
+    gap: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .carousel-img-container {
+    max-width: var(--carouselMaxWidth, 600px); /* Use prop or default */
+  }
+  
+  .carousel-img {
+    max-height: 70vh;
+  }
+  
+  .carousel-main {
+    gap: 1.5rem;
+  }
+  
+  .carousel-nav-btn {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .carousel-img-container {
+    max-width: var(--carouselMaxWidth, 800px);
   }
 }
