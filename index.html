@@ -9,10 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Personal Portfolio Website"/>
     <title>CACS</title>
-    <script type="module" crossorigin src="/assets/index-ctlMeanD.js"></script>
+    <script type="module" crossorigin src="/assets/index-D62_xfHF.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Q7RIx5yR.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          window.history.replaceState({}, '', p);
+        }
+      })();
+    </script>
   </body>
 </html>
