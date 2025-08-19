@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./scroll-to-top";
 import Homepage from "./components/Homepage/homepage";
 import Projects from "./components/Projects/projects-page";
 import About from "./components/About/about-page";
@@ -18,18 +19,19 @@ function App(){
     <Router>
       <div>
         <NavBar/>
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="about" element={<About />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="construction" element={<Construction/>}/>
-            <Route path="Aegeliss" element={<Aegeliss/>}/>
-            <Route path="Rotator-Creative" element={<Rotator/>}/>
-            <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
-            <Route path="RÉVISEMÉ" element={<Revisime/>}/>
-            <Route path="Husky-Fitness" element={<HuskyFitness/>}/>
-          </Routes>
+          <ScrollToTop/>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="construction" element={<Construction/>}/>
+              <Route path="Aegeliss" element={<Aegeliss/>}/>
+              <Route path="Rotator-Creative" element={<Rotator/>}/>
+              <Route path="The-City-Between-Article" element={<TheCityBetween/>}/>
+              <Route path="RÉVISEMÉ" element={<Revisime/>}/>
+              <Route path="Husky-Fitness" element={<HuskyFitness/>}/>
+            </Routes>
         <Footer />
         </div>
     </Router>
