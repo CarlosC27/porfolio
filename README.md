@@ -1,12 +1,25 @@
-# React + Vite
+#  My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for my personal portfolio website: https://carlos-carrillo.com
+This site is a a collection and reflection of how I think, design, and build. I curated the projects based on how they have shaped my skills and pushed me to think critically.
 
-Currently, two official plugins are available:
+## What Makes it Mine
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Custom-crafted design** – Every detail, from the color palette and typography to the layout and responsiveness, was intentionally designed by me.  
+- **Solo-coded** – I developed this portfolio from scratch, writing all the code myself (no pre-made templates).  
+- **Curated projects** – The projects featured here are ones I’m truly proud of. Each has shaped the way I approach design and problem-solving. 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Built with:** [Insert your stack here, e.g., React, JavaScript, HTML, CSS]  
+- **Responsive design:** Adapts seamlessly across devices.  
+- **Performance-minded:** Optimized images, minified code, and fast load times.  
+- **Accessibility-first:** Semantic markup and inclusive user experience practices.
+
+## Get in Touch
+
+I’m always open to connecting—whether for feedback, collaborations, or future opportunities.  
+
+🌐 Live Site: [carlos-carrillo.com](https://carlos-carrillo.com)  
+
+
+This repository reflects my growth as a designer and developer. The projects included aren’t just work—they’re stepping stones that shaped my journey and the way I approach creating meaningful digital experiences.

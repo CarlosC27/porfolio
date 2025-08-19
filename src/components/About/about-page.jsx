@@ -78,7 +78,7 @@ const About = (props) => {
                     <h2 className='orange-subtitle my-journey-title'>My Journey</h2>
                         <div className="timeline-scroll-container">
                         <div className='x-and-title'>
-                                        <p>The Begginng</p>
+                                        <p>The Beginning</p>
                                         <p className='x'>x</p>
                                     </div>
                                 <div className='timeline-section'>
