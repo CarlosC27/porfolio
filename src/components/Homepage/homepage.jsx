@@ -16,7 +16,7 @@ const Homepage = (props) => {
                         <div className='intro-sub-content'>
                             <h2 className='subtitle'>Carlos Alexis Carrillo-Sandoval</h2>
                             <p className='intro-p'>
-                                 Hello! I’m passionate about building digital experiences that inspire and empower people. With a background in Software Development and User Experience Design, I love crafting solutions that are both intuitive and efficient.
+                                 Hello! I’m a Product Designer and Developer based in Seattle. I dissect digital problems by analyzing user behavior, technical constraints, and business needs to build solutions that work on multiple levels. My process involves questioning assumptions, testing hypotheses through prototypes, and documenting the reasoning behind design decisions.
                                 When I’m not immersed in code or design, you can find me spinning vinyl records, wandering through nature, or capturing life’s moments with my Polaroid camera.
                             </p>
                         </div>
